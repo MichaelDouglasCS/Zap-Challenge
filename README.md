@@ -11,14 +11,14 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software.
 
 ```
-1 - Xcode 8
-2 - Swift 3
+1 - Xcode 9
+2 - Swift 4
 3 - CocoaPods
 ```
 
 ### Installing
 
-Firs of all, you need install the Xcode 8, you can find it in the App Store.
+Firs of all, you need install the Xcode 9, you can find it in the App Store.
 
 ```
 https://developer.apple.com/xcode/
