@@ -8,13 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		6149E13D202B77AB00AD77F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149E13C202B77AB00AD77F9 /* AppDelegate.swift */; };
-		6149E13F202B77AB00AD77F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149E13E202B77AB00AD77F9 /* ViewController.swift */; };
-		6149E142202B77AB00AD77F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6149E140202B77AB00AD77F9 /* Main.storyboard */; };
 		6149E145202B77AB00AD77F9 /* Zap_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6149E143202B77AB00AD77F9 /* Zap_Challenge.xcdatamodeld */; };
 		6149E147202B77AB00AD77F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6149E146202B77AB00AD77F9 /* Assets.xcassets */; };
-		6149E14A202B77AB00AD77F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6149E148202B77AB00AD77F9 /* LaunchScreen.storyboard */; };
 		6149E155202B77AC00AD77F9 /* Zap_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149E154202B77AC00AD77F9 /* Zap_ChallengeTests.swift */; };
 		6149E160202B77AC00AD77F9 /* Zap_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149E15F202B77AC00AD77F9 /* Zap_ChallengeUITests.swift */; };
+		61DC8522202BDBF3007A7552 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8517202BDBF1007A7552 /* UIViewController+Alerts.swift */; };
+		61DC8524202BDBF3007A7552 /* XIBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8519202BDBF2007A7552 /* XIBDesignable.swift */; };
+		61DC8529202BDBF3007A7552 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC851E202BDBF2007A7552 /* String+Localized.swift */; };
+		61DC852B202BDBF3007A7552 /* UIColor+StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8520202BDBF3007A7552 /* UIColor+StyleKit.swift */; };
+		61DC8530202BE2A7007A7552 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61DC8532202BE2A7007A7552 /* Localizable.strings */; };
+		61DC853D202BE5B2007A7552 /* DateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC853B202BE5B2007A7552 /* DateKit.swift */; };
+		61DC8542202BF025007A7552 /* ServerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8541202BF025007A7552 /* ServerRequest.swift */; };
+		61DC8546202C6B8B007A7552 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DC8545202C6B8B007A7552 /* LaunchScreen.storyboard */; };
+		61DC8548202C6C06007A7552 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DC8547202C6C06007A7552 /* Dashboard.storyboard */; };
+		61DC854A202C6D12007A7552 /* TopGames.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DC8549202C6D12007A7552 /* TopGames.storyboard */; };
+		61DC854C202C6D25007A7552 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DC854B202C6D25007A7552 /* Favorites.storyboard */; };
+		61DC854E202C6D4A007A7552 /* GameDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DC854D202C6D4A007A7552 /* GameDetails.storyboard */; };
+		61DC856C202C85B8007A7552 /* LocalizedBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8551202C85B4007A7552 /* LocalizedBarButton.swift */; };
+		61DC856F202C85B8007A7552 /* LocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8554202C85B4007A7552 /* LocalizedLabel.swift */; };
+		61DC8570202C85B8007A7552 /* LocalizedSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8555202C85B4007A7552 /* LocalizedSearchBar.swift */; };
+		61DC8571202C85B8007A7552 /* LocalizedNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8556202C85B5007A7552 /* LocalizedNavigationItem.swift */; };
+		61DC8572202C85B8007A7552 /* LocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8557202C85B5007A7552 /* LocalizedButton.swift */; };
+		61DC8573202C85B8007A7552 /* IBDesignableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8558202C85B5007A7552 /* IBDesignableClass.swift */; };
+		61DC8577202C85B8007A7552 /* LocalizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC855C202C85B5007A7552 /* LocalizedTabBar.swift */; };
+		61DC857C202C85B8007A7552 /* CircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8561202C85B6007A7552 /* CircularImage.swift */; };
+		61DC857D202C85B8007A7552 /* LocalizedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8562202C85B6007A7552 /* LocalizedTextField.swift */; };
+		61DC857E202C85B8007A7552 /* UIBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8563202C85B6007A7552 /* UIBox.swift */; };
+		61DC857F202C85B8007A7552 /* TopicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8564202C85B6007A7552 /* TopicButton.swift */; };
+		61DC8580202C85B8007A7552 /* LocalizedNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8565202C85B7007A7552 /* LocalizedNavigationBar.swift */; };
+		61DC8582202C85B8007A7552 /* LocalizedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8567202C85B7007A7552 /* LocalizedBarButtonItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +59,8 @@
 /* Begin PBXFileReference section */
 		6149E139202B77AB00AD77F9 /* Zap-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zap-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6149E13C202B77AB00AD77F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6149E13E202B77AB00AD77F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6149E141202B77AB00AD77F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6149E144202B77AB00AD77F9 /* Zap_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zap_Challenge.xcdatamodel; sourceTree = "<group>"; };
 		6149E146202B77AB00AD77F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6149E149202B77AB00AD77F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6149E14B202B77AB00AD77F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6149E150202B77AC00AD77F9 /* Zap-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zap-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6149E154202B77AC00AD77F9 /* Zap_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zap_ChallengeTests.swift; sourceTree = "<group>"; };
@@ -49,6 +68,32 @@
 		6149E15B202B77AC00AD77F9 /* Zap-ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zap-ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6149E15F202B77AC00AD77F9 /* Zap_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zap_ChallengeUITests.swift; sourceTree = "<group>"; };
 		6149E161202B77AC00AD77F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61DC8517202BDBF1007A7552 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
+		61DC8519202BDBF2007A7552 /* XIBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIBDesignable.swift; sourceTree = "<group>"; };
+		61DC851E202BDBF2007A7552 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		61DC8520202BDBF3007A7552 /* UIColor+StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+StyleKit.swift"; sourceTree = "<group>"; };
+		61DC8539202BE4A9007A7552 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		61DC853A202BE4CB007A7552 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		61DC853B202BE5B2007A7552 /* DateKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateKit.swift; sourceTree = "<group>"; };
+		61DC8541202BF025007A7552 /* ServerRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRequest.swift; sourceTree = "<group>"; };
+		61DC8545202C6B8B007A7552 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		61DC8547202C6C06007A7552 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		61DC8549202C6D12007A7552 /* TopGames.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopGames.storyboard; sourceTree = "<group>"; };
+		61DC854B202C6D25007A7552 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		61DC854D202C6D4A007A7552 /* GameDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameDetails.storyboard; sourceTree = "<group>"; };
+		61DC8551202C85B4007A7552 /* LocalizedBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedBarButton.swift; sourceTree = "<group>"; };
+		61DC8554202C85B4007A7552 /* LocalizedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedLabel.swift; sourceTree = "<group>"; };
+		61DC8555202C85B4007A7552 /* LocalizedSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedSearchBar.swift; sourceTree = "<group>"; };
+		61DC8556202C85B5007A7552 /* LocalizedNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedNavigationItem.swift; sourceTree = "<group>"; };
+		61DC8557202C85B5007A7552 /* LocalizedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedButton.swift; sourceTree = "<group>"; };
+		61DC8558202C85B5007A7552 /* IBDesignableClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableClass.swift; sourceTree = "<group>"; };
+		61DC855C202C85B5007A7552 /* LocalizedTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedTabBar.swift; sourceTree = "<group>"; };
+		61DC8561202C85B6007A7552 /* CircularImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImage.swift; sourceTree = "<group>"; };
+		61DC8562202C85B6007A7552 /* LocalizedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedTextField.swift; sourceTree = "<group>"; };
+		61DC8563202C85B6007A7552 /* UIBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBox.swift; sourceTree = "<group>"; };
+		61DC8564202C85B6007A7552 /* TopicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicButton.swift; sourceTree = "<group>"; };
+		61DC8565202C85B7007A7552 /* LocalizedNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedNavigationBar.swift; sourceTree = "<group>"; };
+		61DC8567202C85B7007A7552 /* LocalizedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedBarButtonItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +144,8 @@
 		6149E13B202B77AB00AD77F9 /* Zap-Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				6149E13C202B77AB00AD77F9 /* AppDelegate.swift */,
-				6149E13E202B77AB00AD77F9 /* ViewController.swift */,
-				6149E140202B77AB00AD77F9 /* Main.storyboard */,
-				6149E146202B77AB00AD77F9 /* Assets.xcassets */,
-				6149E148202B77AB00AD77F9 /* LaunchScreen.storyboard */,
-				6149E14B202B77AB00AD77F9 /* Info.plist */,
-				6149E143202B77AB00AD77F9 /* Zap_Challenge.xcdatamodeld */,
+				61DC84F7202B8AA2007A7552 /* Resources */,
+				61DC84F8202B8AAD007A7552 /* Sources */,
 			);
 			path = "Zap-Challenge";
 			sourceTree = "<group>";
@@ -126,6 +166,145 @@
 				6149E161202B77AC00AD77F9 /* Info.plist */,
 			);
 			path = "Zap-ChallengeUITests";
+			sourceTree = "<group>";
+		};
+		61DC84F7202B8AA2007A7552 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6149E146202B77AB00AD77F9 /* Assets.xcassets */,
+				61DC84F9202B8CB2007A7552 /* Interfaces */,
+				61DC852D202BDECE007A7552 /* Language */,
+				61DC84FC202B8F18007A7552 /* Supporting Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		61DC84F8202B8AAD007A7552 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6149E13C202B77AB00AD77F9 /* AppDelegate.swift */,
+				61DC84FD202BD502007A7552 /* Features */,
+				61DC84FE202BD50B007A7552 /* Persistence */,
+				61DC84FF202BD96F007A7552 /* Shared */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		61DC84F9202B8CB2007A7552 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				61DC84FA202B8CCA007A7552 /* Storyboards */,
+				61DC84FB202B8CD5007A7552 /* Views */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		61DC84FA202B8CCA007A7552 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				61DC8545202C6B8B007A7552 /* LaunchScreen.storyboard */,
+				61DC8547202C6C06007A7552 /* Dashboard.storyboard */,
+				61DC8549202C6D12007A7552 /* TopGames.storyboard */,
+				61DC854B202C6D25007A7552 /* Favorites.storyboard */,
+				61DC854D202C6D4A007A7552 /* GameDetails.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		61DC84FB202B8CD5007A7552 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		61DC84FC202B8F18007A7552 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6149E14B202B77AB00AD77F9 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61DC84FD202BD502007A7552 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		61DC84FE202BD50B007A7552 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				6149E143202B77AB00AD77F9 /* Zap_Challenge.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		61DC84FF202BD96F007A7552 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				61DC854F202C857C007A7552 /* Appearance */,
+				61DC8540202BF018007A7552 /* Network */,
+				61DC853F202BE8B7007A7552 /* Extensions */,
+				61DC8500202BD9C0007A7552 /* Utils */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		61DC8500202BD9C0007A7552 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61DC8519202BDBF2007A7552 /* XIBDesignable.swift */,
+				61DC853B202BE5B2007A7552 /* DateKit.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		61DC852D202BDECE007A7552 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				61DC8532202BE2A7007A7552 /* Localizable.strings */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		61DC853F202BE8B7007A7552 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61DC8517202BDBF1007A7552 /* UIViewController+Alerts.swift */,
+				61DC851E202BDBF2007A7552 /* String+Localized.swift */,
+				61DC8520202BDBF3007A7552 /* UIColor+StyleKit.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		61DC8540202BF018007A7552 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				61DC8541202BF025007A7552 /* ServerRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		61DC854F202C857C007A7552 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				61DC8561202C85B6007A7552 /* CircularImage.swift */,
+				61DC8558202C85B5007A7552 /* IBDesignableClass.swift */,
+				61DC8551202C85B4007A7552 /* LocalizedBarButton.swift */,
+				61DC8567202C85B7007A7552 /* LocalizedBarButtonItem.swift */,
+				61DC8557202C85B5007A7552 /* LocalizedButton.swift */,
+				61DC8554202C85B4007A7552 /* LocalizedLabel.swift */,
+				61DC8565202C85B7007A7552 /* LocalizedNavigationBar.swift */,
+				61DC8556202C85B5007A7552 /* LocalizedNavigationItem.swift */,
+				61DC8555202C85B4007A7552 /* LocalizedSearchBar.swift */,
+				61DC855C202C85B5007A7552 /* LocalizedTabBar.swift */,
+				61DC8562202C85B6007A7552 /* LocalizedTextField.swift */,
+				61DC8564202C85B6007A7552 /* TopicButton.swift */,
+				61DC8563202C85B6007A7552 /* UIBox.swift */,
+			);
+			path = Appearance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +394,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				"pt-BR",
 				en,
-				Base,
 			);
 			mainGroup = 6149E130202B77AB00AD77F9;
 			productRefGroup = 6149E13A202B77AB00AD77F9 /* Products */;
@@ -235,9 +414,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6149E14A202B77AB00AD77F9 /* LaunchScreen.storyboard in Resources */,
+				61DC854A202C6D12007A7552 /* TopGames.storyboard in Resources */,
+				61DC8546202C6B8B007A7552 /* LaunchScreen.storyboard in Resources */,
+				61DC854C202C6D25007A7552 /* Favorites.storyboard in Resources */,
+				61DC854E202C6D4A007A7552 /* GameDetails.storyboard in Resources */,
+				61DC8530202BE2A7007A7552 /* Localizable.strings in Resources */,
 				6149E147202B77AB00AD77F9 /* Assets.xcassets in Resources */,
-				6149E142202B77AB00AD77F9 /* Main.storyboard in Resources */,
+				61DC8548202C6C06007A7552 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +445,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DC8571202C85B8007A7552 /* LocalizedNavigationItem.swift in Sources */,
+				61DC852B202BDBF3007A7552 /* UIColor+StyleKit.swift in Sources */,
+				61DC853D202BE5B2007A7552 /* DateKit.swift in Sources */,
+				61DC8572202C85B8007A7552 /* LocalizedButton.swift in Sources */,
+				61DC8580202C85B8007A7552 /* LocalizedNavigationBar.swift in Sources */,
+				61DC857C202C85B8007A7552 /* CircularImage.swift in Sources */,
+				61DC8577202C85B8007A7552 /* LocalizedTabBar.swift in Sources */,
+				61DC8582202C85B8007A7552 /* LocalizedBarButtonItem.swift in Sources */,
+				61DC856C202C85B8007A7552 /* LocalizedBarButton.swift in Sources */,
 				6149E145202B77AB00AD77F9 /* Zap_Challenge.xcdatamodeld in Sources */,
-				6149E13F202B77AB00AD77F9 /* ViewController.swift in Sources */,
+				61DC8529202BDBF3007A7552 /* String+Localized.swift in Sources */,
+				61DC857F202C85B8007A7552 /* TopicButton.swift in Sources */,
+				61DC857D202C85B8007A7552 /* LocalizedTextField.swift in Sources */,
+				61DC857E202C85B8007A7552 /* UIBox.swift in Sources */,
+				61DC8570202C85B8007A7552 /* LocalizedSearchBar.swift in Sources */,
+				61DC856F202C85B8007A7552 /* LocalizedLabel.swift in Sources */,
+				61DC8524202BDBF3007A7552 /* XIBDesignable.swift in Sources */,
+				61DC8522202BDBF3007A7552 /* UIViewController+Alerts.swift in Sources */,
+				61DC8542202BF025007A7552 /* ServerRequest.swift in Sources */,
 				6149E13D202B77AB00AD77F9 /* AppDelegate.swift in Sources */,
+				61DC8573202C85B8007A7552 /* IBDesignableClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,20 +501,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6149E140202B77AB00AD77F9 /* Main.storyboard */ = {
+		61DC8532202BE2A7007A7552 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6149E141202B77AB00AD77F9 /* Base */,
+				61DC8539202BE4A9007A7552 /* pt-BR */,
+				61DC853A202BE4CB007A7552 /* en */,
 			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6149E148202B77AB00AD77F9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6149E149202B77AB00AD77F9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -323,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -380,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -432,7 +628,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Q582659G6;
-				INFOPLIST_FILE = "Zap-Challenge/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Zap-Challenge/Resources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeldouglas.Zap-Challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,7 +643,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Q582659G6;
-				INFOPLIST_FILE = "Zap-Challenge/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Zap-Challenge/Resources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeldouglas.Zap-Challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";

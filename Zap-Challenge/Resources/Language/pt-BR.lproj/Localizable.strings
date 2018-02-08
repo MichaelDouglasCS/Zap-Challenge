@@ -1,0 +1,21 @@
+//*************************
+// Labels
+//*************************
+
+"LB_TOPGAMES" = "Melhores Jogos";
+
+//*************************
+// Strings
+//*************************
+
+"ST_PRIORITY" = "Priority";
+
+//*************************
+// Messages
+//*************************
+
+"MSG_UNKNOWN" = "Unknown behavior\nPlease take a screenshot (Home button + Power button) and contact the support team";
+"MSG_NO_CONNECTION" = "No internet connection";
+"MSG_SERVER_ERROR" = "Untreated server error. Please try again later";
+
+
