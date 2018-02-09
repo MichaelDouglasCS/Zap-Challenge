@@ -34,7 +34,8 @@ public class TopGamesViewModel: NSObject {
   public func loadTopGames(completion: @escaping (_ isSuccess: Bool, _ localizedError: String) -> Void) {
     self.provider.loadTopGames(with: 20, from: 0) { (topGames, error) in
       if let topGames = topGames {
-        self.games = topGames
+        //Sorted by viewers
+        self.games = topGames.sorted(by: { $0.viewers ?? 0 > $1.viewers ?? 0 })
       }
       completion(topGames != nil, error ?? "")
     }
