@@ -10,12 +10,14 @@
 //*************************
 
 "ST_OK" = "OK";
+"ST_SORRY" = "Sorry :(";
 
 //*************************
 // Network
 //*************************
 
-"ST_SERVICE_UNAVAILABLE" = "Service Unavailable. Please try again later";
-"ST_SERVER_ERROR" = "Untreated server error. Please try again later";
+"ST_NO_CONNECTION" = "No connection available. Please, verify your conectivity and try again.";
+"ST_SERVICE_UNAVAILABLE" = "Service Unavailable. Please try again later.";
+"ST_SERVER_ERROR" = "Untreated server error. Please try again later.";
 
 

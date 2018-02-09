@@ -17,7 +17,8 @@ import UIKit
 extension UIColor {
 	
 	struct ZAP {
-		static var azure: UIColor { return UIColor(hexadecimal: 0x007AFF) }
+		static var purple: UIColor { return UIColor(hexadecimal: 0x6034B1) }
+    static var purpleLight: UIColor { return UIColor(hexadecimal: 0x6441A5) }
 	}
 	
 	convenience init(hexadecimal: Int, alpha: CGFloat = 1.0) {

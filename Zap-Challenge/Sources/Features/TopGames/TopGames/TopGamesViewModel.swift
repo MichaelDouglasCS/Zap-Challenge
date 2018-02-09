@@ -15,7 +15,8 @@ public class TopGamesViewModel: NSObject {
   //*************************************************
   
   public var provider: TopGamesProvider
-  public let headerTitle: String = String.Local.topGames
+  
+  public let headerTitle: String = String.ZAP.topGames
   public var games: [GameRank] = []
   
   //*************************************************
@@ -50,5 +51,9 @@ public class TopGamesViewModel: NSObject {
     default:
       return 0
     }
+  }
+  
+  public func cellViewModel(at indexPath: IndexPath) -> Any {
+    return 0
   }
 }

@@ -28,6 +28,7 @@ public enum ServerResponse {
   public enum Error: String {
     case unkown = "ST_SERVER_ERROR"
     case serviceUnavailable = "ST_SERVICE_UNAVAILABLE"
+    case noConnection = "ST_NO_CONNECTION"
   }
   
   case success
@@ -60,6 +61,8 @@ public enum ServerResponse {
       default:
         self = .error(.unkown)
       }
+    } else if NetworkReachabilityManager()?.isReachable == false {
+      self = .error(.noConnection)
     } else {
       self = .error(.unkown)
     }

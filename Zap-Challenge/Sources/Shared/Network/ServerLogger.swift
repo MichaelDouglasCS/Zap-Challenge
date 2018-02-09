@@ -22,7 +22,7 @@ public class ServerLogger: NSObject {
   //*************************************************
   
   public class func logSeparator() {
-    print("----------------------------------//----------------------------------")
+    print("-------------//-------------")
   }
   
   public class func logHeaders(_ headers: [String: AnyObject]) {
@@ -106,26 +106,16 @@ public class ServerLogger: NSObject {
       }
       
       guard let data = data else { return }
+      let json = JSON(data)
       
-      do {
-        let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-        if let theJson = json as? JSON {
-          let pretty = try JSONSerialization.data(withJSONObject: theJson, options: .prettyPrinted)
-          if let string = NSString(data: pretty, encoding: String.Encoding.utf8.rawValue) {
-            print("JSON: \(string)")
-          }
-        } else {
-          if let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
-            print("Data: \(string)")
-          }
-        }
-        
-      } catch {
+      if !json.isEmpty {
+        print("JSON: \(json.debugDescription)")
+      } else {
         if let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
           print("Data: \(string)")
         }
       }
-      
+
     } else {
       print("📥 Response: nil ")
     }

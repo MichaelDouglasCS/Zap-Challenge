@@ -10,13 +10,13 @@ import UIKit
 
 //**********************************************************************************************************
 //
-// MARK: - Extension - String Local
+// MARK: - Extension - String ZAP
 //
 //**********************************************************************************************************
 
 extension String {
 	
-	struct Local {
+	struct ZAP {
     
 		//*************************
 		// Top Games
@@ -27,6 +27,8 @@ extension String {
     // Alerts
     //*************************
     static var ok: String { return "ST_OK".localized }
+    static var sorry: String { return "ST_SORRY".localized }
+    static var noConnection: String { return "ST_NO_CONECTION".localized }
 	}
 }
 
@@ -42,20 +44,8 @@ extension String {
 // MARK: - Exposed Methods
 //**************************************************
 	
-	/**
-	Localized string version, using the main bundle and the main table (Localizable.strings) 
-	and keeping the record for the original localizable key.
-	*/
 	var localized: String {
 		return NSLocalizedString(self, comment: self)
-	}
-	
-	/**
-	Pluralized string version, using the main bundle and the main table (Localizable.stringsdict)
-	This function must be called after a call to the localized in order to keep the original version.
-	*/
-	func pluralized(_ count: Int) -> String {
-		return String.localizedStringWithFormat(self, count)
 	}
 }
 

@@ -21,7 +21,8 @@ class TopGamesViewController: UIViewController {
   //*************************************************
   
   @IBOutlet weak var collectionView: UICollectionView!
-  @IBOutlet weak var searchBar: UISearchBar!
+  
+  private let refreshControl = UIRefreshControl()
   
   var viewModel: TopGamesViewModel!
   
@@ -33,7 +34,7 @@ class TopGamesViewController: UIViewController {
     super.viewDidLoad()
     self.setupNavigationBar()
     self.setupCollectionView()
-    self.loadData()
+    self.fetchData()
   }
   
   //*************************************************
@@ -41,23 +42,44 @@ class TopGamesViewController: UIViewController {
   //*************************************************
 
   private func setupNavigationBar() {
+    //Change Status Bar Style
     UIApplication.shared.statusBarStyle = .lightContent
+    //Navigation
     self.navigationItem.title = self.viewModel.headerTitle
   }
   
   private func setupCollectionView() {
+    // Configure Refresh Control
+    self.refreshControl.tintColor = .white
+    self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
+    
+    //Configure CollectionView
     self.collectionView.scrollsToTop = true
     self.collectionView.allowsSelection = true
     self.collectionView.allowsMultipleSelection = false
+    self.collectionView.refreshControl = self.refreshControl
   }
   
-  private func loadData() {
+  private func fetchData() {
+    self.collectionView.showLoading(isShow: true, isLarge: true, color: UIColor.ZAP.purple)
+    self.loadData {
+      self.collectionView.showLoading(isShow: false)
+    }
+  }
+  
+  @objc private func refreshData() {
+    self.loadData {
+      self.refreshControl.endRefreshing()
+    }
+  }
+  
+  private func loadData(completion: @escaping ()->()) {
     self.viewModel.loadTopGames { (isSuccess, localizedError) in
-      
+      completion()
       if isSuccess {
-        self.collectionView.reloadData()
+        self.collectionView.reloadSections([0])
       } else {
-        self.showInfoAlert(title: "Error", message: localizedError)
+        self.showInfoAlert(title: String.ZAP.sorry, message: localizedError)
       }
     }
   }
@@ -103,15 +125,5 @@ extension TopGamesViewController: UICollectionViewDataSource {
 //**********************************************************************************************************
 
 extension TopGamesViewController: UICollectionViewDelegate {
-  
-}
-
-//**********************************************************************************************************
-//
-// MARK: - Extension - UISearchBarDelegate
-//
-//**********************************************************************************************************
-
-extension TopGamesViewController: UISearchBarDelegate {
   
 }

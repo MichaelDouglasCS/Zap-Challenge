@@ -36,6 +36,9 @@
 		61DC8577202C85B8007A7552 /* LocalizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC855C202C85B5007A7552 /* LocalizedTabBar.swift */; };
 		61DC857C202C85B8007A7552 /* CircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8561202C85B6007A7552 /* CircularImage.swift */; };
 		61DC857E202C85B8007A7552 /* UIBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8563202C85B6007A7552 /* UIBox.swift */; };
+		61E5C978202DC36600A6D2AB /* TopGamesSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E5C977202DC36600A6D2AB /* TopGamesSearchBarView.swift */; };
+		61E5C97A202DC38D00A6D2AB /* TopGamesSearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E5C979202DC38D00A6D2AB /* TopGamesSearchBarViewModel.swift */; };
+		61E5C97C202DCAB600A6D2AB /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E5C97B202DCAB600A6D2AB /* UIView+Loading.swift */; };
 		65E548C7E04BCE6FB011C4E7 /* Pods_Zap_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8764FBC9913D2D43F03E1C /* Pods_Zap_ChallengeTests.framework */; };
 		B943651F3294E49A899C4A87 /* Pods_Zap_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D13C8625DA75C42EFF8FFA6D /* Pods_Zap_ChallengeUITests.framework */; };
 		E9DC244C7147762DB304B39F /* Pods_Zap_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDBEE2A63113F2C47C12A6D /* Pods_Zap_Challenge.framework */; };
@@ -98,6 +101,9 @@
 		61DC855C202C85B5007A7552 /* LocalizedTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedTabBar.swift; sourceTree = "<group>"; };
 		61DC8561202C85B6007A7552 /* CircularImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImage.swift; sourceTree = "<group>"; };
 		61DC8563202C85B6007A7552 /* UIBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBox.swift; sourceTree = "<group>"; };
+		61E5C977202DC36600A6D2AB /* TopGamesSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesSearchBarView.swift; sourceTree = "<group>"; };
+		61E5C979202DC38D00A6D2AB /* TopGamesSearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesSearchBarViewModel.swift; sourceTree = "<group>"; };
+		61E5C97B202DCAB600A6D2AB /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
 		6768613A6B6C816C495B5EA9 /* Pods-Zap-ChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7DDBEE2A63113F2C47C12A6D /* Pods_Zap_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zap_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F09500064DF701D427212E1 /* Pods-Zap-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeTests/Pods-Zap-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 		6172D9E1202CB2EE004E3A11 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				61DC854B202C6D25007A7552 /* Favorites.storyboard */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -193,6 +200,7 @@
 		6172D9E2202CB2F7004E3A11 /* GameDetails */ = {
 			isa = PBXGroup;
 			children = (
+				61DC854D202C6D4A007A7552 /* GameDetails.storyboard */,
 			);
 			path = GameDetails;
 			sourceTree = "<group>";
@@ -213,6 +221,8 @@
 			children = (
 				6172D9EF202CD462004E3A11 /* TopGamesViewController.swift */,
 				6172D9F1202CD474004E3A11 /* TopGamesViewModel.swift */,
+				61E5C976202DC1E200A6D2AB /* SearchBarView */,
+				61E5C975202DC1CB00A6D2AB /* Cells */,
 			);
 			path = TopGames;
 			sourceTree = "<group>";
@@ -220,6 +230,7 @@
 		61BC018B202D15830035F273 /* DashboardTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				61DC8547202C6C06007A7552 /* Dashboard.storyboard */,
 				61BC018C202D15DB0035F273 /* DashboardTabBarViewController.swift */,
 				61BC018E202D15ED0035F273 /* DashboardTabBarViewModel.swift */,
 			);
@@ -237,6 +248,7 @@
 		61C5D0A9202CB2BC008286E3 /* TopGames */ = {
 			isa = PBXGroup;
 			children = (
+				61DC8549202C6D12007A7552 /* TopGames.storyboard */,
 				6172D9E5202CB496004E3A11 /* Model */,
 				6172D9EE202CD446004E3A11 /* TopGames */,
 			);
@@ -247,7 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				6149E146202B77AB00AD77F9 /* Assets.xcassets */,
-				61DC84F9202B8CB2007A7552 /* Interfaces */,
+				61DC8545202C6B8B007A7552 /* LaunchScreen.storyboard */,
 				61DC852D202BDECE007A7552 /* Language */,
 				61DC84FC202B8F18007A7552 /* Supporting Files */,
 			);
@@ -263,34 +275,6 @@
 				61DC84FF202BD96F007A7552 /* Shared */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		61DC84F9202B8CB2007A7552 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				61DC84FA202B8CCA007A7552 /* Storyboards */,
-				61DC84FB202B8CD5007A7552 /* Views */,
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		61DC84FA202B8CCA007A7552 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				61DC8545202C6B8B007A7552 /* LaunchScreen.storyboard */,
-				61DC8547202C6C06007A7552 /* Dashboard.storyboard */,
-				61DC8549202C6D12007A7552 /* TopGames.storyboard */,
-				61DC854B202C6D25007A7552 /* Favorites.storyboard */,
-				61DC854D202C6D4A007A7552 /* GameDetails.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		61DC84FB202B8CD5007A7552 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		61DC84FC202B8F18007A7552 /* Supporting Files */ = {
@@ -354,6 +338,7 @@
 				61DC8517202BDBF1007A7552 /* UIViewController+Alerts.swift */,
 				61DC851E202BDBF2007A7552 /* String+Localized.swift */,
 				61DC8520202BDBF3007A7552 /* UIColor+StyleKit.swift */,
+				61E5C97B202DCAB600A6D2AB /* UIView+Loading.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,6 +360,22 @@
 				61DC8563202C85B6007A7552 /* UIBox.swift */,
 			);
 			path = Appearance;
+			sourceTree = "<group>";
+		};
+		61E5C975202DC1CB00A6D2AB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		61E5C976202DC1E200A6D2AB /* SearchBarView */ = {
+			isa = PBXGroup;
+			children = (
+				61E5C977202DC36600A6D2AB /* TopGamesSearchBarView.swift */,
+				61E5C979202DC38D00A6D2AB /* TopGamesSearchBarViewModel.swift */,
+			);
+			path = SearchBarView;
 			sourceTree = "<group>";
 		};
 		6EC276ADF214FAE0DFDB895D /* Pods */ = {
@@ -704,6 +705,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6172D9F0202CD462004E3A11 /* TopGamesViewController.swift in Sources */,
+				61E5C97C202DCAB600A6D2AB /* UIView+Loading.swift in Sources */,
 				6172D9E4202CB394004E3A11 /* TopGamesProvider.swift in Sources */,
 				61DC852B202BDBF3007A7552 /* UIColor+StyleKit.swift in Sources */,
 				6172D9E7202CB879004E3A11 /* ServerLogger.swift in Sources */,
@@ -720,8 +722,10 @@
 				6172D9E9202CC23D004E3A11 /* Game.swift in Sources */,
 				61DC8524202BDBF3007A7552 /* XIBDesignable.swift in Sources */,
 				61BC018D202D15DB0035F273 /* DashboardTabBarViewController.swift in Sources */,
+				61E5C978202DC36600A6D2AB /* TopGamesSearchBarView.swift in Sources */,
 				61DC8522202BDBF3007A7552 /* UIViewController+Alerts.swift in Sources */,
 				61DC8542202BF025007A7552 /* ServerRequest.swift in Sources */,
+				61E5C97A202DC38D00A6D2AB /* TopGamesSearchBarViewModel.swift in Sources */,
 				6149E13D202B77AB00AD77F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -38,7 +38,7 @@ extension UIViewController {
 	
 	func showInfoAlert(title: String, message: Any, completion: ((UIAlertAction) -> Void)? = nil) {
 		let alert = UIViewController.generateAlert(for: title, message: message)
-		let defaultAction = UIAlertAction(title: String.Local.ok, style: .default, handler: completion)
+		let defaultAction = UIAlertAction(title: String.ZAP.ok, style: .default, handler: completion)
 		
 		alert.addAction(defaultAction)
 		self.present(alert, animated: true, completion: nil)
