@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Dashboard Tab Bar View Controller-->
         <scene sceneID="27I-bd-Yg0">
             <objects>
-                <tabBarController id="EYJ-Aj-ZZR" sceneMemberID="viewController">
+                <tabBarController id="EYJ-Aj-ZZR" customClass="DashboardTabBarViewController" customModule="Zap_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eCc-55-Df2" customClass="LocalizedTabBar" customModule="Zap_Challenge" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -36,7 +36,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hag-9f-XKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114" y="345"/>
+            <point key="canvasLocation" x="-18" y="343"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="KZZ-T0-2y5">
@@ -46,7 +46,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yl-mx-nBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="594" y="345"/>
+            <point key="canvasLocation" x="541" y="343"/>
         </scene>
     </scenes>
 </document>

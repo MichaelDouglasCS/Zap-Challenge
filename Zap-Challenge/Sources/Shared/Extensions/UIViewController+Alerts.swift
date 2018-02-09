@@ -17,18 +17,6 @@ import UIKit
 extension UIViewController {
 
 //**************************************************
-// MARK: - Properties
-//**************************************************
-
-	static let loading: UIAlertController = {
-		return UIViewController.generateAlert(for: String.Local.loading, message: String.Local.wait)
-	}()
-	
-	static let syncing: UIAlertController = {
-		return UIViewController.generateAlert(for: String.Local.syncing, message: String.Local.wait)
-	}()
-	
-//**************************************************
 // MARK: - Protected Methods
 //**************************************************
 
@@ -65,39 +53,4 @@ extension UIViewController {
 		
 		self.present(alert, animated: true, completion: nil)
 	}
-	
-	func showFieldAlert(title: String, message: Any, completion: ((String?) -> Void)? = nil) {
-		let alert = UIViewController.generateAlert(for: title, message: message)
-		let cancelAction = UIAlertAction(title: String.Local.cancel, style: .cancel, handler: nil)
-		let defaultAction = UIAlertAction(title: String.Local.ok, style: .default) { _ in
-			if let textField = alert.textFields?.first {
-				completion?(textField.text)
-			}
-		}
-		
-		alert.addTextField {
-			$0.placeholder = String.Local.typeHere
-		}
-		
-		alert.addAction(cancelAction)
-		alert.addAction(defaultAction)
-		self.present(alert, animated: true, completion: nil)
-	}
-	
-	func showLoadingAlert(completion: (() -> Void)? = nil) {
-		self.present(UIViewController.loading, animated: true, completion: completion)
-	}
-	
-	func hidesLoadingAlert(completion: (() -> Void)? = nil) {
-		UIViewController.loading.dismiss(animated: false, completion: completion)
-	}
-	
-	func showSyncingAlert(completion: (() -> Void)? = nil) {
-		self.present(UIViewController.syncing, animated: true, completion: completion)
-	}
-	
-	func hidesSyncingAlert(completion: (() -> Void)? = nil) {
-		UIViewController.syncing.dismiss(animated: false, completion: completion)
-	}
-
 }

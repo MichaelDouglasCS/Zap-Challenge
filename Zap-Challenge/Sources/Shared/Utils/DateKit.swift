@@ -313,7 +313,7 @@ public class DateRange : Comparable {
 	}
 	
 //**************************************************
-// MARK: - Constructors
+// MARK: - Initializers
 //**************************************************
 	
 	public init(start: Date, end: Date) {
@@ -337,11 +337,7 @@ public class DateRange : Comparable {
 		self.start = (now - components).startOfDay
 		self.end = now.endOfDay
 	}
-	
-//**************************************************
-// MARK: - Protected Methods
-//**************************************************
-	
+
 //**************************************************
 // MARK: - Exposed Methods
 //**************************************************

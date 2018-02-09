@@ -12,6 +12,15 @@
 		6149E147202B77AB00AD77F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6149E146202B77AB00AD77F9 /* Assets.xcassets */; };
 		6149E155202B77AC00AD77F9 /* Zap_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149E154202B77AC00AD77F9 /* Zap_ChallengeTests.swift */; };
 		6149E160202B77AC00AD77F9 /* Zap_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149E15F202B77AC00AD77F9 /* Zap_ChallengeUITests.swift */; };
+		6172D9E4202CB394004E3A11 /* TopGamesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9E3202CB394004E3A11 /* TopGamesProvider.swift */; };
+		6172D9E7202CB879004E3A11 /* ServerLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9E6202CB879004E3A11 /* ServerLogger.swift */; };
+		6172D9E9202CC23D004E3A11 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9E8202CC23D004E3A11 /* Game.swift */; };
+		6172D9EB202CC896004E3A11 /* GameRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9EA202CC896004E3A11 /* GameRank.swift */; };
+		6172D9ED202CD0F9004E3A11 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9EC202CD0F9004E3A11 /* Media.swift */; };
+		6172D9F0202CD462004E3A11 /* TopGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9EF202CD462004E3A11 /* TopGamesViewController.swift */; };
+		6172D9F2202CD474004E3A11 /* TopGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9F1202CD474004E3A11 /* TopGamesViewModel.swift */; };
+		61BC018D202D15DB0035F273 /* DashboardTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC018C202D15DB0035F273 /* DashboardTabBarViewController.swift */; };
+		61BC018F202D15ED0035F273 /* DashboardTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC018E202D15ED0035F273 /* DashboardTabBarViewModel.swift */; };
 		61DC8522202BDBF3007A7552 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8517202BDBF1007A7552 /* UIViewController+Alerts.swift */; };
 		61DC8524202BDBF3007A7552 /* XIBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8519202BDBF2007A7552 /* XIBDesignable.swift */; };
 		61DC8529202BDBF3007A7552 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC851E202BDBF2007A7552 /* String+Localized.swift */; };
@@ -24,19 +33,12 @@
 		61DC854A202C6D12007A7552 /* TopGames.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DC8549202C6D12007A7552 /* TopGames.storyboard */; };
 		61DC854C202C6D25007A7552 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DC854B202C6D25007A7552 /* Favorites.storyboard */; };
 		61DC854E202C6D4A007A7552 /* GameDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DC854D202C6D4A007A7552 /* GameDetails.storyboard */; };
-		61DC856C202C85B8007A7552 /* LocalizedBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8551202C85B4007A7552 /* LocalizedBarButton.swift */; };
-		61DC856F202C85B8007A7552 /* LocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8554202C85B4007A7552 /* LocalizedLabel.swift */; };
-		61DC8570202C85B8007A7552 /* LocalizedSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8555202C85B4007A7552 /* LocalizedSearchBar.swift */; };
-		61DC8571202C85B8007A7552 /* LocalizedNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8556202C85B5007A7552 /* LocalizedNavigationItem.swift */; };
-		61DC8572202C85B8007A7552 /* LocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8557202C85B5007A7552 /* LocalizedButton.swift */; };
-		61DC8573202C85B8007A7552 /* IBDesignableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8558202C85B5007A7552 /* IBDesignableClass.swift */; };
 		61DC8577202C85B8007A7552 /* LocalizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC855C202C85B5007A7552 /* LocalizedTabBar.swift */; };
 		61DC857C202C85B8007A7552 /* CircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8561202C85B6007A7552 /* CircularImage.swift */; };
-		61DC857D202C85B8007A7552 /* LocalizedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8562202C85B6007A7552 /* LocalizedTextField.swift */; };
 		61DC857E202C85B8007A7552 /* UIBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8563202C85B6007A7552 /* UIBox.swift */; };
-		61DC857F202C85B8007A7552 /* TopicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8564202C85B6007A7552 /* TopicButton.swift */; };
-		61DC8580202C85B8007A7552 /* LocalizedNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8565202C85B7007A7552 /* LocalizedNavigationBar.swift */; };
-		61DC8582202C85B8007A7552 /* LocalizedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8567202C85B7007A7552 /* LocalizedBarButtonItem.swift */; };
+		65E548C7E04BCE6FB011C4E7 /* Pods_Zap_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8764FBC9913D2D43F03E1C /* Pods_Zap_ChallengeTests.framework */; };
+		B943651F3294E49A899C4A87 /* Pods_Zap_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D13C8625DA75C42EFF8FFA6D /* Pods_Zap_ChallengeUITests.framework */; };
+		E9DC244C7147762DB304B39F /* Pods_Zap_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDBEE2A63113F2C47C12A6D /* Pods_Zap_Challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06C5C08BA18EDF0DC5DD9B28 /* Pods-Zap-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2A8764FBC9913D2D43F03E1C /* Pods_Zap_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zap_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B99D75F23B298DDF2B3916 /* Pods-Zap-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		6149E139202B77AB00AD77F9 /* Zap-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zap-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6149E13C202B77AB00AD77F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6149E144202B77AB00AD77F9 /* Zap_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zap_Challenge.xcdatamodel; sourceTree = "<group>"; };
@@ -68,6 +73,15 @@
 		6149E15B202B77AC00AD77F9 /* Zap-ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zap-ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6149E15F202B77AC00AD77F9 /* Zap_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zap_ChallengeUITests.swift; sourceTree = "<group>"; };
 		6149E161202B77AC00AD77F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6172D9E3202CB394004E3A11 /* TopGamesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesProvider.swift; sourceTree = "<group>"; };
+		6172D9E6202CB879004E3A11 /* ServerLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerLogger.swift; sourceTree = "<group>"; };
+		6172D9E8202CC23D004E3A11 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		6172D9EA202CC896004E3A11 /* GameRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRank.swift; sourceTree = "<group>"; };
+		6172D9EC202CD0F9004E3A11 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		6172D9EF202CD462004E3A11 /* TopGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesViewController.swift; sourceTree = "<group>"; };
+		6172D9F1202CD474004E3A11 /* TopGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesViewModel.swift; sourceTree = "<group>"; };
+		61BC018C202D15DB0035F273 /* DashboardTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarViewController.swift; sourceTree = "<group>"; };
+		61BC018E202D15ED0035F273 /* DashboardTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarViewModel.swift; sourceTree = "<group>"; };
 		61DC8517202BDBF1007A7552 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		61DC8519202BDBF2007A7552 /* XIBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIBDesignable.swift; sourceTree = "<group>"; };
 		61DC851E202BDBF2007A7552 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
@@ -81,19 +95,15 @@
 		61DC8549202C6D12007A7552 /* TopGames.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopGames.storyboard; sourceTree = "<group>"; };
 		61DC854B202C6D25007A7552 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		61DC854D202C6D4A007A7552 /* GameDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameDetails.storyboard; sourceTree = "<group>"; };
-		61DC8551202C85B4007A7552 /* LocalizedBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedBarButton.swift; sourceTree = "<group>"; };
-		61DC8554202C85B4007A7552 /* LocalizedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedLabel.swift; sourceTree = "<group>"; };
-		61DC8555202C85B4007A7552 /* LocalizedSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedSearchBar.swift; sourceTree = "<group>"; };
-		61DC8556202C85B5007A7552 /* LocalizedNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedNavigationItem.swift; sourceTree = "<group>"; };
-		61DC8557202C85B5007A7552 /* LocalizedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedButton.swift; sourceTree = "<group>"; };
-		61DC8558202C85B5007A7552 /* IBDesignableClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableClass.swift; sourceTree = "<group>"; };
 		61DC855C202C85B5007A7552 /* LocalizedTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedTabBar.swift; sourceTree = "<group>"; };
 		61DC8561202C85B6007A7552 /* CircularImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImage.swift; sourceTree = "<group>"; };
-		61DC8562202C85B6007A7552 /* LocalizedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedTextField.swift; sourceTree = "<group>"; };
 		61DC8563202C85B6007A7552 /* UIBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBox.swift; sourceTree = "<group>"; };
-		61DC8564202C85B6007A7552 /* TopicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicButton.swift; sourceTree = "<group>"; };
-		61DC8565202C85B7007A7552 /* LocalizedNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedNavigationBar.swift; sourceTree = "<group>"; };
-		61DC8567202C85B7007A7552 /* LocalizedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedBarButtonItem.swift; sourceTree = "<group>"; };
+		6768613A6B6C816C495B5EA9 /* Pods-Zap-ChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DDBEE2A63113F2C47C12A6D /* Pods_Zap_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zap_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F09500064DF701D427212E1 /* Pods-Zap-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeTests/Pods-Zap-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		B22CFFFAED20FBCF3103643E /* Pods-Zap-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		D13C8625DA75C42EFF8FFA6D /* Pods_Zap_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zap_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F67478350FCF518EDCEA3258 /* Pods-Zap-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeTests/Pods-Zap-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9DC244C7147762DB304B39F /* Pods_Zap_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E548C7E04BCE6FB011C4E7 /* Pods_Zap_ChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B943651F3294E49A899C4A87 /* Pods_Zap_ChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +141,8 @@
 				6149E153202B77AC00AD77F9 /* Zap-ChallengeTests */,
 				6149E15E202B77AC00AD77F9 /* Zap-ChallengeUITests */,
 				6149E13A202B77AB00AD77F9 /* Products */,
+				6EC276ADF214FAE0DFDB895D /* Pods */,
+				76BEAB6F9D13A88D443999E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,6 +181,66 @@
 				6149E161202B77AC00AD77F9 /* Info.plist */,
 			);
 			path = "Zap-ChallengeUITests";
+			sourceTree = "<group>";
+		};
+		6172D9E1202CB2EE004E3A11 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		6172D9E2202CB2F7004E3A11 /* GameDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameDetails;
+			sourceTree = "<group>";
+		};
+		6172D9E5202CB496004E3A11 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6172D9E3202CB394004E3A11 /* TopGamesProvider.swift */,
+				6172D9EA202CC896004E3A11 /* GameRank.swift */,
+				6172D9E8202CC23D004E3A11 /* Game.swift */,
+				6172D9EC202CD0F9004E3A11 /* Media.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6172D9EE202CD446004E3A11 /* TopGames */ = {
+			isa = PBXGroup;
+			children = (
+				6172D9EF202CD462004E3A11 /* TopGamesViewController.swift */,
+				6172D9F1202CD474004E3A11 /* TopGamesViewModel.swift */,
+			);
+			path = TopGames;
+			sourceTree = "<group>";
+		};
+		61BC018B202D15830035F273 /* DashboardTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				61BC018C202D15DB0035F273 /* DashboardTabBarViewController.swift */,
+				61BC018E202D15ED0035F273 /* DashboardTabBarViewModel.swift */,
+			);
+			path = DashboardTabBar;
+			sourceTree = "<group>";
+		};
+		61C5D0A8202CB2B6008286E3 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				61BC018B202D15830035F273 /* DashboardTabBar */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		61C5D0A9202CB2BC008286E3 /* TopGames */ = {
+			isa = PBXGroup;
+			children = (
+				6172D9E5202CB496004E3A11 /* Model */,
+				6172D9EE202CD446004E3A11 /* TopGames */,
+			);
+			path = TopGames;
 			sourceTree = "<group>";
 		};
 		61DC84F7202B8AA2007A7552 /* Resources */ = {
@@ -229,6 +304,10 @@
 		61DC84FD202BD502007A7552 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				61C5D0A8202CB2B6008286E3 /* Dashboard */,
+				61C5D0A9202CB2BC008286E3 /* TopGames */,
+				6172D9E1202CB2EE004E3A11 /* Favorites */,
+				6172D9E2202CB2F7004E3A11 /* GameDetails */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -283,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				61DC8541202BF025007A7552 /* ServerRequest.swift */,
+				6172D9E6202CB879004E3A11 /* ServerLogger.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -291,20 +371,33 @@
 			isa = PBXGroup;
 			children = (
 				61DC8561202C85B6007A7552 /* CircularImage.swift */,
-				61DC8558202C85B5007A7552 /* IBDesignableClass.swift */,
-				61DC8551202C85B4007A7552 /* LocalizedBarButton.swift */,
-				61DC8567202C85B7007A7552 /* LocalizedBarButtonItem.swift */,
-				61DC8557202C85B5007A7552 /* LocalizedButton.swift */,
-				61DC8554202C85B4007A7552 /* LocalizedLabel.swift */,
-				61DC8565202C85B7007A7552 /* LocalizedNavigationBar.swift */,
-				61DC8556202C85B5007A7552 /* LocalizedNavigationItem.swift */,
-				61DC8555202C85B4007A7552 /* LocalizedSearchBar.swift */,
 				61DC855C202C85B5007A7552 /* LocalizedTabBar.swift */,
-				61DC8562202C85B6007A7552 /* LocalizedTextField.swift */,
-				61DC8564202C85B6007A7552 /* TopicButton.swift */,
 				61DC8563202C85B6007A7552 /* UIBox.swift */,
 			);
 			path = Appearance;
+			sourceTree = "<group>";
+		};
+		6EC276ADF214FAE0DFDB895D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33B99D75F23B298DDF2B3916 /* Pods-Zap-Challenge.debug.xcconfig */,
+				B22CFFFAED20FBCF3103643E /* Pods-Zap-Challenge.release.xcconfig */,
+				F67478350FCF518EDCEA3258 /* Pods-Zap-ChallengeTests.debug.xcconfig */,
+				9F09500064DF701D427212E1 /* Pods-Zap-ChallengeTests.release.xcconfig */,
+				6768613A6B6C816C495B5EA9 /* Pods-Zap-ChallengeUITests.debug.xcconfig */,
+				06C5C08BA18EDF0DC5DD9B28 /* Pods-Zap-ChallengeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		76BEAB6F9D13A88D443999E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DDBEE2A63113F2C47C12A6D /* Pods_Zap_Challenge.framework */,
+				2A8764FBC9913D2D43F03E1C /* Pods_Zap_ChallengeTests.framework */,
+				D13C8625DA75C42EFF8FFA6D /* Pods_Zap_ChallengeUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,9 +407,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6149E164202B77AC00AD77F9 /* Build configuration list for PBXNativeTarget "Zap-Challenge" */;
 			buildPhases = (
+				59FACCC4F0EFBEC6342FC95E /* [CP] Check Pods Manifest.lock */,
 				6149E135202B77AB00AD77F9 /* Sources */,
 				6149E136202B77AB00AD77F9 /* Frameworks */,
 				6149E137202B77AB00AD77F9 /* Resources */,
+				92BD0B784C2334375BDFBAB1 /* [CP] Embed Pods Frameworks */,
+				00ACA1243D862CB0FF01D055 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,9 +427,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6149E167202B77AC00AD77F9 /* Build configuration list for PBXNativeTarget "Zap-ChallengeTests" */;
 			buildPhases = (
+				5525351246386611F99F1E49 /* [CP] Check Pods Manifest.lock */,
 				6149E14C202B77AC00AD77F9 /* Sources */,
 				6149E14D202B77AC00AD77F9 /* Frameworks */,
 				6149E14E202B77AC00AD77F9 /* Resources */,
+				FB636BFEB0C28032A16EE93F /* [CP] Embed Pods Frameworks */,
+				69518F437AA2D6CF716B9D70 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -349,9 +448,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6149E16A202B77AC00AD77F9 /* Build configuration list for PBXNativeTarget "Zap-ChallengeUITests" */;
 			buildPhases = (
+				5857D83ADA2F304D0CA41EF3 /* [CP] Check Pods Manifest.lock */,
 				6149E157202B77AC00AD77F9 /* Sources */,
 				6149E158202B77AC00AD77F9 /* Frameworks */,
 				6149E159202B77AC00AD77F9 /* Resources */,
+				0665EAAC57E66D70493EBE87 /* [CP] Embed Pods Frameworks */,
+				5AE376F2297B771CD139BC1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -440,32 +542,187 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00ACA1243D862CB0FF01D055 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0665EAAC57E66D70493EBE87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5525351246386611F99F1E49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zap-ChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5857D83ADA2F304D0CA41EF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zap-ChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59FACCC4F0EFBEC6342FC95E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zap-Challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AE376F2297B771CD139BC1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69518F437AA2D6CF716B9D70 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-ChallengeTests/Pods-Zap-ChallengeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92BD0B784C2334375BDFBAB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB636BFEB0C28032A16EE93F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-ChallengeTests/Pods-Zap-ChallengeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6149E135202B77AB00AD77F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61DC8571202C85B8007A7552 /* LocalizedNavigationItem.swift in Sources */,
+				6172D9F0202CD462004E3A11 /* TopGamesViewController.swift in Sources */,
+				6172D9E4202CB394004E3A11 /* TopGamesProvider.swift in Sources */,
 				61DC852B202BDBF3007A7552 /* UIColor+StyleKit.swift in Sources */,
+				6172D9E7202CB879004E3A11 /* ServerLogger.swift in Sources */,
+				6172D9F2202CD474004E3A11 /* TopGamesViewModel.swift in Sources */,
 				61DC853D202BE5B2007A7552 /* DateKit.swift in Sources */,
-				61DC8572202C85B8007A7552 /* LocalizedButton.swift in Sources */,
-				61DC8580202C85B8007A7552 /* LocalizedNavigationBar.swift in Sources */,
+				6172D9EB202CC896004E3A11 /* GameRank.swift in Sources */,
 				61DC857C202C85B8007A7552 /* CircularImage.swift in Sources */,
+				6172D9ED202CD0F9004E3A11 /* Media.swift in Sources */,
+				61BC018F202D15ED0035F273 /* DashboardTabBarViewModel.swift in Sources */,
 				61DC8577202C85B8007A7552 /* LocalizedTabBar.swift in Sources */,
-				61DC8582202C85B8007A7552 /* LocalizedBarButtonItem.swift in Sources */,
-				61DC856C202C85B8007A7552 /* LocalizedBarButton.swift in Sources */,
 				6149E145202B77AB00AD77F9 /* Zap_Challenge.xcdatamodeld in Sources */,
 				61DC8529202BDBF3007A7552 /* String+Localized.swift in Sources */,
-				61DC857F202C85B8007A7552 /* TopicButton.swift in Sources */,
-				61DC857D202C85B8007A7552 /* LocalizedTextField.swift in Sources */,
 				61DC857E202C85B8007A7552 /* UIBox.swift in Sources */,
-				61DC8570202C85B8007A7552 /* LocalizedSearchBar.swift in Sources */,
-				61DC856F202C85B8007A7552 /* LocalizedLabel.swift in Sources */,
+				6172D9E9202CC23D004E3A11 /* Game.swift in Sources */,
 				61DC8524202BDBF3007A7552 /* XIBDesignable.swift in Sources */,
+				61BC018D202D15DB0035F273 /* DashboardTabBarViewController.swift in Sources */,
 				61DC8522202BDBF3007A7552 /* UIViewController+Alerts.swift in Sources */,
 				61DC8542202BF025007A7552 /* ServerRequest.swift in Sources */,
 				6149E13D202B77AB00AD77F9 /* AppDelegate.swift in Sources */,
-				61DC8573202C85B8007A7552 /* IBDesignableClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +881,7 @@
 		};
 		6149E165202B77AC00AD77F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33B99D75F23B298DDF2B3916 /* Pods-Zap-Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -639,6 +897,7 @@
 		};
 		6149E166202B77AC00AD77F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B22CFFFAED20FBCF3103643E /* Pods-Zap-Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -654,6 +913,7 @@
 		};
 		6149E168202B77AC00AD77F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F67478350FCF518EDCEA3258 /* Pods-Zap-ChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -671,6 +931,7 @@
 		};
 		6149E169202B77AC00AD77F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F09500064DF701D427212E1 /* Pods-Zap-ChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -688,6 +949,7 @@
 		};
 		6149E16B202B77AC00AD77F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6768613A6B6C816C495B5EA9 /* Pods-Zap-ChallengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -704,6 +966,7 @@
 		};
 		6149E16C202B77AC00AD77F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06C5C08BA18EDF0DC5DD9B28 /* Pods-Zap-ChallengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

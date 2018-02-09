@@ -1,21 +1,23 @@
 //*************************
-// Labels
+// Top Games
 //*************************
 
-"LB_TOPGAMES" = "Melhores Jogos";
+"ST_TOPGAMES" = "Melhores Jogos";
+"ST_FAVORITES" = "Favoritos";
 
 //*************************
-// Strings
+// Alerts
 //*************************
 
-"ST_PRIORITY" = "Priority";
+"ST_OK" = "OK";
 
 //*************************
-// Messages
+// Network
 //*************************
 
-"MSG_UNKNOWN" = "Unknown behavior\nPlease take a screenshot (Home button + Power button) and contact the support team";
-"MSG_NO_CONNECTION" = "No internet connection";
-"MSG_SERVER_ERROR" = "Untreated server error. Please try again later";
+"ST_SERVICE_UNAVAILABLE" = "Serviço Indisponível. Por favor, tente novamente mais tarde";
+"ST_SERVER_ERROR" = "Erro no servidor não tratado. Por favor, tente novamente mais tarde";
+
+
 
 

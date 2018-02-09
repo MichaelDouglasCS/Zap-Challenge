@@ -47,10 +47,6 @@ class UIBox: UIView {
 		let path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.cornerRadius)
 		return path
 	}
-	
-//**************************************************
-// MARK: - Constructors
-//**************************************************
 
 //**************************************************
 // MARK: - Protected Methods
