@@ -30,11 +30,14 @@ class DashboardTabBarViewController: UITabBarController {
   //*************************************************
   
   private func injectViewModels() {
-    self.viewControllers?.forEach({ (viewController) in
-      let firstViewController = (viewController as? UINavigationController)?.viewControllers.first
+    self.viewControllers?.forEach({ (navigationViewController) in
+      let firstViewController = (navigationViewController as? UINavigationController)?.viewControllers.first
       
       if let topGamesViewController = firstViewController as? TopGamesViewController {
         topGamesViewController.viewModel = TopGamesViewModel(provider: TopGamesProvider())
+        navigationViewController.tabBarItem.title = String.ZAP.topGames
+      } else {
+        navigationViewController.tabBarItem.title = String.ZAP.favorites
       }
     })
   }

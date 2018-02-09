@@ -22,6 +22,7 @@ extension String {
 		// Top Games
 		//*************************
 		static var topGames: String { return "ST_TOPGAMES".localized }
+    static var favorites: String { return "ST_FAVORITES".localized }
     
     //*************************
     // Alerts

@@ -13,7 +13,7 @@
         <scene sceneID="27I-bd-Yg0">
             <objects>
                 <tabBarController id="EYJ-Aj-ZZR" customClass="DashboardTabBarViewController" customModule="Zap_Challenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eCc-55-Df2" customClass="LocalizedTabBar" customModule="Zap_Challenge" customModuleProvider="target">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eCc-55-Df2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
