@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ST_FAVORITES-->
+        <!--Title-->
         <scene sceneID="9WR-zb-dJx">
             <objects>
                 <navigationController id="aLU-V8-2dh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ST_FAVORITES" image="icn_favorites" id="Os0-Ge-MA2"/>
+                    <tabBarItem key="tabBarItem" title="Title" image="icn_favorites" selectedImage="icn_favorites_filled" id="Os0-Ge-MA2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zt5-MV-Fbp">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -47,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icn_favorites" width="28" height="26"/>
+        <image name="icn_favorites" width="28" height="25"/>
+        <image name="icn_favorites_filled" width="28" height="24"/>
     </resources>
 </document>
