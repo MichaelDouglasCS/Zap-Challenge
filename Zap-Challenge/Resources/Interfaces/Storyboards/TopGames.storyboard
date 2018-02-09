@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y78-Gh-Pw9">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,10 +16,10 @@
                 <navigationController id="y78-Gh-Pw9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="ST_TOPGAMES" image="icn_joystick" id="rDu-OR-eK2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="BsB-4I-DHC">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="BsB-4I-DHC">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.37647058820000001" green="0.20392156859999999" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.3921568627" green="0.25490196079999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -40,24 +40,69 @@
             <objects>
                 <viewController id="Ifl-Fv-spB" customClass="TopGamesViewController" customModule="Zap_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O1o-IY-yoO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pXq-Z0-9ZY">
-                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-u6-yiJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7zs-tu-69F">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="54" height="54"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Teste" id="p56-ah-1Jo">
+                                        <rect key="frame" x="0.0" y="54" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.37647058820000001" green="0.20392156859999999" blue="0.88632812500000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SearchBarView" id="Hvu-4H-4f7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="qqG-B2-NYa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                            <color key="barTintColor" red="0.3921568627" green="0.25490196079999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="Ifl-Fv-spB" id="nwk-QV-WWO"/>
+                                            </connections>
+                                        </searchBar>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="qqG-B2-NYa" secondAttribute="trailing" id="GKV-U8-6gf"/>
+                                        <constraint firstAttribute="bottom" secondItem="qqG-B2-NYa" secondAttribute="bottom" id="Mh4-A1-E4K"/>
+                                        <constraint firstItem="qqG-B2-NYa" firstAttribute="leading" secondItem="Hvu-4H-4f7" secondAttribute="leading" id="YSm-5I-xOD"/>
+                                        <constraint firstItem="qqG-B2-NYa" firstAttribute="top" secondItem="Hvu-4H-4f7" secondAttribute="top" id="llK-wi-aa6"/>
+                                    </constraints>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ifl-Fv-spB" id="sgZ-tu-bqX"/>
+                                    <outlet property="delegate" destination="Ifl-Fv-spB" id="WEa-mJ-edN"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="pXq-Z0-9ZY" firstAttribute="leading" secondItem="8Ae-xX-I7R" secondAttribute="leading" id="190-2r-AHr"/>
-                            <constraint firstItem="8Ae-xX-I7R" firstAttribute="bottom" secondItem="pXq-Z0-9ZY" secondAttribute="bottom" id="GuW-AM-vDk"/>
-                            <constraint firstItem="pXq-Z0-9ZY" firstAttribute="top" secondItem="8Ae-xX-I7R" secondAttribute="top" id="Sqr-Au-Nk8"/>
-                            <constraint firstItem="8Ae-xX-I7R" firstAttribute="trailing" secondItem="pXq-Z0-9ZY" secondAttribute="trailing" id="pmT-Sa-ZHg"/>
+                            <constraint firstItem="zaO-u6-yiJ" firstAttribute="top" secondItem="8Ae-xX-I7R" secondAttribute="top" id="0nf-Hk-3Wo"/>
+                            <constraint firstItem="8Ae-xX-I7R" firstAttribute="trailing" secondItem="zaO-u6-yiJ" secondAttribute="trailing" id="GkE-Qi-KTu"/>
+                            <constraint firstItem="zaO-u6-yiJ" firstAttribute="leading" secondItem="8Ae-xX-I7R" secondAttribute="leading" id="qes-Ob-ozd"/>
+                            <constraint firstItem="8Ae-xX-I7R" firstAttribute="bottom" secondItem="zaO-u6-yiJ" secondAttribute="bottom" id="rV5-UT-6Qc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Ae-xX-I7R"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="6Ln-Zl-nhF"/>
+                    <connections>
+                        <outlet property="collectionView" destination="zaO-u6-yiJ" id="yfg-YA-gZO"/>
+                        <outlet property="searchBar" destination="qqG-B2-NYa" id="u2b-E0-zvN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tck-md-q9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

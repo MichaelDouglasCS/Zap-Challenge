@@ -38,4 +38,17 @@ public class TopGamesViewModel: NSObject {
       completion(topGames != nil, error ?? "")
     }
   }
+  
+  public func numberOfSections() -> Int {
+    return 1
+  }
+  
+  public func numberOfItems(inSection section: Int) -> Int {
+    switch section {
+    case 0:
+      return self.games.count
+    default:
+      return 0
+    }
+  }
 }
