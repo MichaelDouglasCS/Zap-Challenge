@@ -55,6 +55,11 @@ public class TopGamesViewModel: NSObject {
   }
   
   public func cellViewModel(at indexPath: IndexPath) -> Any {
-    return 0
+    switch indexPath.section {
+    case 0:
+      return TopGameCollectionViewModel(game: self.games[indexPath.row].game)
+    default:
+      return 0
+    }
   }
 }

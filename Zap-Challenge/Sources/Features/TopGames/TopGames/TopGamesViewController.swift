@@ -20,6 +20,7 @@ class TopGamesViewController: UIViewController {
   // MARK: - Properties
   //*************************************************
   
+  @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var collectionView: UICollectionView!
   
   private let refreshControl = UIRefreshControl()
@@ -50,7 +51,7 @@ class TopGamesViewController: UIViewController {
   
   private func setupCollectionView() {
     // Configure Refresh Control
-    self.refreshControl.tintColor = .white
+    self.refreshControl.tintColor = UIColor.ZAP.purple
     self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
     
     //Configure CollectionView
@@ -102,19 +103,19 @@ extension TopGamesViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Teste", for: indexPath)
-    return cell
-  }
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      viewForSupplementaryElementOfKind kind: String,
-                      at indexPath: IndexPath) -> UICollectionReusableView {
+    let cellViewModel = self.viewModel.cellViewModel(at: indexPath)
     
-    if kind == UICollectionElementKindSectionHeader {
-      let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SearchBarView", for: indexPath)
-      return view
+    switch cellViewModel {
+    case is TopGameCollectionViewModel:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopGameCollectionViewModel.cellNibName,
+                                                    for: indexPath) as! TopGameCollectionViewCell
+      cell.viewModel = cellViewModel as! TopGameCollectionViewModel
+      cell.setup()
+      
+      return cell
+    default:
+      return UICollectionViewCell()
     }
-    return UICollectionReusableView()
   }
 }
 

@@ -1,0 +1,64 @@
+//
+//  TopGameCollectionViewCell.swift
+//  Zap-Challenge
+//
+//  Created by Michael Douglas on 10/02/18.
+//  Copyright © 2018 Michael Douglas. All rights reserved.
+//
+
+import UIKit
+
+//**********************************************************************************************************
+//
+// MARK: - Class -
+//
+//**********************************************************************************************************
+
+class TopGameCollectionViewCell: UICollectionViewCell {
+  
+  //*************************************************
+  // MARK: - Properties
+  //*************************************************
+  
+  @IBOutlet weak var backgroundBlurView: UIImageView!
+  @IBOutlet weak var imageView: CircularImage!
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var favoriteButton: UIButton!
+  
+  var viewModel: TopGameCollectionViewModel!
+  
+  //*************************************************
+  // MARK: - Exposed Methods
+  //*************************************************
+  
+  func setup() {
+    
+    if let url = self.viewModel.imageURL {
+      
+      self.backgroundBlurView.image = UIImage.ZAP.joystick
+      self.imageView.downloadImage(from: url,
+                                   withPlaceholder: UIImage.ZAP.joystick,
+                                   completion: { (_) in
+                                    self.backgroundBlurView.image = self.imageView.image
+      })
+    }
+    
+    self.nameLabel.text = self.viewModel.name
+  }
+  
+  @IBAction func didTouchFavorite(_ sender: UIButton) {
+    self.favoriteButton.isSelected = !self.favoriteButton.isSelected
+  }
+  
+  //*************************************************
+  // MARK: - Overridden Public Methods
+  //*************************************************
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+  }
+}
