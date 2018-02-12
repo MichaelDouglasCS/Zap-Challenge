@@ -82,8 +82,9 @@
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qe2-Ss-xeY" userLabel="BackgroundView" customClass="UIBox" customModule="Zap_Challenge" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="157" height="240"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_template" translatesAutoresizingMaskIntoConstraints="NO" id="upi-Gc-z75" userLabel="BackgroundBlurView">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="upi-Gc-z75" userLabel="BackgroundBlurView">
                                                             <rect key="frame" x="0.0" y="0.0" width="157" height="240"/>
+                                                            <color key="tintColor" red="0.37647058820000001" green="0.20392156859999999" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         </imageView>
                                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZT-fe-bKg">
                                                             <rect key="frame" x="0.0" y="0.0" width="157" height="240"/>
@@ -93,8 +94,9 @@
                                                             </view>
                                                             <blurEffect style="light"/>
                                                         </visualEffectView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_template" translatesAutoresizingMaskIntoConstraints="NO" id="1s1-7U-hQj" userLabel="Image View" customClass="CircularImage" customModule="Zap_Challenge" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1s1-7U-hQj" userLabel="Image View" customClass="CircularImage" customModule="Zap_Challenge" customModuleProvider="target">
                                                             <rect key="frame" x="10" y="10" width="137" height="180"/>
+                                                            <color key="tintColor" red="0.37647058820000001" green="0.20392156859999999" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="5"/>
@@ -207,6 +209,5 @@
         <image name="btn_favorites" width="36" height="32"/>
         <image name="btn_favorites_filled" width="36" height="32"/>
         <image name="icn_joystick" width="32" height="22"/>
-        <image name="icn_template" width="272" height="380"/>
     </resources>
 </document>

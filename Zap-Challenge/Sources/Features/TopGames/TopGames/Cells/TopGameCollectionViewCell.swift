@@ -35,11 +35,14 @@ class TopGameCollectionViewCell: UICollectionViewCell {
     
     if let url = self.viewModel.imageURL {
       
-      self.backgroundBlurView.image = UIImage.ZAP.joystick
+      self.backgroundBlurView.image = UIImage.ZAP.joystickPlaceholder
+      self.imageView.contentMode = .scaleAspectFit
+      
       self.imageView.downloadImage(from: url,
-                                   withPlaceholder: UIImage.ZAP.joystick,
+                                   withPlaceholder: UIImage.ZAP.joystickPlaceholder,
                                    completion: { (_) in
                                     self.backgroundBlurView.image = self.imageView.image
+                                    self.imageView.contentMode = .scaleAspectFill
       })
     }
     
