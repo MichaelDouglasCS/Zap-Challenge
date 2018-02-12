@@ -15,7 +15,6 @@ public class TopGamesViewModel: NSObject {
   //*************************************************
   
   public var provider: TopGamesProvider
-  
   public let headerTitle: String = String.ZAP.topGames
   public var games: [GameRank] = []
   
@@ -31,6 +30,8 @@ public class TopGamesViewModel: NSObject {
   // MARK: - Exposed Methods
   //*************************************************
   
+  // Load Data
+  
   public func loadTopGames(completion: @escaping (_ isSuccess: Bool, _ localizedError: String) -> Void) {
     self.provider.loadTopGames(with: 20, from: 0) { (topGames, error) in
       if let topGames = topGames {
@@ -41,25 +42,36 @@ public class TopGamesViewModel: NSObject {
     }
   }
   
+  // UICollectionView
+  
   public func numberOfSections() -> Int {
     return 1
   }
   
-  public func numberOfItems(inSection section: Int) -> Int {
-    switch section {
-    case 0:
-      return self.games.count
-    default:
-      return 0
-    }
+  public func numberOfItems() -> Int {
+    return self.games.count
   }
   
   public func cellViewModel(at indexPath: IndexPath) -> Any {
-    switch indexPath.section {
-    case 0:
-      return TopGameCollectionViewModel(game: self.games[indexPath.row].game)
-    default:
-      return 0
-    }
+    return TopGameCollectionViewModel(game: self.games[indexPath.row].game)
+  }
+  
+  public func insetForSection() -> UIEdgeInsets {
+    return UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+  }
+  
+  public func minimumLineSpacingForSection() -> CGFloat {
+    return CGFloat(10.0)
+  }
+  
+  public func minimumInteritemSpacingForSection() -> CGFloat {
+    return CGFloat(10.0)
+  }
+  
+  public func sizeForItem(fromView view: UIView) -> CGSize {
+    let padding = self.insetForSection().left + self.insetForSection().right + self.minimumInteritemSpacingForSection()
+    let width = (view.bounds.size.width - padding) / 2
+    let height = width * 1.5 //Ratio
+    return CGSize(width: width, height: height)
   }
 }

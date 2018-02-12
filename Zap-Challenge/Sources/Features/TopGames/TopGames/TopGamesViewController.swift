@@ -99,7 +99,7 @@ extension TopGamesViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return self.viewModel.numberOfItems(inSection: section)
+    return self.viewModel.numberOfItems()
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -121,10 +121,25 @@ extension TopGamesViewController: UICollectionViewDataSource {
 
 //**********************************************************************************************************
 //
-// MARK: - Extension - UICollectionViewDelegate
+// MARK: - Extension - UICollectionViewDelegateFlowLayout
 //
 //**********************************************************************************************************
 
-extension TopGamesViewController: UICollectionViewDelegate {
+extension TopGamesViewController: UICollectionViewDelegateFlowLayout {
   
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    return self.viewModel.insetForSection()
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return self.viewModel.minimumLineSpacingForSection()
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    return self.viewModel.minimumInteritemSpacingForSection()
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return self.viewModel.sizeForItem(fromView: self.view)
+  }
 }
