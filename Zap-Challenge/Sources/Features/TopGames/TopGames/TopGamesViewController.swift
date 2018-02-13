@@ -53,6 +53,9 @@ class TopGamesViewController: UIViewController {
     // Configure Refresh Control
     self.refreshControl.tintColor = UIColor.ZAP.purple
     self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
+    self.collectionView.register(LoadingFooterCollectionViewModel.viewNib,
+                                 forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
+                                 withReuseIdentifier: LoadingFooterCollectionViewModel.reuseIdentifier)
     
     //Configure CollectionView
     self.collectionView.scrollsToTop = true
@@ -74,8 +77,10 @@ class TopGamesViewController: UIViewController {
     }
   }
   
-  private func loadData(completion: @escaping ()->()) {
+  private func loadData(completion: @escaping () -> ()) {
+    self.viewModel.isLoading = true
     self.viewModel.loadTopGames { (isSuccess, localizedError) in
+      self.viewModel.isLoading = false
       completion()
       if isSuccess {
         self.collectionView.reloadSections([0])
@@ -117,6 +122,19 @@ extension TopGamesViewController: UICollectionViewDataSource {
       return UICollectionViewCell()
     }
   }
+  
+  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    let lastRowItem = self.collectionView.numberOfItems(inSection: indexPath.section) - 1
+    
+    if lastRowItem == indexPath.row {
+      self.viewModel.footerView?.startAnimate()
+    }
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    let view = self.viewModel.collectionView(self.collectionView, viewForSupplementaryElementOfKind: kind, at: indexPath)
+    return view
+  }
 }
 
 //**********************************************************************************************************
@@ -142,4 +160,21 @@ extension TopGamesViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return self.viewModel.sizeForItem(fromView: self.view)
   }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+    return self.viewModel.referenceSizeForFooter(fromView: self.view)
+  }
+}
+
+//**********************************************************************************************************
+//
+// MARK: - Extension - UICollectionViewDelegate
+//
+//**********************************************************************************************************
+
+extension TopGamesViewController: UICollectionViewDelegate {
+  
+  
+  
+  
 }

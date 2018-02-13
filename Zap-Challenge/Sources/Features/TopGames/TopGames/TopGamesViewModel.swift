@@ -15,8 +15,12 @@ public class TopGamesViewModel: NSObject {
   //*************************************************
   
   public var provider: TopGamesProvider
+  
   public let headerTitle: String = String.ZAP.topGames
+  public var isLoading: Bool = false
   public var games: [GameRank] = []
+  
+  var footerView: LoadingFooterCollectionView?
   
   //*************************************************
   // MARK: - Initializers
@@ -42,7 +46,7 @@ public class TopGamesViewModel: NSObject {
     }
   }
   
-  // UICollectionView
+  // UICollectionView - Items
   
   public func numberOfSections() -> Int {
     return 1
@@ -73,5 +77,24 @@ public class TopGamesViewModel: NSObject {
     let width = (view.bounds.size.width - padding) / 2
     let height = width * 1.5 //Ratio
     return CGSize(width: width, height: height)
+  }
+  
+  // UICollectionView - FooterView
+  
+  public func referenceSizeForFooter(fromView view: UIView) -> CGSize {
+    return self.isLoading ? .zero : CGSize(width: view.bounds.size.width, height: 40.0)
+  }
+  
+  public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    
+    if let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LoadingFooterCollectionViewModel.reuseIdentifier, for: indexPath) as? LoadingFooterCollectionView, kind == UICollectionElementKindSectionFooter {
+      self.footerView = footerView
+      self.footerView?.backgroundColor = .clear
+      self.footerView?.startAnimate()
+      return self.footerView!
+    } else {
+      let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LoadingFooterCollectionViewModel.reuseIdentifier, for: indexPath)
+      return headerView
+    }
   }
 }
