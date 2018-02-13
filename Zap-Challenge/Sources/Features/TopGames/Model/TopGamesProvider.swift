@@ -16,6 +16,22 @@ import SwiftyJSON
 //**********************************************************************************************************
 
 public class TopGamesProvider: NSObject {
+  
+  //*************************************************
+  // MARK: - Exposed Methods
+  //*************************************************
+  
+  private func verifyGames(_ gamesRank: [GameRank]) {
+    do {
+      if let persistedGames = try PersistenceService.shared.context.fetch(GameRankMO.fetchRequest()) as? [GameRankMO] {
+        gamesRank.forEach({ (gameRank) in
+          if persistedGames.contains(where: { $0.game?.id == Int32(gameRank.game?.id ?? 0) }) {
+            gameRank.isFavorite = true
+          }
+        })
+      }
+    } catch { }
+  }
  
   //*************************************************
   // MARK: - Exposed Methods
@@ -30,7 +46,7 @@ public class TopGamesProvider: NSObject {
       switch response {
       case .success:
         var topGames: [GameRank] = []
-        
+
         if let total = json["_total"].int {
           self.saveTopGamesTotal(total)
         }
@@ -41,6 +57,7 @@ public class TopGamesProvider: NSObject {
           }
         })
         
+        self.verifyGames(topGames)
         completion(topGames, nil)
       case .error:
         completion(nil, response.localizedError)
