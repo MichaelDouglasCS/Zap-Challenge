@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import CoreData
 
 //**********************************************************************************************************
 //
@@ -43,5 +44,25 @@ public class Media: Mappable {
     self.medium   <- map["medium"]
     self.small    <- map["small"]
     self.template <- map["template"]
+  }
+}
+
+//**********************************************************************************************************
+//
+// MARK: - Extension - PersistenceServiceProtocol
+//
+//**********************************************************************************************************
+
+extension Media: PersistenceServiceProtocol {
+  
+  public func toNSManagedObject() -> NSManagedObject {
+    let mediaMO = MediaMO(context: PersistenceService.shared.container.viewContext)
+    
+    mediaMO.large = self.large
+    mediaMO.medium = self.medium
+    mediaMO.small = self.small
+    mediaMO.template = self.template
+    
+    return mediaMO
   }
 }

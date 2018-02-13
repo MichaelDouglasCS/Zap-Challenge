@@ -22,21 +22,21 @@ public class TopGameCollectionViewModel: NSObject {
   
   public static let cellNibName: String = "TopGameCollectionViewCell"
   
-  private var game: Game?
+  private var gameRank: GameRank?
   
   public var name: String? {
-    return self.game?.name
+    return self.gameRank?.game?.name
   }
   
   public var imageURL: URL? {
-    return URL(string: self.game?.box?.large ?? "")
+    return URL(string: self.gameRank?.game?.box?.large ?? "")
   }
   
   //*************************************************
   // MARK: - Initializers
   //*************************************************
   
-  public init(game: Game?) {
-    self.game = game
+  public init(gameRank: GameRank?) {
+    self.gameRank = gameRank
   }
 }

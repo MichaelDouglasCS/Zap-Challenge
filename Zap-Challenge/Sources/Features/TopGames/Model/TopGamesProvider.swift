@@ -21,6 +21,7 @@ public class TopGamesProvider: NSObject {
   // MARK: - Exposed Methods
   //*************************************************
   
+  // Load Data
   public func loadTopGames(with limit: Int,
                            from offset: Int,
                            completion: @escaping (_ topGames: [GameRank]?, _ localizedError: String?) -> Void) {
@@ -47,11 +48,23 @@ public class TopGamesProvider: NSObject {
     }
   }
   
+  // Total of Top Games
   public func saveTopGamesTotal(_ total: Int) {
     KeychainService.shared.setValue(total.toString(), forKey: "TopGamesTotal")
   }
   
   public func getTopGamesTotal() -> Int {
     return KeychainService.shared.getValue(forKey: "TopGamesTotal")?.toInt() ?? 0
+  }
+  
+  // Favorite Games
+  public func addFavoriteGame(_ gameRank: GameRank) {
+    _ = gameRank.toNSManagedObject()
+    PersistenceService.shared.saveContext()
+  }
+  
+  public func removeFavoriteGame(_ gameRank: GameRank) {
+    _ = gameRank.toNSManagedObject()
+    PersistenceService.shared.saveContext()
   }
 }

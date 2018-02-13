@@ -76,11 +76,11 @@ class TopGamesViewController: UIViewController {
       completion()
       if isSuccess {
         
-        if self.viewModel.games.count > self.collectionView.numberOfItems(inSection: 0) {
+        if self.viewModel.gamesRank.count > self.collectionView.numberOfItems(inSection: 0) {
           // Insert New
           var indexPaths: [IndexPath] = []
           
-          for (index, gameRank) in self.viewModel.games.enumerated() {
+          for (index, gameRank) in self.viewModel.gamesRank.enumerated() {
             if gameRank.isNew {
               indexPaths.append(IndexPath(item: index, section: 0))
             }
@@ -123,7 +123,7 @@ extension TopGamesViewController: UICollectionViewDataSource {
       cell.viewModel = cellViewModel as! TopGameCollectionViewModel
       cell.setup()
       
-      self.viewModel.games[indexPath.row].isNew = false
+      self.viewModel.gamesRank[indexPath.row].isNew = false
       
       return cell
     default:
@@ -184,4 +184,7 @@ extension TopGamesViewController: UICollectionViewDelegateFlowLayout {
 
 extension TopGamesViewController: UICollectionViewDelegate {
   
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    print("SELECIONOU: \(self.viewModel.gamesRank[indexPath.row].game?.name ?? "")")
+  }
 }

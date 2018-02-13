@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GameMO" representedClassName="GameMO" syncable="YES" codeGenerationType="class">
+        <attribute name="giantbombID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="locale" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localizedName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="popularity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="box" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="MediaMO" inverseName="boxMedia" inverseEntity="MediaMO" syncable="YES"/>
+        <relationship name="logo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="MediaMO" inverseName="logoMedia" inverseEntity="MediaMO" syncable="YES"/>
+        <relationship name="rank" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GameRankMO" inverseName="game" inverseEntity="GameRankMO" syncable="YES"/>
+    </entity>
+    <entity name="GameRankMO" representedClassName="GameRankMO" syncable="YES" codeGenerationType="class">
+        <attribute name="channels" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isFavorite" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isNew" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="viewers" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="game" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="GameMO" inverseName="rank" inverseEntity="GameMO" syncable="YES"/>
+    </entity>
+    <entity name="MediaMO" representedClassName="MediaMO" syncable="YES" codeGenerationType="class">
+        <attribute name="large" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medium" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="small" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="template" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="boxMedia" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GameMO" inverseName="box" inverseEntity="GameMO" syncable="YES"/>
+        <relationship name="logoMedia" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GameMO" inverseName="logo" inverseEntity="GameMO" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GameRankMO" positionX="-227" positionY="-0" width="128" height="118"/>
+        <element name="GameMO" positionX="-54" positionY="-1" width="128" height="178"/>
+        <element name="MediaMO" positionX="115" positionY="29" width="128" height="133"/>
+    </elements>
 </model>

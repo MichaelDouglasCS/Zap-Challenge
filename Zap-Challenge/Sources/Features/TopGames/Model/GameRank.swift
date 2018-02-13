@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import CoreData
 
 //**********************************************************************************************************
 //
@@ -25,6 +26,7 @@ public class GameRank: Mappable {
   public var viewers: Int?
   public var channels: Int?
   public var isNew: Bool = true
+  public var isFavorite: Bool = false
   
   //**************************************************
   // MARK: - Initializers
@@ -47,7 +49,7 @@ public class GameRank: Mappable {
 
 //**********************************************************************************************************
 //
-// MARK: - Extension -
+// MARK: - Extension - Equatable
 //
 //**********************************************************************************************************
 
@@ -55,5 +57,26 @@ extension GameRank: Equatable {
   
   public static func ==(lhs: GameRank, rhs: GameRank) -> Bool {
     return lhs.game?.id == rhs.game?.id
+  }
+}
+
+//**********************************************************************************************************
+//
+// MARK: - Extension - PersistenceServiceProtocol
+//
+//**********************************************************************************************************
+
+extension GameRank: PersistenceServiceProtocol {
+  
+  public func toNSManagedObject() -> NSManagedObject {
+    let gameRankMO = GameRankMO(context: PersistenceService.shared.container.viewContext)
+    
+    gameRankMO.game = self.game?.toNSManagedObject() as? GameMO
+    gameRankMO.viewers = Int32(self.viewers ?? 0)
+    gameRankMO.channels = Int32(self.channels ?? 0)
+    gameRankMO.isNew = self.isNew
+    gameRankMO.isFavorite = self.isFavorite
+    
+    return gameRankMO
   }
 }

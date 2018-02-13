@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import CoreData
 
 //**********************************************************************************************************
 //
@@ -51,5 +52,29 @@ public class Game: Mappable {
     self.logo          <- map["logo"]
     self.giantbombID   <- map["giantbomb_id"]
     self.locale        <- map["locale"]
+  }
+}
+
+//**********************************************************************************************************
+//
+// MARK: - Extension - PersistenceServiceProtocol
+//
+//**********************************************************************************************************
+
+extension Game: PersistenceServiceProtocol {
+  
+  public func toNSManagedObject() -> NSManagedObject {
+    let gameMO = GameMO(context: PersistenceService.shared.container.viewContext)
+    
+    gameMO.id = Int32(self.id ?? 0)
+    gameMO.name = self.name
+    gameMO.localizedName = self.localizedName
+    gameMO.popularity = Int32(self.popularity ?? 0)
+    gameMO.box = self.box?.toNSManagedObject() as? MediaMO
+    gameMO.logo = self.logo?.toNSManagedObject() as? MediaMO
+    gameMO.giantbombID = Int32(self.giantbombID ?? 0)
+    gameMO.locale = self.locale
+    
+    return gameMO
   }
 }

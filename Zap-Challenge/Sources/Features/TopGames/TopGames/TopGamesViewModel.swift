@@ -21,11 +21,11 @@ public class TopGamesViewModel: NSObject {
   public var isPullToRefresh: Bool = false {
     didSet {
       if self.isPullToRefresh {
-        self.games = []
+        self.gamesRank = []
       }
     }
   }
-  public var games: [GameRank] = []
+  public var gamesRank: [GameRank] = []
   
   var footerView: LoadingFooterCollectionView?
   
@@ -44,14 +44,14 @@ public class TopGamesViewModel: NSObject {
   // Load Data
   
   public func loadTopGames(completion: @escaping (_ isSuccess: Bool, _ localizedError: String) -> Void) {
-    self.provider.loadTopGames(with: 20, from: self.games.count) { (topGames, error) in
+    self.provider.loadTopGames(with: 20, from: self.gamesRank.count) { (topGames, error) in
       if let topGames = topGames {
         //Sorted by viewers
-        if self.games.isEmpty {
-          self.games = topGames.sorted(by: { $0.viewers ?? 0 > $1.viewers ?? 0 })
+        if self.gamesRank.isEmpty {
+          self.gamesRank = topGames.sorted(by: { $0.viewers ?? 0 > $1.viewers ?? 0 })
         } else {
-          let newGames = topGames.filter({ !self.games.contains($0) }).sorted(by: { $0.viewers ?? 0 > $1.viewers ?? 0 })
-          self.games.append(contentsOf: newGames)
+          let newGames = topGames.filter({ !self.gamesRank.contains($0) }).sorted(by: { $0.viewers ?? 0 > $1.viewers ?? 0 })
+          self.gamesRank.append(contentsOf: newGames)
         }
       }
       completion(topGames != nil, error ?? "")
@@ -59,7 +59,7 @@ public class TopGamesViewModel: NSObject {
   }
   
   public func isLastGame() -> Bool {
-    return self.games.count >= self.provider.getTopGamesTotal()
+    return self.gamesRank.count >= self.provider.getTopGamesTotal()
   }
   
   // UICollectionView - Items
@@ -69,11 +69,11 @@ public class TopGamesViewModel: NSObject {
   }
   
   public func numberOfItems() -> Int {
-    return self.games.count
+    return self.gamesRank.count
   }
   
   public func cellViewModel(at indexPath: IndexPath) -> Any {
-    return TopGameCollectionViewModel(game: self.games[indexPath.row].game)
+    return TopGameCollectionViewModel(gameRank: self.gamesRank[indexPath.row])
   }
   
   public func insetForSection() -> UIEdgeInsets {
