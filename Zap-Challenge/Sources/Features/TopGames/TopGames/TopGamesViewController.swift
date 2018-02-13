@@ -33,23 +33,12 @@ class TopGamesViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.setupNavigationBar()
-    self.setupCollectionView()
-    self.fetchData()
-  }
-  
-  //*************************************************
-  // MARK: - Private Methods
-  //*************************************************
-
-  private func setupNavigationBar() {
+    
     //Change Status Bar Style
     UIApplication.shared.statusBarStyle = .lightContent
     //Navigation
     self.navigationItem.title = self.viewModel.headerTitle
-  }
-  
-  private func setupCollectionView() {
+    
     // Configure Refresh Control
     self.refreshControl.tintColor = UIColor.ZAP.purple
     self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
@@ -60,14 +49,17 @@ class TopGamesViewController: UIViewController {
     //Configure CollectionView
     self.collectionView.scrollsToTop = true
     self.collectionView.refreshControl = self.refreshControl
-  }
-  
-  private func fetchData() {
+    
+    // Load Data
     self.collectionView.showLoading(isShow: true, isLarge: true, color: UIColor.ZAP.purple)
     self.loadData {
       self.collectionView.showLoading(isShow: false)
     }
   }
+  
+  //*************************************************
+  // MARK: - Private Methods
+  //*************************************************
   
   @objc private func refreshData() {
     self.viewModel.isPullToRefresh = true
@@ -87,6 +79,7 @@ class TopGamesViewController: UIViewController {
         if self.viewModel.games.count > self.collectionView.numberOfItems(inSection: 0) {
           // Insert New
           var indexPaths: [IndexPath] = []
+          
           for (index, gameRank) in self.viewModel.games.enumerated() {
             if gameRank.isNew {
               indexPaths.append(IndexPath(item: index, section: 0))
@@ -150,8 +143,7 @@ extension TopGamesViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    let view = self.viewModel.collectionView(self.collectionView, viewForSupplementaryElementOfKind: kind, at: indexPath)
-    return view
+    return self.viewModel.collectionView(self.collectionView, viewForSupplementaryElementOfKind: kind, at: indexPath)
   }
 }
 
@@ -191,8 +183,5 @@ extension TopGamesViewController: UICollectionViewDelegateFlowLayout {
 //**********************************************************************************************************
 
 extension TopGamesViewController: UICollectionViewDelegate {
-  
-  
-  
   
 }
