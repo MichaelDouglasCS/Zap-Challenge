@@ -22,10 +22,14 @@ public class TopGameCollectionViewModel: NSObject {
   
   public static let cellNibName: String = "TopGameCollectionViewCell"
   
-  private var gameRank: GameRank?
+  public var gameRank: GameRank?
   
   public var name: String? {
     return self.gameRank?.game?.name
+  }
+  
+  public var isFavorite: Bool {
+    return self.gameRank?.isFavorite ?? false
   }
   
   public var imageURL: URL? {

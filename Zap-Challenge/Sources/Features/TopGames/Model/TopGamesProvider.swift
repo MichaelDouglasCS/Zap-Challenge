@@ -64,7 +64,14 @@ public class TopGamesProvider: NSObject {
   }
   
   public func removeFavoriteGame(_ gameRank: GameRank) {
-    _ = gameRank.toNSManagedObject()
-    PersistenceService.shared.saveContext()
+    do {
+      if let games = try PersistenceService.shared.context.fetch(GameRankMO.fetchRequest()) as? [GameRankMO] {
+        games.forEach({
+          if $0.game?.id == Int32(gameRank.game?.id ?? 0) {
+            PersistenceService.shared.context.delete($0)
+          }
+        })
+      }
+    } catch { }
   }
 }

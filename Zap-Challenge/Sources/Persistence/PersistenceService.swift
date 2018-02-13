@@ -11,7 +11,7 @@ import CoreData
 
 //**********************************************************************************************************
 //
-// MARK: - Definitions -
+// MARK: - Definitions - PersistenceServiceProtocol
 //
 //**********************************************************************************************************
 
@@ -41,6 +41,10 @@ public final class PersistenceService: NSObject {
     return container
   }()
   
+  public lazy var context: NSManagedObjectContext = {
+    return self.container.viewContext
+  }()
+  
   //*************************************************
   // MARK: - Initializers
   //*************************************************
@@ -56,10 +60,9 @@ public final class PersistenceService: NSObject {
   //*************************************************
   
   func saveContext () {
-    let context = self.container.viewContext
-    if context.hasChanges {
+    if self.context.hasChanges {
       do {
-        try context.save()
+        try self.context.save()
       } catch {
         let nserror = error as NSError
         print("Unresolved error \(nserror), \(nserror.userInfo)")

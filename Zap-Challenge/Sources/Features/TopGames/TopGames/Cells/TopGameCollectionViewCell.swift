@@ -10,6 +10,17 @@ import UIKit
 
 //**********************************************************************************************************
 //
+// MARK: - Definition - TopGameCollectionViewCellDelegate
+//
+//**********************************************************************************************************
+
+protocol TopGameCollectionViewCellDelegate: class {
+  func didTouchAddFavoriteGame(_ game: GameRank?)
+  func didTouchRemoveFavoriteGame(_ game: GameRank?)
+}
+
+//**********************************************************************************************************
+//
 // MARK: - Class -
 //
 //**********************************************************************************************************
@@ -26,6 +37,7 @@ class TopGameCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var favoriteButton: UIButton!
   
   var viewModel: TopGameCollectionViewModel!
+  weak var delegate: TopGameCollectionViewCellDelegate!
   
   //*************************************************
   // MARK: - Exposed Methods
@@ -47,10 +59,16 @@ class TopGameCollectionViewCell: UICollectionViewCell {
     }
     
     self.nameLabel.text = self.viewModel.name
+    self.favoriteButton.isSelected = self.viewModel.isFavorite
   }
   
   @IBAction func didTouchFavorite(_ sender: UIButton) {
-    self.favoriteButton.isSelected = !self.favoriteButton.isSelected
+    if !self.viewModel.isFavorite {
+      self.delegate.didTouchAddFavoriteGame(self.viewModel.gameRank)
+    } else {
+      self.delegate.didTouchRemoveFavoriteGame(self.viewModel.gameRank)
+    }
+    self.favoriteButton.isSelected = self.viewModel.isFavorite
   }
   
   //*************************************************

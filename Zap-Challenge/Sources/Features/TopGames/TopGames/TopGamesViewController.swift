@@ -121,6 +121,7 @@ extension TopGamesViewController: UICollectionViewDataSource {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopGameCollectionViewModel.cellNibName,
                                                     for: indexPath) as! TopGameCollectionViewCell
       cell.viewModel = cellViewModel as! TopGameCollectionViewModel
+      cell.delegate = self
       cell.setup()
       
       self.viewModel.gamesRank[indexPath.row].isNew = false
@@ -173,6 +174,24 @@ extension TopGamesViewController: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
     return self.viewModel.referenceSizeForFooter(fromView: self.view)
+  }
+}
+
+//**********************************************************************************************************
+//
+// MARK: - Extension - TopGameCollectionViewCellDelegate
+//
+//**********************************************************************************************************
+
+
+extension TopGamesViewController: TopGameCollectionViewCellDelegate {
+  
+  func didTouchAddFavoriteGame(_ game: GameRank?) {
+    self.viewModel.addFavoriteGame(game)
+  }
+  
+  func didTouchRemoveFavoriteGame(_ game: GameRank?) {
+    self.viewModel.removeFavoriteGame(game)
   }
 }
 

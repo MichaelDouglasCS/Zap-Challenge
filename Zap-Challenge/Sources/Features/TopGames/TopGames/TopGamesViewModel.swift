@@ -41,7 +41,7 @@ public class TopGamesViewModel: NSObject {
   // MARK: - Exposed Methods
   //*************************************************
   
-  // Load Data
+  // Data
   
   public func loadTopGames(completion: @escaping (_ isSuccess: Bool, _ localizedError: String) -> Void) {
     self.provider.loadTopGames(with: 20, from: self.gamesRank.count) { (topGames, error) in
@@ -60,6 +60,20 @@ public class TopGamesViewModel: NSObject {
   
   public func isLastGame() -> Bool {
     return self.gamesRank.count >= self.provider.getTopGamesTotal()
+  }
+  
+  public func addFavoriteGame(_ game: GameRank?) {
+    if let gameRank = game {
+      self.provider.addFavoriteGame(gameRank)
+      gameRank.isFavorite = true
+    }
+  }
+  
+  public func removeFavoriteGame(_ game: GameRank?) {
+    if let gameRank = game {
+      self.provider.removeFavoriteGame(gameRank)
+      gameRank.isFavorite = false
+    }
   }
   
   // UICollectionView - Items
