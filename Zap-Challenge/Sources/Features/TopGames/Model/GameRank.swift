@@ -24,6 +24,7 @@ public class GameRank: Mappable {
   public var game: Game?
   public var viewers: Int?
   public var channels: Int?
+  public var isNew: Bool = true
   
   //**************************************************
   // MARK: - Initializers
@@ -41,5 +42,18 @@ public class GameRank: Mappable {
     self.game     <- map["game"]
     self.viewers  <- map["viewers"]
     self.channels <- map["channels"]
+  }
+}
+
+//**********************************************************************************************************
+//
+// MARK: - Extension -
+//
+//**********************************************************************************************************
+
+extension GameRank: Equatable {
+  
+  public static func ==(lhs: GameRank, rhs: GameRank) -> Bool {
+    return lhs.game?.id == rhs.game?.id
   }
 }

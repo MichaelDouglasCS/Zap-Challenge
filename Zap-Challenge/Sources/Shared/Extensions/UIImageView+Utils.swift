@@ -17,9 +17,9 @@ import AlamofireImage
 
 extension UIImageView {
   
-  ///////////////////////////
-  // MARK: Private Methods
-  ///////////////////////////
+  //**************************************************
+  // MARK: - Exposed Methods
+  //**************************************************
   
   public func downloadImage(from url: URL,
                             withPlaceholder placeholder: UIImage?,
@@ -41,10 +41,6 @@ extension UIImageView {
                       }
                       
                       completion?(self.image)
-                      
-                      print("Finished image download")
     }
-    
   }
-  
 }

@@ -59,8 +59,6 @@ class TopGamesViewController: UIViewController {
     
     //Configure CollectionView
     self.collectionView.scrollsToTop = true
-    self.collectionView.allowsSelection = true
-    self.collectionView.allowsMultipleSelection = false
     self.collectionView.refreshControl = self.refreshControl
   }
   
@@ -72,8 +70,10 @@ class TopGamesViewController: UIViewController {
   }
   
   @objc private func refreshData() {
+    self.viewModel.isPullToRefresh = true
     self.loadData {
       self.refreshControl.endRefreshing()
+      self.viewModel.isPullToRefresh = false
     }
   }
   
@@ -83,7 +83,20 @@ class TopGamesViewController: UIViewController {
       self.viewModel.isLoading = false
       completion()
       if isSuccess {
-        self.collectionView.reloadSections([0])
+        
+        if self.viewModel.games.count > self.collectionView.numberOfItems(inSection: 0) {
+          // Insert New
+          var indexPaths: [IndexPath] = []
+          for (index, gameRank) in self.viewModel.games.enumerated() {
+            if gameRank.isNew {
+              indexPaths.append(IndexPath(item: index, section: 0))
+            }
+          }
+          self.collectionView.insertItems(at: indexPaths)
+        } else {
+          // Reload All
+          self.collectionView.reloadSections([0])
+        }
       } else {
         self.showInfoAlert(title: String.ZAP.sorry, message: localizedError)
       }
@@ -117,6 +130,8 @@ extension TopGamesViewController: UICollectionViewDataSource {
       cell.viewModel = cellViewModel as! TopGameCollectionViewModel
       cell.setup()
       
+      self.viewModel.games[indexPath.row].isNew = false
+      
       return cell
     default:
       return UICollectionViewCell()
@@ -128,6 +143,9 @@ extension TopGamesViewController: UICollectionViewDataSource {
     
     if lastRowItem == indexPath.row {
       self.viewModel.footerView?.startAnimate()
+      self.loadData {
+        self.viewModel.footerView?.stopAnimate()
+      }
     }
   }
   
