@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C670F0661035AC770C14835 /* Pods_Zap_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D22359D98D011560F027ED /* Pods_Zap_ChallengeTests.framework */; };
+		0E3E594A920AB68C621FAA9B /* Pods_Zap_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25991EE877A461E7A355B136 /* Pods_Zap_Challenge.framework */; };
+		597EA7458DB017A610BCBBCA /* Pods_Zap_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447C51420B81AF48164DB0AF /* Pods_Zap_ChallengeUITests.framework */; };
 		6149E13D202B77AB00AD77F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149E13C202B77AB00AD77F9 /* AppDelegate.swift */; };
 		6149E145202B77AB00AD77F9 /* Zap_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6149E143202B77AB00AD77F9 /* Zap_Challenge.xcdatamodeld */; };
 		6149E147202B77AB00AD77F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6149E146202B77AB00AD77F9 /* Assets.xcassets */; };
@@ -19,6 +22,8 @@
 		6172D9ED202CD0F9004E3A11 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9EC202CD0F9004E3A11 /* Media.swift */; };
 		6172D9F0202CD462004E3A11 /* TopGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9EF202CD462004E3A11 /* TopGamesViewController.swift */; };
 		6172D9F2202CD474004E3A11 /* TopGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172D9F1202CD474004E3A11 /* TopGamesViewModel.swift */; };
+		61AD919020332EA600BC8115 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD918F20332EA600BC8115 /* KeychainService.swift */; };
+		61AD919220334B7200BC8115 /* Int+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD919120334B7200BC8115 /* Int+Utils.swift */; };
 		61BC018D202D15DB0035F273 /* DashboardTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC018C202D15DB0035F273 /* DashboardTabBarViewController.swift */; };
 		61BC018F202D15ED0035F273 /* DashboardTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC018E202D15ED0035F273 /* DashboardTabBarViewModel.swift */; };
 		61BC24EB2032783E00B79256 /* LoadingFooterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC24E92032783E00B79256 /* LoadingFooterCollectionView.swift */; };
@@ -42,9 +47,6 @@
 		61DC857E202C85B8007A7552 /* UIBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8563202C85B6007A7552 /* UIBox.swift */; };
 		61E5C97C202DCAB600A6D2AB /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E5C97B202DCAB600A6D2AB /* UIView+Loading.swift */; };
 		61F33D74203098DA00B31916 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F33D73203098DA00B31916 /* UIImage+Utils.swift */; };
-		65E548C7E04BCE6FB011C4E7 /* Pods_Zap_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8764FBC9913D2D43F03E1C /* Pods_Zap_ChallengeTests.framework */; };
-		B943651F3294E49A899C4A87 /* Pods_Zap_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D13C8625DA75C42EFF8FFA6D /* Pods_Zap_ChallengeUITests.framework */; };
-		E9DC244C7147762DB304B39F /* Pods_Zap_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDBEE2A63113F2C47C12A6D /* Pods_Zap_Challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06C5C08BA18EDF0DC5DD9B28 /* Pods-Zap-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2A8764FBC9913D2D43F03E1C /* Pods_Zap_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zap_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		33B99D75F23B298DDF2B3916 /* Pods-Zap-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		25991EE877A461E7A355B136 /* Pods_Zap_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zap_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		447C51420B81AF48164DB0AF /* Pods_Zap_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zap_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D22359D98D011560F027ED /* Pods_Zap_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zap_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B17BC0B7157D29A466E06BB /* Pods-Zap-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeTests/Pods-Zap-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6149E139202B77AB00AD77F9 /* Zap-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zap-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6149E13C202B77AB00AD77F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6149E144202B77AB00AD77F9 /* Zap_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zap_Challenge.xcdatamodel; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 		6172D9EC202CD0F9004E3A11 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		6172D9EF202CD462004E3A11 /* TopGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesViewController.swift; sourceTree = "<group>"; };
 		6172D9F1202CD474004E3A11 /* TopGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesViewModel.swift; sourceTree = "<group>"; };
+		61AD918F20332EA600BC8115 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		61AD919120334B7200BC8115 /* Int+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Utils.swift"; sourceTree = "<group>"; };
 		61BC018C202D15DB0035F273 /* DashboardTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarViewController.swift; sourceTree = "<group>"; };
 		61BC018E202D15ED0035F273 /* DashboardTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarViewModel.swift; sourceTree = "<group>"; };
 		61BC24E92032783E00B79256 /* LoadingFooterCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterCollectionView.swift; sourceTree = "<group>"; };
@@ -110,12 +115,11 @@
 		61DC8563202C85B6007A7552 /* UIBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBox.swift; sourceTree = "<group>"; };
 		61E5C97B202DCAB600A6D2AB /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
 		61F33D73203098DA00B31916 /* UIImage+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
-		6768613A6B6C816C495B5EA9 /* Pods-Zap-ChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7DDBEE2A63113F2C47C12A6D /* Pods_Zap_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zap_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F09500064DF701D427212E1 /* Pods-Zap-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeTests/Pods-Zap-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
-		B22CFFFAED20FBCF3103643E /* Pods-Zap-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge.release.xcconfig"; sourceTree = "<group>"; };
-		D13C8625DA75C42EFF8FFA6D /* Pods_Zap_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zap_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F67478350FCF518EDCEA3258 /* Pods-Zap-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeTests/Pods-Zap-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B02744043F32830555BF510 /* Pods-Zap-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A696C5F9FE194AA2CF249E78 /* Pods-Zap-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		BC7CECA574C5D5ED20E5F476 /* Pods-Zap-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeTests/Pods-Zap-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		F576BAC3050CAE70920314EB /* Pods-Zap-ChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-ChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FFCC5823CCB8EBD706CA4B88 /* Pods-Zap-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zap-Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9DC244C7147762DB304B39F /* Pods_Zap_Challenge.framework in Frameworks */,
+				0E3E594A920AB68C621FAA9B /* Pods_Zap_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65E548C7E04BCE6FB011C4E7 /* Pods_Zap_ChallengeTests.framework in Frameworks */,
+				0C670F0661035AC770C14835 /* Pods_Zap_ChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,13 +143,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B943651F3294E49A899C4A87 /* Pods_Zap_ChallengeUITests.framework in Frameworks */,
+				597EA7458DB017A610BCBBCA /* Pods_Zap_ChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05085F63CA89175C14597DBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25991EE877A461E7A355B136 /* Pods_Zap_Challenge.framework */,
+				50D22359D98D011560F027ED /* Pods_Zap_ChallengeTests.framework */,
+				447C51420B81AF48164DB0AF /* Pods_Zap_ChallengeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2612B7010A31FA8733B05134 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFCC5823CCB8EBD706CA4B88 /* Pods-Zap-Challenge.debug.xcconfig */,
+				A696C5F9FE194AA2CF249E78 /* Pods-Zap-Challenge.release.xcconfig */,
+				5B17BC0B7157D29A466E06BB /* Pods-Zap-ChallengeTests.debug.xcconfig */,
+				BC7CECA574C5D5ED20E5F476 /* Pods-Zap-ChallengeTests.release.xcconfig */,
+				F576BAC3050CAE70920314EB /* Pods-Zap-ChallengeUITests.debug.xcconfig */,
+				6B02744043F32830555BF510 /* Pods-Zap-ChallengeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6149E130202B77AB00AD77F9 = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +180,8 @@
 				6149E153202B77AC00AD77F9 /* Zap-ChallengeTests */,
 				6149E15E202B77AC00AD77F9 /* Zap-ChallengeUITests */,
 				6149E13A202B77AB00AD77F9 /* Products */,
-				6EC276ADF214FAE0DFDB895D /* Pods */,
-				76BEAB6F9D13A88D443999E3 /* Frameworks */,
+				2612B7010A31FA8733B05134 /* Pods */,
+				05085F63CA89175C14597DBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -316,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				61BC24EF2033277F00B79256 /* PersistenceService.swift */,
+				61AD918F20332EA600BC8115 /* KeychainService.swift */,
 				6149E143202B77AB00AD77F9 /* Zap_Challenge.xcdatamodeld */,
 			);
 			path = Persistence;
@@ -346,6 +374,7 @@
 				61F33D73203098DA00B31916 /* UIImage+Utils.swift */,
 				61DC8517202BDBF1007A7552 /* UIViewController+Alerts.swift */,
 				61DC851E202BDBF2007A7552 /* String+Localized.swift */,
+				61AD919120334B7200BC8115 /* Int+Utils.swift */,
 				61DC8520202BDBF3007A7552 /* UIColor+StyleKit.swift */,
 				61E5C97B202DCAB600A6D2AB /* UIView+Loading.swift */,
 			);
@@ -379,29 +408,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		6EC276ADF214FAE0DFDB895D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				33B99D75F23B298DDF2B3916 /* Pods-Zap-Challenge.debug.xcconfig */,
-				B22CFFFAED20FBCF3103643E /* Pods-Zap-Challenge.release.xcconfig */,
-				F67478350FCF518EDCEA3258 /* Pods-Zap-ChallengeTests.debug.xcconfig */,
-				9F09500064DF701D427212E1 /* Pods-Zap-ChallengeTests.release.xcconfig */,
-				6768613A6B6C816C495B5EA9 /* Pods-Zap-ChallengeUITests.debug.xcconfig */,
-				06C5C08BA18EDF0DC5DD9B28 /* Pods-Zap-ChallengeUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		76BEAB6F9D13A88D443999E3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7DDBEE2A63113F2C47C12A6D /* Pods_Zap_Challenge.framework */,
-				2A8764FBC9913D2D43F03E1C /* Pods_Zap_ChallengeTests.framework */,
-				D13C8625DA75C42EFF8FFA6D /* Pods_Zap_ChallengeUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,12 +415,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6149E164202B77AC00AD77F9 /* Build configuration list for PBXNativeTarget "Zap-Challenge" */;
 			buildPhases = (
-				59FACCC4F0EFBEC6342FC95E /* [CP] Check Pods Manifest.lock */,
+				7A31D3F9A7C1342E957DACFE /* [CP] Check Pods Manifest.lock */,
 				6149E135202B77AB00AD77F9 /* Sources */,
 				6149E136202B77AB00AD77F9 /* Frameworks */,
 				6149E137202B77AB00AD77F9 /* Resources */,
-				92BD0B784C2334375BDFBAB1 /* [CP] Embed Pods Frameworks */,
-				00ACA1243D862CB0FF01D055 /* [CP] Copy Pods Resources */,
+				6DEAA66ECA13FE39B2BEB2D5 /* [CP] Embed Pods Frameworks */,
+				2E33778FBE34AAF545E3F909 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -429,12 +435,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6149E167202B77AC00AD77F9 /* Build configuration list for PBXNativeTarget "Zap-ChallengeTests" */;
 			buildPhases = (
-				5525351246386611F99F1E49 /* [CP] Check Pods Manifest.lock */,
+				A307F2285533B315D9616FF0 /* [CP] Check Pods Manifest.lock */,
 				6149E14C202B77AC00AD77F9 /* Sources */,
 				6149E14D202B77AC00AD77F9 /* Frameworks */,
 				6149E14E202B77AC00AD77F9 /* Resources */,
-				FB636BFEB0C28032A16EE93F /* [CP] Embed Pods Frameworks */,
-				69518F437AA2D6CF716B9D70 /* [CP] Copy Pods Resources */,
+				DF5AD4A5C85E2ED2B6ED69F9 /* [CP] Embed Pods Frameworks */,
+				A472CAF01B9D8BCFCB5EE781 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -450,12 +456,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6149E16A202B77AC00AD77F9 /* Build configuration list for PBXNativeTarget "Zap-ChallengeUITests" */;
 			buildPhases = (
-				5857D83ADA2F304D0CA41EF3 /* [CP] Check Pods Manifest.lock */,
+				6B5473E53472FF047E4D50C8 /* [CP] Check Pods Manifest.lock */,
 				6149E157202B77AC00AD77F9 /* Sources */,
 				6149E158202B77AC00AD77F9 /* Frameworks */,
 				6149E159202B77AC00AD77F9 /* Resources */,
-				0665EAAC57E66D70493EBE87 /* [CP] Embed Pods Frameworks */,
-				5AE376F2297B771CD139BC1C /* [CP] Copy Pods Resources */,
+				115591745F2300ADADB256BF /* [CP] Embed Pods Frameworks */,
+				29E64F0F330076794AD2BB87 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -546,22 +552,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00ACA1243D862CB0FF01D055 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0665EAAC57E66D70493EBE87 /* [CP] Embed Pods Frameworks */ = {
+		115591745F2300ADADB256BF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -576,25 +567,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5525351246386611F99F1E49 /* [CP] Check Pods Manifest.lock */ = {
+		29E64F0F330076794AD2BB87 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Zap-ChallengeTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5857D83ADA2F304D0CA41EF3 /* [CP] Check Pods Manifest.lock */ = {
+		2E33778FBE34AAF545E3F909 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B5473E53472FF047E4D50C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -612,7 +615,33 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		59FACCC4F0EFBEC6342FC95E /* [CP] Check Pods Manifest.lock */ = {
+		6DEAA66ECA13FE39B2BEB2D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A31D3F9A7C1342E957DACFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -630,22 +659,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5AE376F2297B771CD139BC1C /* [CP] Copy Pods Resources */ = {
+		A307F2285533B315D9616FF0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zap-ChallengeTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-ChallengeUITests/Pods-Zap-ChallengeUITests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		69518F437AA2D6CF716B9D70 /* [CP] Copy Pods Resources */ = {
+		A472CAF01B9D8BCFCB5EE781 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -660,31 +692,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-ChallengeTests/Pods-Zap-ChallengeTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		92BD0B784C2334375BDFBAB1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zap-Challenge/Pods-Zap-Challenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FB636BFEB0C28032A16EE93F /* [CP] Embed Pods Frameworks */ = {
+		DF5AD4A5C85E2ED2B6ED69F9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -713,9 +721,11 @@
 				6172D9E7202CB879004E3A11 /* ServerLogger.swift in Sources */,
 				6172D9F2202CD474004E3A11 /* TopGamesViewModel.swift in Sources */,
 				61BC24EE20327C8600B79256 /* LoadingFooterCollectionViewModel.swift in Sources */,
+				61AD919020332EA600BC8115 /* KeychainService.swift in Sources */,
 				61CB7AD8202FA00E00924E35 /* TopGameCollectionViewModel.swift in Sources */,
 				6172D9EB202CC896004E3A11 /* GameRank.swift in Sources */,
 				61DC857C202C85B8007A7552 /* CircularImage.swift in Sources */,
+				61AD919220334B7200BC8115 /* Int+Utils.swift in Sources */,
 				61CB7ADA202FA60000924E35 /* UIImageView+Utils.swift in Sources */,
 				6172D9ED202CD0F9004E3A11 /* Media.swift in Sources */,
 				61BC018F202D15ED0035F273 /* DashboardTabBarViewModel.swift in Sources */,
@@ -889,7 +899,7 @@
 		};
 		6149E165202B77AC00AD77F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33B99D75F23B298DDF2B3916 /* Pods-Zap-Challenge.debug.xcconfig */;
+			baseConfigurationReference = FFCC5823CCB8EBD706CA4B88 /* Pods-Zap-Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -905,7 +915,7 @@
 		};
 		6149E166202B77AC00AD77F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B22CFFFAED20FBCF3103643E /* Pods-Zap-Challenge.release.xcconfig */;
+			baseConfigurationReference = A696C5F9FE194AA2CF249E78 /* Pods-Zap-Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -921,7 +931,7 @@
 		};
 		6149E168202B77AC00AD77F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F67478350FCF518EDCEA3258 /* Pods-Zap-ChallengeTests.debug.xcconfig */;
+			baseConfigurationReference = 5B17BC0B7157D29A466E06BB /* Pods-Zap-ChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -939,7 +949,7 @@
 		};
 		6149E169202B77AC00AD77F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F09500064DF701D427212E1 /* Pods-Zap-ChallengeTests.release.xcconfig */;
+			baseConfigurationReference = BC7CECA574C5D5ED20E5F476 /* Pods-Zap-ChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -957,7 +967,7 @@
 		};
 		6149E16B202B77AC00AD77F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6768613A6B6C816C495B5EA9 /* Pods-Zap-ChallengeUITests.debug.xcconfig */;
+			baseConfigurationReference = F576BAC3050CAE70920314EB /* Pods-Zap-ChallengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -974,7 +984,7 @@
 		};
 		6149E16C202B77AC00AD77F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06C5C08BA18EDF0DC5DD9B28 /* Pods-Zap-ChallengeUITests.release.xcconfig */;
+			baseConfigurationReference = 6B02744043F32830555BF510 /* Pods-Zap-ChallengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

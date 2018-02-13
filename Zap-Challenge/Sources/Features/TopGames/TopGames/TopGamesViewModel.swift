@@ -58,6 +58,10 @@ public class TopGamesViewModel: NSObject {
     }
   }
   
+  public func isLastGame() -> Bool {
+    return self.games.count >= self.provider.getTopGamesTotal()
+  }
+  
   // UICollectionView - Items
   
   public func numberOfSections() -> Int {
@@ -94,12 +98,12 @@ public class TopGamesViewModel: NSObject {
   // UICollectionView - FooterView
   
   public func referenceSizeForFooter(fromView view: UIView) -> CGSize {
-    return self.isLoading ? .zero : CGSize(width: view.bounds.size.width, height: 40.0)
+    return self.isLoading || self.isLastGame() ? .zero : CGSize(width: view.bounds.size.width, height: 40.0)
   }
   
   public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
     
-    if let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LoadingFooterCollectionViewModel.reuseIdentifier, for: indexPath) as? LoadingFooterCollectionView, kind == UICollectionElementKindSectionFooter {
+    if let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LoadingFooterCollectionViewModel.reuseIdentifier, for: indexPath) as? LoadingFooterCollectionView, kind == UICollectionElementKindSectionFooter, !self.isLastGame() {
       self.footerView = footerView
       self.footerView?.backgroundColor = .clear
       self.footerView?.startAnimate()

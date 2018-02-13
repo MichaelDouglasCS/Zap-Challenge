@@ -10,6 +10,7 @@ target 'Zap-Challenge' do
   pod 'ObjectMapper', '~> 3.1'
   pod 'Alamofire', '~> 4.5'
   pod 'AlamofireImage', '~> 3.3'
+  pod 'KeychainAccess'
 
   target 'Zap-ChallengeTests' do
     inherit! :search_paths

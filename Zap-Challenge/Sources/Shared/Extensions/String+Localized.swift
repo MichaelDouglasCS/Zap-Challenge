@@ -48,6 +48,10 @@ extension String {
 	var localized: String {
 		return NSLocalizedString(self, comment: self)
 	}
+  
+  public func toInt() -> Int {
+    return Int(self) ?? 0
+  }
 }
 
 //**********************************************************************************************************

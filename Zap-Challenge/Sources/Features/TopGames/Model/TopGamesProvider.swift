@@ -30,6 +30,10 @@ public class TopGamesProvider: NSObject {
       case .success:
         var topGames: [GameRank] = []
         
+        if let total = json["_total"].int {
+          self.saveTopGamesTotal(total)
+        }
+        
         json["top"].arrayValue.forEach({ json in
           if let gameRank = GameRank(JSON: json.dictionaryObject ?? [:]) {
             topGames.append(gameRank)
@@ -41,5 +45,13 @@ public class TopGamesProvider: NSObject {
         completion(nil, response.localizedError)
       }
     }
+  }
+  
+  public func saveTopGamesTotal(_ total: Int) {
+    KeychainService.shared.setValue(total.toString(), forKey: "TopGamesTotal")
+  }
+  
+  public func getTopGamesTotal() -> Int {
+    return KeychainService.shared.getValue(forKey: "TopGamesTotal")?.toInt() ?? 0
   }
 }

@@ -134,7 +134,7 @@ extension TopGamesViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
     let lastRowItem = self.collectionView.numberOfItems(inSection: indexPath.section) - 1
     
-    if lastRowItem == indexPath.row {
+    if lastRowItem == indexPath.row && !self.viewModel.isLastGame() {
       self.viewModel.footerView?.startAnimate()
       self.loadData {
         self.viewModel.footerView?.stopAnimate()

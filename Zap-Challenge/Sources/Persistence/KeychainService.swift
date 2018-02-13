@@ -1,5 +1,5 @@
 //
-//  PersistenceService.swift
+//  KeychainService.swift
 //  Zap-Challenge
 //
 //  Created by Michael Douglas on 13/02/18.
@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CoreData
+import KeychainAccess
 
 //**********************************************************************************************************
 //
@@ -15,11 +15,13 @@ import CoreData
 //
 //**********************************************************************************************************
 
-public final class PersistenceService: NSObject {
+public final class KeychainService: NSObject {
   
   //*************************************************
   // MARK: - Properties
   //*************************************************
+  
+  private lazy var keychain: Keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "com.michaeldouglas.Zap-Challenge")
   
   //*************************************************
   // MARK: - Initializers
@@ -27,12 +29,27 @@ public final class PersistenceService: NSObject {
   
   private override init() { }
   
+  public static let shared: KeychainService = {
+    return KeychainService()
+  }()
+  
   //*************************************************
   // MARK: - Exposed Methods
   //*************************************************
+
+  public func setValue(_ value: String, forKey key: String) {
+    do { try keychain.set(value, key: key) } catch { }
+  }
   
-  //*************************************************
-  // MARK: - Overridden Public Methods
-  //*************************************************
+  public func getValue(forKey key: String) -> String? {
+    do { return try self.keychain.getString(key) } catch { return nil }
+  }
   
+  public func removeValue(forKey key: String) {
+    do { try keychain.remove(key) } catch { }
+  }
+  
+  public func clearAll() {
+    do { try keychain.removeAll() } catch { }
+  }
 }
