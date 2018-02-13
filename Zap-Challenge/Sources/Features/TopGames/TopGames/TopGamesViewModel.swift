@@ -18,13 +18,7 @@ public class TopGamesViewModel: NSObject {
   
   public let headerTitle: String = String.ZAP.topGames
   public var isLoading: Bool = false
-  public var isPullToRefresh: Bool = false {
-    didSet {
-      if self.isPullToRefresh {
-        self.gamesRank = []
-      }
-    }
-  }
+  public var isPullToRefresh: Bool = false
   public var gamesRank: [GameRank] = []
   
   var footerView: LoadingFooterCollectionView?
@@ -44,10 +38,12 @@ public class TopGamesViewModel: NSObject {
   // Data
   
   public func loadTopGames(completion: @escaping (_ isSuccess: Bool, _ localizedError: String) -> Void) {
-    self.provider.loadTopGames(with: 20, from: self.gamesRank.count) { (topGames, error) in
+    let offSet = self.isPullToRefresh ? 0 : self.gamesRank.count
+    
+    self.provider.loadTopGames(with: 20, from: offSet) { (topGames, error) in
       if let topGames = topGames {
         //Sorted by viewers
-        if self.gamesRank.isEmpty {
+        if self.gamesRank.isEmpty || offSet == 0 {
           self.gamesRank = topGames.sorted(by: { $0.viewers ?? 0 > $1.viewers ?? 0 })
         } else {
           let newGames = topGames.filter({ !self.gamesRank.contains($0) }).sorted(by: { $0.viewers ?? 0 > $1.viewers ?? 0 })

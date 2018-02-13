@@ -64,8 +64,8 @@ class TopGamesViewController: UIViewController {
   @objc private func refreshData() {
     self.viewModel.isPullToRefresh = true
     self.loadData {
-      self.refreshControl.endRefreshing()
       self.viewModel.isPullToRefresh = false
+      self.refreshControl.endRefreshing()
     }
   }
   
