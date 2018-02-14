@@ -43,7 +43,7 @@ public class TopGamesViewModel: NSObject {
     self.provider.loadTopGames(with: 20, from: offSet) { (topGames, error) in
       if let topGames = topGames {
         //Sorted by viewers
-        if self.gamesRank.isEmpty || offSet == 0 {
+        if offSet == 0 {
           self.gamesRank = topGames.sorted(by: { $0.viewers ?? 0 > $1.viewers ?? 0 })
         } else {
           let newGames = topGames.filter({ !self.gamesRank.contains($0) }).sorted(by: { $0.viewers ?? 0 > $1.viewers ?? 0 })

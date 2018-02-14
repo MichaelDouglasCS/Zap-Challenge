@@ -74,6 +74,7 @@ class TopGamesViewController: UIViewController {
     self.viewModel.loadTopGames { (isSuccess, localizedError) in
       self.viewModel.isLoading = false
       completion()
+      
       if isSuccess {
         
         if self.viewModel.gamesRank.count > self.collectionView.numberOfItems(inSection: 0) {
