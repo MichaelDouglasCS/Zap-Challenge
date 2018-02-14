@@ -95,6 +95,7 @@ class TopGamesViewController: UIViewController {
       self.viewModel.isPullToRefresh = false
       self.refreshControl.endRefreshing()
       self.searchBar.text?.removeAll()
+      self.viewModel.isSearch = self.searchBar.text?.isEmpty == false
     }
   }
   
@@ -103,11 +104,9 @@ class TopGamesViewController: UIViewController {
     self.viewModel.loadTopGames { (isSuccess, localizedError) in
       self.viewModel.isLoading = false
       self.isPlaceholderVisible()
-      completion()
       
       if isSuccess {
-        
-        if self.viewModel.gamesRank.count > self.collectionView.numberOfItems(inSection: 0) {
+        if self.viewModel.gamesRank.count > self.collectionView.numberOfItems(inSection: 0) && !self.viewModel.isSearch {
           // Insert New
           var indexPaths: [IndexPath] = []
           
@@ -127,6 +126,7 @@ class TopGamesViewController: UIViewController {
       } else {
         self.showInfoAlert(title: String.ZAP.sorry, message: localizedError)
       }
+      completion()
     }
   }
   
