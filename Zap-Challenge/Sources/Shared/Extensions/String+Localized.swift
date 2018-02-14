@@ -34,6 +34,7 @@ extension String {
     // Game Details
     //*************************
     static var viewers: String { return "ST_VIEWERS".localized }
+    static var gameDetails: String { return "ST_GAME_DETAILS".localized }
     
     //*************************
     // Alerts

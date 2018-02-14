@@ -14,6 +14,7 @@
 // Game Details
 //*************************
 "ST_VIEWERS" = "viewers";
+"ST_GAME_DETAILS" = "Game Details";
 
 //*************************
 // Alerts
