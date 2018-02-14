@@ -39,6 +39,7 @@
 		61CD169D2033D11700A8C022 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CD169C2033D11700A8C022 /* FavoritesViewModel.swift */; };
 		61CD16A12033FC0200A8C022 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CD16A02033FC0200A8C022 /* GameDetailsViewController.swift */; };
 		61CD16A32033FC3F00A8C022 /* GameDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CD16A22033FC3F00A8C022 /* GameDetailsViewModel.swift */; };
+		61CD16A5203476C400A8C022 /* GameDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CD16A4203476C400A8C022 /* GameDetailsProvider.swift */; };
 		61DC8522202BDBF3007A7552 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8517202BDBF1007A7552 /* UIViewController+Alerts.swift */; };
 		61DC8529202BDBF3007A7552 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC851E202BDBF2007A7552 /* String+Localized.swift */; };
 		61DC852B202BDBF3007A7552 /* UIColor+StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC8520202BDBF3007A7552 /* UIColor+StyleKit.swift */; };
@@ -112,6 +113,7 @@
 		61CD169C2033D11700A8C022 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		61CD16A02033FC0200A8C022 /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		61CD16A22033FC3F00A8C022 /* GameDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewModel.swift; sourceTree = "<group>"; };
+		61CD16A4203476C400A8C022 /* GameDetailsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsProvider.swift; sourceTree = "<group>"; };
 		61DC8517202BDBF1007A7552 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		61DC851E202BDBF2007A7552 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		61DC8520202BDBF3007A7552 /* UIColor+StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+StyleKit.swift"; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 		61CD169E2033FBD900A8C022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				61CD16A4203476C400A8C022 /* GameDetailsProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -793,6 +796,7 @@
 				61F33D74203098DA00B31916 /* UIImage+Utils.swift in Sources */,
 				6149E145202B77AB00AD77F9 /* Zap_Challenge.xcdatamodeld in Sources */,
 				61BC24EB2032783E00B79256 /* LoadingFooterCollectionView.swift in Sources */,
+				61CD16A5203476C400A8C022 /* GameDetailsProvider.swift in Sources */,
 				61DC8529202BDBF3007A7552 /* String+Localized.swift in Sources */,
 				61DC857E202C85B8007A7552 /* UIBox.swift in Sources */,
 				61CD16992033C8B100A8C022 /* FavoritesProvider.swift in Sources */,

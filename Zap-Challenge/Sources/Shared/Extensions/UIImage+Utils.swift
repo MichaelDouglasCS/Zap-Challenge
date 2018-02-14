@@ -28,5 +28,11 @@ extension UIImage {
     // Favorite Games
     //*************************
     static var favoritesPlaceholder: UIImage { return UIImage(named: "icn_favorites_placeholder")! }
+    
+    //*************************
+    // Game Details
+    //*************************
+    static var favoritesSelected: UIImage { return UIImage(named: "btn_favorites_bordered")! }
+    static var favoritesUnselected: UIImage { return UIImage(named: "btn_favorites")! }
   }
 }

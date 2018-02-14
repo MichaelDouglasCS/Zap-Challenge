@@ -11,6 +11,11 @@
 "ST_NO_FAVORITE" = "Você não possui nenhum jogo favorito ainda.";
 
 //*************************
+// Game Details
+//*************************
+"ST_VIEWERS" = "visualizadores";
+
+//*************************
 // Alerts
 //*************************
 "ST_OK" = "OK";

@@ -179,7 +179,17 @@ extension FavoritesViewController: TopGameCollectionViewCellDelegate {
 
 extension FavoritesViewController: UICollectionViewDelegate {
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let gameDetails = segue.destination as? GameDetailsViewController,
+      let index = sender as? Int {
+      gameDetails.viewModel = GameDetailsViewModel(provider: GameDetailsProvider(),
+                                                   gameRank: self.viewModel.favoriteGames[index],
+                                                   index: index)
+      self.navigationItem.backBarButtonItem = UIBarButtonItem()
+    }
+  }
+  
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    self.performSegue(withIdentifier: "showGameDetails", sender: nil)
+    self.performSegue(withIdentifier: "showGameDetails", sender: indexPath.row)
   }
 }

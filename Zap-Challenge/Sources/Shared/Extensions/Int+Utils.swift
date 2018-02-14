@@ -23,4 +23,10 @@ extension Int {
   public func toString() -> String {
     return String(self)
   }
+  
+  func toDecimalFormat() -> String {
+    let numberFormatter = NumberFormatter()
+    numberFormatter.numberStyle = NumberFormatter.Style.decimal
+    return numberFormatter.string(from: NSNumber(value: self)) ?? "0"
+  }
 }
