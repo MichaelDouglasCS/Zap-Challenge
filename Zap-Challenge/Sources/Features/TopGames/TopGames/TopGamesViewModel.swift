@@ -17,6 +17,8 @@ public class TopGamesViewModel: NSObject {
   private var provider: TopGamesProvider
   
   public let headerTitle: String = String.ZAP.topGames
+  public let searchBarPlaceholder: String = String.ZAP.search
+  public var isSearch: Bool = false
   public let placeholderImage: UIImage = UIImage.ZAP.emptyTopGamesPlaceholder
   public let placeholderMessage: String = String.ZAP.emptyTopGames
   public var isShowPlaceholder: Bool {
@@ -25,6 +27,7 @@ public class TopGamesViewModel: NSObject {
   public var isLoading: Bool = false
   public var isPullToRefresh: Bool = false
   public var gamesRank: [GameRank] = []
+  private var storedGames: [GameRank] = []
   
   var footerView: LoadingFooterCollectionView?
   
@@ -37,11 +40,18 @@ public class TopGamesViewModel: NSObject {
   }
 
   //*************************************************
+  // MARK: - Private Methods
+  //*************************************************
+  
+  public func isLoadingFooterVisible() -> Bool {
+    return !self.isLoading && !self.isSearch && !self.isLastGame() && !self.gamesRank.isEmpty
+  }
+  
+  //*************************************************
   // MARK: - Exposed Methods
   //*************************************************
   
   // Data
-  
   public func loadTopGames(completion: @escaping (_ isSuccess: Bool, _ localizedError: String) -> Void) {
     let offSet = self.isPullToRefresh ? 0 : self.gamesRank.count
     
@@ -56,6 +66,29 @@ public class TopGamesViewModel: NSObject {
         }
       }
       completion(topGames != nil, error ?? "")
+    }
+  }
+  
+  public func searchGames(for string: String) {
+    
+    if self.isSearch {
+      self.gamesRank.forEach({ (gameRank) in
+        if !self.storedGames.contains(gameRank) {
+          self.storedGames.append(gameRank)
+        }
+      })
+      
+      self.gamesRank = self.storedGames.filter({ (gameRank) -> Bool in
+        var tmp = NSString()
+        
+        if let gameName = gameRank.game?.name {
+          tmp = gameName as NSString
+        }
+        return tmp.range(of: string, options: .caseInsensitive).location != NSNotFound
+      })
+    } else {
+      self.gamesRank = self.storedGames
+      self.storedGames.removeAll()
     }
   }
   
@@ -117,12 +150,12 @@ public class TopGamesViewModel: NSObject {
   // UICollectionView - FooterView
   
   public func referenceSizeForFooter(fromView view: UIView) -> CGSize {
-    return self.isLoading || self.isLastGame() ? .zero : CGSize(width: view.bounds.size.width, height: 40.0)
+    return !self.isLoadingFooterVisible() ? .zero : CGSize(width: view.bounds.size.width, height: 40.0)
   }
   
   public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
     
-    if let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LoadingFooterCollectionViewModel.reuseIdentifier, for: indexPath) as? LoadingFooterCollectionView, kind == UICollectionElementKindSectionFooter, !self.isLastGame() {
+    if let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LoadingFooterCollectionViewModel.reuseIdentifier, for: indexPath) as? LoadingFooterCollectionView, kind == UICollectionElementKindSectionFooter {
       self.footerView = footerView
       self.footerView?.backgroundColor = .clear
       self.footerView?.startAnimate()

@@ -92,6 +92,9 @@ public enum ServerRequest {
     static public func top(with limit: Int, from offset: Int) -> ServerRequest {
       return .mobile((method: .get, path: "/games/top?limit=\(limit)&offset=\(offset)"))
     }
+    static public func search(for string: String) -> ServerRequest {
+      return .mobile((method: .get, path: "/search/games?query=\(string)"))
+    }
   }
   
   //**************************************************

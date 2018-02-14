@@ -3,6 +3,7 @@
 //*************************
 "ST_TOPGAMES" = "Melhores Jogos";
 "ST_EMPTY_TOPGAMES" = "Nenhum jogo encontrado.";
+"ST_SEARCH" = "Buscar";
 
 //*************************
 // Favorite Games

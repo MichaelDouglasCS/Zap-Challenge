@@ -48,6 +48,9 @@ class TopGamesViewController: UIViewController {
                                  forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
                                  withReuseIdentifier: LoadingFooterCollectionViewModel.reuseIdentifier)
     
+    // Setup SearchBar
+    self.searchBar.placeholder = self.viewModel.searchBarPlaceholder
+    
     // Setup CollectionView
     self.collectionView.scrollsToTop = true
     self.collectionView.refreshControl = self.refreshControl
@@ -91,6 +94,7 @@ class TopGamesViewController: UIViewController {
     self.loadData {
       self.viewModel.isPullToRefresh = false
       self.refreshControl.endRefreshing()
+      self.searchBar.text?.removeAll()
     }
   }
   
@@ -158,9 +162,7 @@ extension TopGamesViewController: UICollectionViewDataSource {
       cell.viewModel = cellViewModel as! TopGameCollectionViewModel
       cell.delegate = self
       cell.setup()
-      
       self.viewModel.gamesRank[indexPath.row].isNew = false
-      
       return cell
     default:
       return UICollectionViewCell()
@@ -170,7 +172,7 @@ extension TopGamesViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
     let lastRowItem = self.collectionView.numberOfItems(inSection: indexPath.section) - 1
     
-    if lastRowItem == indexPath.row && !self.viewModel.isLastGame() {
+    if lastRowItem == indexPath.row && self.viewModel.isLoadingFooterVisible() {
       self.viewModel.footerView?.startAnimate()
       self.loadData {
         self.viewModel.footerView?.stopAnimate()
@@ -245,10 +247,37 @@ extension TopGamesViewController: UICollectionViewDelegate {
                                                    gameRank: self.viewModel.gamesRank[index],
                                                    index: index)
       self.navigationItem.backBarButtonItem = UIBarButtonItem()
+      self.view.endEditing(true)
     }
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     self.performSegue(withIdentifier: "showGameDetails", sender: indexPath.row)
   }
+  
+  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    self.view.endEditing(true)
+  }
 }
+
+//**********************************************************************************************************
+//
+// MARK: - Extension - UISearchBarDelegate
+//
+//**********************************************************************************************************
+
+extension TopGamesViewController: UISearchBarDelegate {
+  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    self.view.endEditing(true)
+  }
+  
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    self.viewModel.isSearch = !searchText.isEmpty
+    self.viewModel.searchGames(for: searchText)
+    self.viewModel.verifyFavoriteGames()
+    self.collectionView.reloadData()
+    self.isPlaceholderVisible()
+  }
+}
+
