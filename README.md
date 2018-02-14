@@ -42,14 +42,6 @@ $ pod install
 
 Now you have all elements to run this project
 
-## Running the tests
-
-To execute the Tests, you need to press:
-
-```
- command + U
-```
-
 ## Authors
 
-* **Michael Douglas** -
+* **Michael Douglas** - https://github.com/MichaelDouglasCS
