@@ -92,7 +92,7 @@ public class TopGamesViewModel: NSObject {
   }
   
   public func cellViewModel(at indexPath: IndexPath) -> Any {
-    return TopGameCollectionViewModel(gameRank: self.gamesRank[indexPath.row])
+    return TopGameCollectionViewModel(gameRank: self.gamesRank[indexPath.row], index: indexPath.row)
   }
   
   public func insetForSection() -> UIEdgeInsets {

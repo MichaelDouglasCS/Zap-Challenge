@@ -63,6 +63,20 @@ class FavoritesViewController: UIViewController {
     self.isPlaceholderVisible()
   }
   
+  fileprivate func reloadData() {
+    var indexPaths: [IndexPath] = []
+    
+    self.viewModel.favoriteGames.forEach({ (gameRank) in
+      if let index = self.viewModel.favoriteGames.index(of: gameRank) {
+        indexPaths.append(IndexPath(item: index, section: 0))
+      }
+    })
+    
+    self.collectionView.performBatchUpdates({
+      self.collectionView.reloadItems(at: indexPaths)
+    })
+  }
+  
   fileprivate func isPlaceholderVisible() {
     self.placeholderImage.isHidden = !self.viewModel.isShowPlaceholder
     self.placeholderLabel.isHidden = !self.viewModel.isShowPlaceholder
@@ -145,10 +159,13 @@ extension FavoritesViewController: TopGameCollectionViewCellDelegate {
       self.collectionView.performBatchUpdates({
         self.viewModel.removeFavoriteGame(game)
         self.collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
+      }, completion: { (_) in
+        self.reloadData()
       })
     } else {
       self.viewModel.removeFavoriteGame(game)
       self.collectionView.reloadSections([0])
+      self.reloadData()
     }
     self.isPlaceholderVisible()
   }
@@ -163,6 +180,6 @@ extension FavoritesViewController: TopGameCollectionViewCellDelegate {
 extension FavoritesViewController: UICollectionViewDelegate {
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    print("SELECIONOU: \(self.viewModel.favoriteGames[indexPath.row].game?.name ?? "")")
+    self.performSegue(withIdentifier: "showGameDetails", sender: nil)
   }
 }

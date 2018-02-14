@@ -24,9 +24,14 @@ public class TopGameCollectionViewModel: NSObject {
   public static let reuseIdentifier: String = "TopGameCollectionViewCell"
   
   public var gameRank: GameRank?
+  private var index: Int
   
   public var name: String? {
-    return self.gameRank?.game?.name
+    if let name = self.gameRank?.game?.name {
+      return "#\(self.index + 1) \(name)"
+    } else {
+      return nil
+    }
   }
   
   public var isFavorite: Bool {
@@ -41,7 +46,8 @@ public class TopGameCollectionViewModel: NSObject {
   // MARK: - Initializers
   //*************************************************
   
-  public init(gameRank: GameRank?) {
+  public init(gameRank: GameRank?, index: Int) {
     self.gameRank = gameRank
+    self.index = index
   }
 }

@@ -67,7 +67,7 @@ public class FavoritesViewModel: NSObject {
   }
   
   public func cellViewModel(at indexPath: IndexPath) -> Any {
-    return TopGameCollectionViewModel(gameRank: self.favoriteGames[indexPath.row])
+    return TopGameCollectionViewModel(gameRank: self.favoriteGames[indexPath.row], index: indexPath.row)
   }
   
   public func insetForSection() -> UIEdgeInsets {

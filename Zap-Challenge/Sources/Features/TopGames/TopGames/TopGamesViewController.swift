@@ -239,6 +239,6 @@ extension TopGamesViewController: TopGameCollectionViewCellDelegate {
 extension TopGamesViewController: UICollectionViewDelegate {
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    print("SELECIONOU: \(self.viewModel.gamesRank[indexPath.row].game?.name ?? "")")
+    self.performSegue(withIdentifier: "showGameDetails", sender: nil)
   }
 }

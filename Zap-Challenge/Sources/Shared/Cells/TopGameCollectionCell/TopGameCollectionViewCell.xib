@@ -67,7 +67,7 @@
                                     <constraint firstAttribute="width" constant="28" id="h3R-TD-CSd"/>
                                     <constraint firstAttribute="height" constant="25" id="o6h-kG-oiD"/>
                                 </constraints>
-                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.14901960784313725" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="btn_favorites"/>
                                 <state key="selected" image="btn_favorites_filled"/>
                                 <connections>
