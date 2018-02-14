@@ -19,7 +19,7 @@
         <scene sceneID="7M1-Zi-5My">
             <objects>
                 <navigationController id="y78-Gh-Pw9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Title" image="icn_joystick" id="rDu-OR-eK2"/>
+                    <tabBarItem key="tabBarItem" title="Title" image="icn_joystick" selectedImage="icn_joystick_filled" id="rDu-OR-eK2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="BsB-4I-DHC">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -209,5 +209,6 @@
         <image name="btn_favorites" width="36" height="32"/>
         <image name="btn_favorites_filled" width="36" height="32"/>
         <image name="icn_joystick" width="32" height="22"/>
+        <image name="icn_joystick_filled" width="32" height="22"/>
     </resources>
 </document>
