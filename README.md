@@ -1,4 +1,4 @@
-# Zap Challeng 
+# Zap Challenge
 
 The goal of the test is to implement an app where we can see the games with the most views in Twitch. The app should show a list of games and be able to navigate to the details of each game. In addition, both in the list and on the details screen, it should be possible to favor the game. Favorite games must be persisted on the device so they can be accessed offline and shown on a tab itself.
 
