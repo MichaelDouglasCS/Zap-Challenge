@@ -6,9 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Title-->
         <scene sceneID="QKr-xg-xOr">
@@ -43,20 +49,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="W7G-cB-Fct">
-                                <rect key="frame" x="167" y="298" width="41.666666666666657" height="45.333333333333314"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_favorites" translatesAutoresizingMaskIntoConstraints="NO" id="Jo5-wE-0a4">
-                                        <rect key="frame" x="6.6666666666666572" y="0.0" width="28" height="25"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eis-50-XYr">
-                                        <rect key="frame" x="0.0" y="25" width="41.666666666666664" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jo5-wE-0a4">
+                                <rect key="frame" x="100" y="203" width="175" height="155"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jo5-wE-0a4" secondAttribute="height" multiplier="373:329" id="WZb-2A-Udf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eis-50-XYr" userLabel="Placeholder">
+                                <rect key="frame" x="50" y="378" width="275" height="22.666666666666686"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hiL-W0-rAs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,18 +80,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="W7G-cB-Fct" firstAttribute="centerY" secondItem="Lzo-fr-MUK" secondAttribute="centerY" id="7yT-u1-sSt"/>
+                            <constraint firstItem="Jo5-wE-0a4" firstAttribute="leading" secondItem="Lzo-fr-MUK" secondAttribute="leading" constant="100" id="7ji-31-SKv"/>
+                            <constraint firstItem="Jo5-wE-0a4" firstAttribute="centerY" secondItem="Lzo-fr-MUK" secondAttribute="centerY" constant="-40" id="9IN-6f-TcM"/>
                             <constraint firstItem="Lzo-fr-MUK" firstAttribute="trailing" secondItem="hiL-W0-rAs" secondAttribute="trailing" id="Eyn-EO-vAO"/>
+                            <constraint firstItem="Lzo-fr-MUK" firstAttribute="trailing" secondItem="Eis-50-XYr" secondAttribute="trailing" constant="50" id="KWg-Cu-ANo"/>
                             <constraint firstItem="hiL-W0-rAs" firstAttribute="top" secondItem="Lzo-fr-MUK" secondAttribute="top" id="W8i-mo-Fwf"/>
+                            <constraint firstItem="Eis-50-XYr" firstAttribute="top" secondItem="Jo5-wE-0a4" secondAttribute="bottom" constant="20" id="WCo-Gr-nvZ"/>
+                            <constraint firstItem="Lzo-fr-MUK" firstAttribute="trailing" secondItem="Jo5-wE-0a4" secondAttribute="trailing" constant="100" id="YMk-e4-Fi3"/>
                             <constraint firstItem="Lzo-fr-MUK" firstAttribute="bottom" secondItem="hiL-W0-rAs" secondAttribute="bottom" id="iwU-CG-yd5"/>
                             <constraint firstItem="hiL-W0-rAs" firstAttribute="leading" secondItem="Lzo-fr-MUK" secondAttribute="leading" id="spj-bg-y8g"/>
-                            <constraint firstItem="W7G-cB-Fct" firstAttribute="centerX" secondItem="Lzo-fr-MUK" secondAttribute="centerX" id="ynq-lv-7Ge"/>
+                            <constraint firstItem="Eis-50-XYr" firstAttribute="leading" secondItem="Lzo-fr-MUK" secondAttribute="leading" constant="50" id="xMf-gg-tpl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lzo-fr-MUK"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="hYI-TC-lVU"/>
                     <connections>
                         <outlet property="collectionView" destination="hiL-W0-rAs" id="rkZ-1x-W4Y"/>
+                        <outlet property="placeholderImage" destination="Jo5-wE-0a4" id="6Nc-jW-qLP"/>
+                        <outlet property="placeholderLabel" destination="Eis-50-XYr" id="Eet-zl-qwA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDG-sh-m0R" userLabel="First Responder" sceneMemberID="firstResponder"/>

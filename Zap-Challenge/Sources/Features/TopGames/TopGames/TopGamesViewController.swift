@@ -34,19 +34,19 @@ class TopGamesViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    //Change Status Bar Style
+    // Change Status Bar Style
     UIApplication.shared.statusBarStyle = .lightContent
-    //Navigation
+    // Navigation
     self.navigationItem.title = self.viewModel.headerTitle
     
-    // Configure Refresh Control
+    // Setup Refresh Control
     self.refreshControl.tintColor = UIColor.ZAP.purple
     self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
     self.collectionView.register(LoadingFooterCollectionViewModel.viewNib,
                                  forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
                                  withReuseIdentifier: LoadingFooterCollectionViewModel.reuseIdentifier)
     
-    //Configure CollectionView
+    // Setup CollectionView
     self.collectionView.scrollsToTop = true
     self.collectionView.refreshControl = self.refreshControl
     self.collectionView.register(TopGameCollectionViewModel.cellNib,

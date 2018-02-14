@@ -23,6 +23,11 @@ public class FavoritesViewModel: NSObject {
   private var provider: FavoritesProvider
   
   public let headerTitle: String = String.ZAP.favorites
+  public let placeholderImage: UIImage = UIImage.ZAP.favoritesPlaceholder
+  public let placeholderMessage: String = String.ZAP.noFavorites
+  public var isShowPlaceholder: Bool {
+    return !self.favoriteGames.isEmpty
+  }
   public var favoriteGames: [GameRank] = []
   
   //*************************************************

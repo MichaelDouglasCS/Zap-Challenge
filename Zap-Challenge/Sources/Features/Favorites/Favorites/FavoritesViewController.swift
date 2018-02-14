@@ -20,6 +20,8 @@ class FavoritesViewController: UIViewController {
   // MARK: - Properties
   //*************************************************
   
+  @IBOutlet weak var placeholderImage: UIImageView!
+  @IBOutlet weak var placeholderLabel: UILabel!
   @IBOutlet weak var collectionView: UICollectionView!
   
   var viewModel: FavoritesViewModel!
@@ -31,15 +33,19 @@ class FavoritesViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    //Change Status Bar Style
+    // Change Status Bar Style
     UIApplication.shared.statusBarStyle = .lightContent
-    //Navigation
+    // Navigation
     self.navigationItem.title = self.viewModel.headerTitle
     
-    //Configure CollectionView
+    // Setup CollectionView
     self.collectionView.scrollsToTop = true
     self.collectionView.register(TopGameCollectionViewModel.cellNib,
                                  forCellWithReuseIdentifier: TopGameCollectionViewModel.reuseIdentifier)
+    
+    // Setup Placeholder
+    self.placeholderImage.image = self.viewModel.placeholderImage
+    self.placeholderLabel.text = self.viewModel.placeholderMessage
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -54,6 +60,12 @@ class FavoritesViewController: UIViewController {
   private func loadData() {
     self.viewModel.loadFavoriteGames()
     self.collectionView.reloadData()
+    self.isPlaceholderVisible()
+  }
+  
+  fileprivate func isPlaceholderVisible() {
+    self.placeholderImage.isHidden = self.viewModel.isShowPlaceholder
+    self.placeholderLabel.isHidden = self.viewModel.isShowPlaceholder
   }
 }
 
@@ -138,6 +150,7 @@ extension FavoritesViewController: TopGameCollectionViewCellDelegate {
       self.viewModel.removeFavoriteGame(game)
       self.collectionView.reloadSections([0])
     }
+    self.isPlaceholderVisible()
   }
 }
 

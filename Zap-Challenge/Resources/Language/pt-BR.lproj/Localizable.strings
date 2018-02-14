@@ -3,7 +3,12 @@
 //*************************
 
 "ST_TOPGAMES" = "Melhores Jogos";
+
+//*************************
+// Favorite Games
+//*************************
 "ST_FAVORITES" = "Favoritos";
+"ST_NO_FAVORITE" = "Você não possui nenhum jogo favorito ainda.";
 
 //*************************
 // Alerts
