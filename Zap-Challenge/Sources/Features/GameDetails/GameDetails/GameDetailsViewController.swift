@@ -47,11 +47,11 @@ class GameDetailsViewController: UIViewController {
     // Navigation
     self.navigationItem.title = self.viewModel.headerTitle
     
+    // Load Data
     if let url = self.viewModel.imageURL {
-      
       self.backgroundImage.image = UIImage.ZAP.joystickPlaceholder
       self.imageView.contentMode = .scaleAspectFit
-      
+
       self.imageView.downloadImage(from: url,
                                    withPlaceholder: UIImage.ZAP.joystickPlaceholder,
                                    completion: { (_) in
@@ -75,7 +75,6 @@ class GameDetailsViewController: UIViewController {
     } else {
       self.viewModel.removeFavoriteGame()
     }
-    
     self.isFavorite = self.viewModel.isFavorite
   }
 }
