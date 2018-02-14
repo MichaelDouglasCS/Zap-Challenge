@@ -17,6 +17,7 @@ import CoreData
 
 public protocol PersistenceServiceProtocol: class {
   func toNSManagedObject() -> NSManagedObject
+  init(NSManagedObject object: NSManagedObject?)
 }
 
 //**********************************************************************************************************

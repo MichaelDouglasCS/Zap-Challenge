@@ -14,7 +14,7 @@ public class TopGamesViewModel: NSObject {
   // MARK: - Properties
   //*************************************************
   
-  public var provider: TopGamesProvider
+  private var provider: TopGamesProvider
   
   public let headerTitle: String = String.ZAP.topGames
   public var isLoading: Bool = false
@@ -60,16 +60,20 @@ public class TopGamesViewModel: NSObject {
   
   public func addFavoriteGame(_ game: GameRank?) {
     if let gameRank = game {
-      self.provider.addFavoriteGame(gameRank)
       gameRank.isFavorite = true
+      self.provider.addFavoriteGame(gameRank)
     }
   }
   
   public func removeFavoriteGame(_ game: GameRank?) {
     if let gameRank = game {
-      self.provider.removeFavoriteGame(gameRank)
       gameRank.isFavorite = false
+      self.provider.removeFavoriteGame(gameRank)
     }
+  }
+  
+  public func verifyFavoriteGames() {
+    self.provider.verifyFavoriteGames(self.gamesRank)
   }
   
   // UICollectionView - Items

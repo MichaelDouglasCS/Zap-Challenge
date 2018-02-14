@@ -16,22 +16,6 @@ import SwiftyJSON
 //**********************************************************************************************************
 
 public class TopGamesProvider: NSObject {
-  
-  //*************************************************
-  // MARK: - Exposed Methods
-  //*************************************************
-  
-  private func verifyGames(_ gamesRank: [GameRank]) {
-    do {
-      if let persistedGames = try PersistenceService.shared.context.fetch(GameRankMO.fetchRequest()) as? [GameRankMO] {
-        gamesRank.forEach({ (gameRank) in
-          if persistedGames.contains(where: { $0.game?.id == Int32(gameRank.game?.id ?? 0) }) {
-            gameRank.isFavorite = true
-          }
-        })
-      }
-    } catch { }
-  }
  
   //*************************************************
   // MARK: - Exposed Methods
@@ -42,7 +26,6 @@ public class TopGamesProvider: NSObject {
                            from offset: Int,
                            completion: @escaping (_ topGames: [GameRank]?, _ localizedError: String?) -> Void) {
     ServerRequest.Games.top(with: limit, from: offset).execute { (json, response) in
-      
       switch response {
       case .success:
         var topGames: [GameRank] = []
@@ -57,7 +40,7 @@ public class TopGamesProvider: NSObject {
           }
         })
         
-        self.verifyGames(topGames)
+        self.verifyFavoriteGames(topGames)
         completion(topGames, nil)
       case .error:
         completion(nil, response.localizedError)
@@ -86,6 +69,20 @@ public class TopGamesProvider: NSObject {
         games.forEach({
           if $0.game?.id == Int32(gameRank.game?.id ?? 0) {
             PersistenceService.shared.context.delete($0)
+          }
+        })
+      }
+    } catch { }
+  }
+  
+  public func verifyFavoriteGames(_ gamesRank: [GameRank]) {
+    do {
+      if let persistedGames = try PersistenceService.shared.context.fetch(GameRankMO.fetchRequest()) as? [GameRankMO] {
+        gamesRank.forEach({ (gameRank) in
+          if persistedGames.contains(where: { $0.game?.id == Int32(gameRank.game?.id ?? 0) }) {
+            gameRank.isFavorite = true
+          } else {
+            gameRank.isFavorite = false
           }
         })
       }

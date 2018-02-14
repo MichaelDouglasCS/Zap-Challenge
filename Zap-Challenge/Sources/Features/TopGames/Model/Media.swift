@@ -16,7 +16,7 @@ import CoreData
 //
 //**********************************************************************************************************
 
-public class Media: Mappable {
+public class Media: Mappable, PersistenceServiceProtocol {
   
   //**************************************************
   // MARK: - Properties
@@ -35,6 +35,17 @@ public class Media: Mappable {
   
   public required init?(map: Map) { }
   
+  public required convenience init(NSManagedObject object: NSManagedObject?) {
+    self.init()
+    
+    if let mediaMO = object as? MediaMO {
+      self.large = mediaMO.large
+      self.medium = mediaMO.medium
+      self.small = mediaMO.small
+      self.template = mediaMO.template
+    }
+  }
+  
   //**************************************************
   // MARK: - Exposed Methods
   //**************************************************
@@ -45,15 +56,6 @@ public class Media: Mappable {
     self.small    <- map["small"]
     self.template <- map["template"]
   }
-}
-
-//**********************************************************************************************************
-//
-// MARK: - Extension - PersistenceServiceProtocol
-//
-//**********************************************************************************************************
-
-extension Media: PersistenceServiceProtocol {
   
   public func toNSManagedObject() -> NSManagedObject {
     let mediaMO = MediaMO(context: PersistenceService.shared.container.viewContext)

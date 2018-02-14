@@ -16,7 +16,7 @@ import CoreData
 //
 //**********************************************************************************************************
 
-public class Game: Mappable {
+public class Game: Mappable, PersistenceServiceProtocol {
   
   //**************************************************
   // MARK: - Properties
@@ -39,6 +39,21 @@ public class Game: Mappable {
   
   public required init?(map: Map) { }
   
+  public required convenience init(NSManagedObject object: NSManagedObject?) {
+    self.init()
+    
+    if let gameMO = object as? GameMO {
+      self.id = Int(gameMO.id)
+      self.name = gameMO.name
+      self.localizedName = gameMO.localizedName
+      self.popularity = Int(gameMO.popularity)
+      self.box = Media(NSManagedObject: gameMO.box)
+      self.logo = Media(NSManagedObject: gameMO.logo)
+      self.giantbombID = Int(gameMO.giantbombID)
+      self.locale = gameMO.locale
+    }
+  }
+  
   //**************************************************
   // MARK: - Exposed Methods
   //**************************************************
@@ -53,15 +68,6 @@ public class Game: Mappable {
     self.giantbombID   <- map["giantbomb_id"]
     self.locale        <- map["locale"]
   }
-}
-
-//**********************************************************************************************************
-//
-// MARK: - Extension - PersistenceServiceProtocol
-//
-//**********************************************************************************************************
-
-extension Game: PersistenceServiceProtocol {
   
   public func toNSManagedObject() -> NSManagedObject {
     let gameMO = GameMO(context: PersistenceService.shared.container.viewContext)

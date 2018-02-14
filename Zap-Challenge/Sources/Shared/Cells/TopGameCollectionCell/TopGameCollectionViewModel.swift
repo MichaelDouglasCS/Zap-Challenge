@@ -6,7 +6,7 @@
 //  Copyright © 2018 Michael Douglas. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 //**********************************************************************************************************
 //
@@ -20,7 +20,8 @@ public class TopGameCollectionViewModel: NSObject {
   // MARK: - Properties
   //*************************************************
   
-  public static let cellNibName: String = "TopGameCollectionViewCell"
+  public static let cellNib: UINib = UINib(nibName: "TopGameCollectionViewCell", bundle: nil)
+  public static let reuseIdentifier: String = "TopGameCollectionViewCell"
   
   public var gameRank: GameRank?
   

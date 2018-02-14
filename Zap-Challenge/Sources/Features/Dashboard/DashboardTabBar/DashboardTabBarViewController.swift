@@ -36,7 +36,8 @@ class DashboardTabBarViewController: UITabBarController {
       if let topGamesViewController = firstViewController as? TopGamesViewController {
         topGamesViewController.viewModel = TopGamesViewModel(provider: TopGamesProvider())
         navigationViewController.tabBarItem.title = String.ZAP.topGames
-      } else {
+      } else if let favoritesViewController = firstViewController as? FavoritesViewController {
+        favoritesViewController.viewModel = FavoritesViewModel(provider: FavoritesProvider())
         navigationViewController.tabBarItem.title = String.ZAP.favorites
       }
     })

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopGameCollectionViewCell" id="SRn-j4-B7T" customClass="TopGameCollectionViewCell" customModule="Zap_Challenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="157" height="240"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="157" height="240"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJM-PV-a0z" userLabel="BackgroundView" customClass="UIBox" customModule="Zap_Challenge" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="157" height="240"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v4a-Mm-qpF" userLabel="BackgroundBlurView">
+                                <rect key="frame" x="0.0" y="0.0" width="157" height="240"/>
+                                <color key="tintColor" red="0.37647058820000001" green="0.20392156859999999" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3r-i2-Ik9">
+                                <rect key="frame" x="0.0" y="0.0" width="157" height="240"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xkf-mO-pQA">
+                                    <rect key="frame" x="0.0" y="0.0" width="157" height="240"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wND-1d-2oL" userLabel="Image View" customClass="CircularImage" customModule="Zap_Challenge" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="137" height="180"/>
+                                <color key="tintColor" red="0.37647058820000001" green="0.20392156859999999" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXj-1R-9HW">
+                                <rect key="frame" x="0.0" y="200" width="157" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="wQV-B8-1bJ">
+                                <rect key="frame" x="10" y="205" width="104" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxe-p0-YBb" userLabel="FavoriteButton">
+                                <rect key="frame" x="119" y="208" width="28" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="h3R-TD-CSd"/>
+                                    <constraint firstAttribute="height" constant="25" id="o6h-kG-oiD"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="btn_favorites"/>
+                                <state key="selected" image="btn_favorites_filled"/>
+                                <connections>
+                                    <action selector="didTouchFavorite:" destination="SRn-j4-B7T" eventType="touchUpInside" id="oqo-zF-dgG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wND-1d-2oL" firstAttribute="top" secondItem="aJM-PV-a0z" secondAttribute="top" constant="10" id="2Bi-yn-qNF"/>
+                            <constraint firstItem="oxe-p0-YBb" firstAttribute="centerY" secondItem="wQV-B8-1bJ" secondAttribute="centerY" id="2SW-Mh-3Cs"/>
+                            <constraint firstAttribute="bottom" secondItem="v4a-Mm-qpF" secondAttribute="bottom" id="6mt-MJ-xG0"/>
+                            <constraint firstAttribute="bottom" secondItem="M3r-i2-Ik9" secondAttribute="bottom" id="74m-x0-FPl"/>
+                            <constraint firstItem="M3r-i2-Ik9" firstAttribute="leading" secondItem="aJM-PV-a0z" secondAttribute="leading" id="C89-Gc-MbB"/>
+                            <constraint firstItem="hXj-1R-9HW" firstAttribute="top" secondItem="wND-1d-2oL" secondAttribute="bottom" constant="10" id="Gv9-YM-Aj3"/>
+                            <constraint firstItem="wQV-B8-1bJ" firstAttribute="leading" secondItem="aJM-PV-a0z" secondAttribute="leading" constant="10" id="Het-8E-6o7"/>
+                            <constraint firstAttribute="trailing" secondItem="M3r-i2-Ik9" secondAttribute="trailing" id="QsJ-as-w9T"/>
+                            <constraint firstItem="wQV-B8-1bJ" firstAttribute="top" secondItem="hXj-1R-9HW" secondAttribute="top" constant="5" id="Rj5-5y-xfA"/>
+                            <constraint firstAttribute="trailing" secondItem="v4a-Mm-qpF" secondAttribute="trailing" id="SKv-dA-31U"/>
+                            <constraint firstItem="hXj-1R-9HW" firstAttribute="leading" secondItem="aJM-PV-a0z" secondAttribute="leading" id="Uep-Fv-uc5"/>
+                            <constraint firstItem="v4a-Mm-qpF" firstAttribute="top" secondItem="aJM-PV-a0z" secondAttribute="top" id="UuU-BD-i6J"/>
+                            <constraint firstAttribute="bottom" secondItem="wND-1d-2oL" secondAttribute="bottom" constant="50" id="dJC-xc-Q0G"/>
+                            <constraint firstItem="wND-1d-2oL" firstAttribute="leading" secondItem="aJM-PV-a0z" secondAttribute="leading" constant="10" id="e35-Yn-Frj"/>
+                            <constraint firstAttribute="bottom" secondItem="hXj-1R-9HW" secondAttribute="bottom" id="eYk-fn-uT4"/>
+                            <constraint firstItem="oxe-p0-YBb" firstAttribute="leading" secondItem="wQV-B8-1bJ" secondAttribute="trailing" constant="5" id="fjr-tV-aRF"/>
+                            <constraint firstAttribute="bottom" secondItem="wQV-B8-1bJ" secondAttribute="bottom" constant="5" id="pLq-Er-CAd"/>
+                            <constraint firstItem="M3r-i2-Ik9" firstAttribute="top" secondItem="aJM-PV-a0z" secondAttribute="top" id="q15-VG-dj0"/>
+                            <constraint firstAttribute="trailing" secondItem="wND-1d-2oL" secondAttribute="trailing" constant="10" id="vLm-ha-5NA"/>
+                            <constraint firstAttribute="trailing" secondItem="oxe-p0-YBb" secondAttribute="trailing" constant="10" id="x9Y-J7-num"/>
+                            <constraint firstAttribute="trailing" secondItem="hXj-1R-9HW" secondAttribute="trailing" id="xe6-X8-3mj"/>
+                            <constraint firstItem="v4a-Mm-qpF" firstAttribute="leading" secondItem="aJM-PV-a0z" secondAttribute="leading" id="y6Z-C0-hxF"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="aJM-PV-a0z" firstAttribute="top" secondItem="SRn-j4-B7T" secondAttribute="top" id="0yB-RS-b91"/>
+                <constraint firstAttribute="bottom" secondItem="aJM-PV-a0z" secondAttribute="bottom" id="UL1-Fy-d8p"/>
+                <constraint firstItem="aJM-PV-a0z" firstAttribute="leading" secondItem="SRn-j4-B7T" secondAttribute="leading" id="oBC-EL-qI9"/>
+                <constraint firstAttribute="trailing" secondItem="aJM-PV-a0z" secondAttribute="trailing" id="y29-fr-6yM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="C8r-pf-vMc"/>
+            <connections>
+                <outlet property="backgroundBlurView" destination="v4a-Mm-qpF" id="Ea1-z2-wBw"/>
+                <outlet property="favoriteButton" destination="oxe-p0-YBb" id="DTq-Jc-3tf"/>
+                <outlet property="imageView" destination="wND-1d-2oL" id="huQ-sC-RFi"/>
+                <outlet property="nameLabel" destination="wQV-B8-1bJ" id="q6n-yh-qTq"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="btn_favorites" width="36" height="32"/>
+        <image name="btn_favorites_filled" width="36" height="32"/>
+    </resources>
+</document>
