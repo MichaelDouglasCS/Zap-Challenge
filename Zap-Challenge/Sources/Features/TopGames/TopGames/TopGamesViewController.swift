@@ -20,6 +20,8 @@ class TopGamesViewController: UIViewController {
   // MARK: - Properties
   //*************************************************
   
+  @IBOutlet weak var placeholderImage: UIImageView!
+  @IBOutlet weak var placeholderLabel: UILabel!
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var collectionView: UICollectionView!
   
@@ -51,6 +53,10 @@ class TopGamesViewController: UIViewController {
     self.collectionView.refreshControl = self.refreshControl
     self.collectionView.register(TopGameCollectionViewModel.cellNib,
                                  forCellWithReuseIdentifier: TopGameCollectionViewModel.reuseIdentifier)
+    
+    // Setup Placeholder
+    self.placeholderImage.image = self.viewModel.placeholderImage
+    self.placeholderLabel.text = self.viewModel.placeholderMessage
     
     // Load Data
     self.collectionView.showLoading(isShow: true, isLarge: true, color: UIColor.ZAP.purple)
@@ -92,6 +98,7 @@ class TopGamesViewController: UIViewController {
     self.viewModel.isLoading = true
     self.viewModel.loadTopGames { (isSuccess, localizedError) in
       self.viewModel.isLoading = false
+      self.isPlaceholderVisible()
       completion()
       
       if isSuccess {
@@ -117,6 +124,11 @@ class TopGamesViewController: UIViewController {
         self.showInfoAlert(title: String.ZAP.sorry, message: localizedError)
       }
     }
+  }
+  
+  fileprivate func isPlaceholderVisible() {
+    self.placeholderImage.isHidden = !self.viewModel.isShowPlaceholder
+    self.placeholderLabel.isHidden = !self.viewModel.isShowPlaceholder
   }
 }
 

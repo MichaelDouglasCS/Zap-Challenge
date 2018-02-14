@@ -17,6 +17,11 @@ public class TopGamesViewModel: NSObject {
   private var provider: TopGamesProvider
   
   public let headerTitle: String = String.ZAP.topGames
+  public let placeholderImage: UIImage = UIImage.ZAP.emptyTopGamesPlaceholder
+  public let placeholderMessage: String = String.ZAP.emptyTopGames
+  public var isShowPlaceholder: Bool {
+    return self.gamesRank.isEmpty
+  }
   public var isLoading: Bool = false
   public var isPullToRefresh: Bool = false
   public var gamesRank: [GameRank] = []

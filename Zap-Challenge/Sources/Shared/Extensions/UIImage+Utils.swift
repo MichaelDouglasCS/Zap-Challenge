@@ -22,6 +22,7 @@ extension UIImage {
     // Top Games
     //*************************
     static var joystickPlaceholder: UIImage { return UIImage(named: "icn_joystick_placeholder")! }
+    static var emptyTopGamesPlaceholder: UIImage { return UIImage(named: "icn_sad")! }
     
     //*************************
     // Favorite Games

@@ -1,8 +1,8 @@
 //*************************
 // Top Games
 //*************************
-
 "ST_TOPGAMES" = "Melhores Jogos";
+"ST_EMPTY_TOPGAMES" = "Nenhum jogo encontrado.";
 
 //*************************
 // Favorite Games
@@ -13,14 +13,12 @@
 //*************************
 // Alerts
 //*************************
-
 "ST_OK" = "OK";
 "ST_SORRY" = "Desculpe :(";
 
 //*************************
 // Network
 //*************************
-
 "ST_NO_CONNECTION" = "Sem conexão disponível. Por favor, verifique sua conectividade e tente novamente.";
 "ST_SERVICE_UNAVAILABLE" = "Serviço Indisponível. Por favor, tente novamente mais tarde.";
 "ST_SERVER_ERROR" = "Erro no servidor não tratado. Por favor, tente novamente mais tarde.";

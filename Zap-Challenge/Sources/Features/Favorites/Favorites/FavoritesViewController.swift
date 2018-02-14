@@ -64,8 +64,8 @@ class FavoritesViewController: UIViewController {
   }
   
   fileprivate func isPlaceholderVisible() {
-    self.placeholderImage.isHidden = self.viewModel.isShowPlaceholder
-    self.placeholderLabel.isHidden = self.viewModel.isShowPlaceholder
+    self.placeholderImage.isHidden = !self.viewModel.isShowPlaceholder
+    self.placeholderLabel.isHidden = !self.viewModel.isShowPlaceholder
   }
 }
 

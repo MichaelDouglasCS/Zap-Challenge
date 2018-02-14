@@ -26,7 +26,7 @@ public class FavoritesViewModel: NSObject {
   public let placeholderImage: UIImage = UIImage.ZAP.favoritesPlaceholder
   public let placeholderMessage: String = String.ZAP.noFavorites
   public var isShowPlaceholder: Bool {
-    return !self.favoriteGames.isEmpty
+    return self.favoriteGames.isEmpty
   }
   public var favoriteGames: [GameRank] = []
   
