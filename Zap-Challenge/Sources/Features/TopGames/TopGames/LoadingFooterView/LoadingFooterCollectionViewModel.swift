@@ -15,11 +15,11 @@ import UIKit
 //**********************************************************************************************************
 
 public class LoadingFooterCollectionViewModel: NSObject {
-  
-  //*************************************************
-  // MARK: - Properties
-  //*************************************************
-
-  public static var viewNib: UINib = UINib(nibName: "LoadingFooterCollectionView", bundle: nil)
-  public static var reuseIdentifier: String = "LoadingFooterCollectionView"
+    
+    //*************************************************
+    // MARK: - Properties
+    //*************************************************
+    
+    public static var viewNib: UINib = UINib(nibName: "LoadingFooterCollectionView", bundle: nil)
+    public static var reuseIdentifier: String = "LoadingFooterCollectionView"
 }

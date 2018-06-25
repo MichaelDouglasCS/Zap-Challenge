@@ -15,72 +15,72 @@ import UIKit
 //**********************************************************************************************************
 
 public class GameDetailsViewModel: NSObject {
-  
-  //*************************************************
-  // MARK: - Properties
-  //*************************************************
-  
-  private var provider: GameDetailsProvider
-  
-  public var gameRank: GameRank
-  private var index: Int
-  
-  public var headerTitle: String {
-    return self.gameRank.game?.name ?? ""
-  }
-  
-  public var name: String? {
-    if let name = self.gameRank.game?.name {
-      return "#\(self.index + 1) \(name)"
-    } else {
-      return nil
-    }
-  }
-  
-  public var isFavorite: Bool {
-    return self.gameRank.isFavorite
-  }
-  
-  public var imageURL: URL? {
-    return URL(string: self.gameRank.game?.box?.large ?? "")
-  }
-  
-  public var viewers: NSAttributedString {
-    let viewersString: String = self.gameRank.viewers?.toDecimalFormat() ?? ""
-    let mutable = NSMutableAttributedString(string: "\(viewersString) \(String.ZAP.viewers)")
     
-    if let range = mutable.string.range(of: viewersString),
-      let font =  UIFont(name: "HelveticaNeue-Bold", size: 15) {
-      mutable.addAttribute(NSAttributedStringKey.font,
-                           value: font,
-                           range: mutable.string.nsRange(from: range))
+    //*************************************************
+    // MARK: - Properties
+    //*************************************************
+    
+    private var provider: GameDetailsProvider
+    
+    public var gameRank: GameRank
+    private var index: Int
+    
+    public var headerTitle: String {
+        return self.gameRank.game?.name ?? ""
     }
     
-    return mutable
-  }
-  
-  //*************************************************
-  // MARK: - Initializers
-  //*************************************************
-  
-  init(provider: GameDetailsProvider, gameRank: GameRank, index: Int) {
-    self.provider = provider
-    self.gameRank = gameRank
-    self.index = index
-  }
-  
-  //*************************************************
-  // MARK: - Exposed Methods
-  //*************************************************
-  
-  // Data
-  public func addFavoriteGame() {
-    self.gameRank.isFavorite = true
-    self.provider.addFavoriteGame(self.gameRank)
-  }
-  
-  public func removeFavoriteGame() {
-    self.gameRank.isFavorite = false
-    self.provider.removeFavoriteGame(self.gameRank)
-  }
+    public var name: String? {
+        if let name = self.gameRank.game?.name {
+            return "#\(self.index + 1) \(name)"
+        } else {
+            return nil
+        }
+    }
+    
+    public var isFavorite: Bool {
+        return self.gameRank.isFavorite
+    }
+    
+    public var imageURL: URL? {
+        return URL(string: self.gameRank.game?.box?.large ?? "")
+    }
+    
+    public var viewers: NSAttributedString {
+        let viewersString: String = self.gameRank.viewers?.toDecimalFormat() ?? ""
+        let mutable = NSMutableAttributedString(string: "\(viewersString) \(String.ZAP.viewers)")
+        
+        if let range = mutable.string.range(of: viewersString),
+            let font =  UIFont(name: "HelveticaNeue-Bold", size: 15) {
+            mutable.addAttribute(NSAttributedStringKey.font,
+                                 value: font,
+                                 range: mutable.string.nsRange(from: range))
+        }
+        
+        return mutable
+    }
+    
+    //*************************************************
+    // MARK: - Initializers
+    //*************************************************
+    
+    init(provider: GameDetailsProvider, gameRank: GameRank, index: Int) {
+        self.provider = provider
+        self.gameRank = gameRank
+        self.index = index
+    }
+    
+    //*************************************************
+    // MARK: - Exposed Methods
+    //*************************************************
+    
+    // Data
+    public func addFavoriteGame() {
+        self.gameRank.isFavorite = true
+        self.provider.addFavoriteGame(self.gameRank)
+    }
+    
+    public func removeFavoriteGame() {
+        self.gameRank.isFavorite = false
+        self.provider.removeFavoriteGame(self.gameRank)
+    }
 }
