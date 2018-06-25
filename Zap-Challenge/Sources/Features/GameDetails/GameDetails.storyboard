@@ -1,49 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EBQ-Hq-b2u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EBQ-Hq-b2u">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-            <string>HelveticaNeue-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Title-->
         <scene sceneID="C3n-wp-oyn">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="EBQ-Hq-b2u" customClass="GameDetailsViewController" customModule="Zap_Challenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vS6-ZP-UgB">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vS6-ZP-UgB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y29-Cx-ZZ1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Krp-4t-zp4">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                                     </imageView>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2oh-2l-lJu">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C1R-k1-daV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agD-zP-8J5">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6b7-OT-ucs" userLabel="BackgroundView" customClass="UIBox" customModule="Zap_Challenge" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="134.66666666666666" width="275" height="420.66666666666674"/>
+                                                <rect key="frame" x="50" y="151.66666666666666" width="275" height="420.66666666666674"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7kB-xh-h2k" userLabel="ImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="275" height="350.66666666666669"/>
@@ -123,12 +117,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Y29-Cx-ZZ1" firstAttribute="leading" secondItem="UoE-ci-Zux" secondAttribute="leading" id="37h-0H-Zsd"/>
-                            <constraint firstItem="Y29-Cx-ZZ1" firstAttribute="top" secondItem="UoE-ci-Zux" secondAttribute="top" id="Bqn-D0-Fwb"/>
-                            <constraint firstItem="UoE-ci-Zux" firstAttribute="trailing" secondItem="Y29-Cx-ZZ1" secondAttribute="trailing" id="Iib-QX-rTG"/>
-                            <constraint firstItem="UoE-ci-Zux" firstAttribute="bottom" secondItem="Y29-Cx-ZZ1" secondAttribute="bottom" id="Sy6-wn-dxg"/>
+                            <constraint firstItem="Y29-Cx-ZZ1" firstAttribute="leading" secondItem="vS6-ZP-UgB" secondAttribute="leading" id="37h-0H-Zsd"/>
+                            <constraint firstItem="Y29-Cx-ZZ1" firstAttribute="top" secondItem="vS6-ZP-UgB" secondAttribute="top" id="Bqn-D0-Fwb"/>
+                            <constraint firstAttribute="trailing" secondItem="Y29-Cx-ZZ1" secondAttribute="trailing" id="Iib-QX-rTG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Y29-Cx-ZZ1" secondAttribute="bottom" id="itP-K6-T32"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="UoE-ci-Zux"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="pYt-8v-5Dy">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="btn_favorites_bordered" id="B9P-QE-aQs">
@@ -152,7 +145,6 @@
         <!--Navigation Controller-->
         <scene sceneID="hI5-ZO-qHn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Adl-vU-Exp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="jfK-xX-dFx" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="AQe-A8-EzK">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -167,6 +159,7 @@
                         <segue destination="EBQ-Hq-b2u" kind="relationship" relationship="rootViewController" id="SIg-fY-exF"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Adl-vU-Exp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-679" y="-170"/>
         </scene>
