@@ -53,6 +53,7 @@ class TopGamesViewController: UIViewController {
         self.searchBar.placeholder = self.viewModel.searchBarPlaceholder
         
         // Setup CollectionView
+        self.collectionView.delaysContentTouches = false
         self.collectionView.scrollsToTop = true
         self.collectionView.refreshControl = self.refreshControl
         self.collectionView.register(TopGameCollectionViewModel.cellNib,
@@ -248,9 +249,27 @@ extension TopGamesViewController: UICollectionViewDelegate {
             self.view.endEditing(true)
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showGameDetails", sender: indexPath.row)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            self.performSegue(withIdentifier: "showGameDetails", sender: indexPath.row)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
+                cell.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            })
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            UIView.animate(withDuration: 0.4, delay: 0.05, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
+                cell.transform = .identity
+            })
+        }
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
