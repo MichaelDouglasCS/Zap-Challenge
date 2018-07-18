@@ -8,17 +8,15 @@
 
 import UIKit
 
-//**********************************************************************************************************
-//
+//*************************************************
 // MARK: - Extension - UIViewController
-//
-//**********************************************************************************************************
+//*************************************************
 
 extension UIViewController {
     
-    //**************************************************
+    //*************************************************
     // MARK: - Protected Methods
-    //**************************************************
+    //*************************************************
     
     private static func generateAlert(for title: String, message: Any) -> UIAlertController {
         let attMsg = message as? NSAttributedString
@@ -32,9 +30,9 @@ extension UIViewController {
         return alert
     }
     
-    //**************************************************
+    //*************************************************
     // MARK: - Exposed Methods
-    //**************************************************
+    //*************************************************
     
     func showInfoAlert(title: String, message: Any, completion: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIViewController.generateAlert(for: title, message: message)
