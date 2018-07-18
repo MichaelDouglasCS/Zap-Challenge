@@ -16,7 +16,7 @@ import AlamofireImage
 extension UIImageView {
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     public func downloadImage(from url: URL,

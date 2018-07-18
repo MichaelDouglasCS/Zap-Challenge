@@ -15,15 +15,20 @@ import UIKit
 class LoadingFooterCollectionView: UICollectionReusableView {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Outlets
     //*************************************************
     
     @IBOutlet weak var refreshControlIndicator: UIActivityIndicatorView!
     
-    //  var viewModel: LoadingFooterCollectionViewModel!
+    //*************************************************
+    // MARK: - Public Properties
+    //*************************************************
+    
+    public static var viewNib: UINib = UINib(nibName: "LoadingFooterCollectionView", bundle: nil)
+    public static var reuseIdentifier: String = "LoadingFooterCollectionView"
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     func startAnimate() {

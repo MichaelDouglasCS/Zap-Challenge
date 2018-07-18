@@ -15,13 +15,10 @@ import UIKit
 public class GameDetailsViewModel: NSObject {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Public Properties
     //*************************************************
     
-    private var provider: GameDetailsProvider
-    
     public var gameRank: GameRank
-    private var index: Int
     
     public var headerTitle: String {
         return self.gameRank.game?.name ?? ""
@@ -58,6 +55,13 @@ public class GameDetailsViewModel: NSObject {
     }
     
     //*************************************************
+    // MARK: - Private Properties
+    //*************************************************
+    
+    private var provider: GameDetailsProvider
+    private var index: Int
+    
+    //*************************************************
     // MARK: - Initializers
     //*************************************************
     
@@ -68,7 +72,7 @@ public class GameDetailsViewModel: NSObject {
     }
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     // Data

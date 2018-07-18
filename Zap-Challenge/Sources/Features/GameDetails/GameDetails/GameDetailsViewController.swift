@@ -15,7 +15,7 @@ import UIKit
 class GameDetailsViewController: UIViewController {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Outlets
     //*************************************************
     
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -32,6 +32,16 @@ class GameDetailsViewController: UIViewController {
         }
     }
     
+    //*************************************************
+    // MARK: - Public Properties
+    //*************************************************
+    
+    var viewModel: GameDetailsViewModel!
+    
+    //*************************************************
+    // MARK: - Private Properties
+    //*************************************************
+    
     private var isFavorite: Bool = false {
         didSet {
             if let favoriteButton = self.favoriteButton.customView as? UIButton {
@@ -40,10 +50,8 @@ class GameDetailsViewController: UIViewController {
         }
     }
     
-    var viewModel: GameDetailsViewModel!
-    
     //*************************************************
-    // MARK: - Life Cycle
+    // MARK: - Lifecycle
     //*************************************************
     
     override func viewDidLoad() {
@@ -74,7 +82,7 @@ class GameDetailsViewController: UIViewController {
     }
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     @objc func didTouchFavorite() {

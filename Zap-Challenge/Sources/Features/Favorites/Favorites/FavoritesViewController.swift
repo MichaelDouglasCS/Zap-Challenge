@@ -15,12 +15,16 @@ import UIKit
 class FavoritesViewController: UIViewController {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Outlets
     //*************************************************
     
     @IBOutlet weak var placeholderImage: UIImageView!
     @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    //*************************************************
+    // MARK: - Public Properties
+    //*************************************************
     
     var viewModel: FavoritesViewModel!
     
@@ -49,6 +53,20 @@ class FavoritesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadData()
+    }
+    
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let gameDetails = segue.destination as? GameDetailsViewController,
+            let index = sender as? Int {
+            gameDetails.viewModel = GameDetailsViewModel(provider: GameDetailsProvider(),
+                                                         gameRank: self.viewModel.favoriteGames[index],
+                                                         index: index)
+            self.navigationItem.backBarButtonItem = UIBarButtonItem()
+        }
     }
     
     //*************************************************
@@ -137,6 +155,17 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
 }
 
 //*************************************************
+// MARK: - Extension - UICollectionViewDelegate
+//*************************************************
+
+extension FavoritesViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showGameDetails", sender: indexPath.row)
+    }
+}
+
+//*************************************************
 // MARK: - Extension - TopGameCollectionViewCellDelegate
 //*************************************************
 
@@ -159,26 +188,5 @@ extension FavoritesViewController: TopGameCollectionViewCellDelegate {
             self.reloadData()
         }
         self.isPlaceholderVisible()
-    }
-}
-
-//*************************************************
-// MARK: - Extension - UICollectionViewDelegate
-//*************************************************
-
-extension FavoritesViewController: UICollectionViewDelegate {
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let gameDetails = segue.destination as? GameDetailsViewController,
-            let index = sender as? Int {
-            gameDetails.viewModel = GameDetailsViewModel(provider: GameDetailsProvider(),
-                                                         gameRank: self.viewModel.favoriteGames[index],
-                                                         index: index)
-            self.navigationItem.backBarButtonItem = UIBarButtonItem()
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showGameDetails", sender: indexPath.row)
     }
 }

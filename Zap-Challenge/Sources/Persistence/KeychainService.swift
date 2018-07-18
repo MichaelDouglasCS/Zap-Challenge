@@ -16,7 +16,7 @@ import KeychainAccess
 public final class KeychainService: NSObject {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Private Properties
     //*************************************************
     
     private lazy var keychain: Keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "com.michaeldouglas.Zap-Challenge")
@@ -32,7 +32,7 @@ public final class KeychainService: NSObject {
     }()
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     public func setValue(_ value: String, forKey key: String) {

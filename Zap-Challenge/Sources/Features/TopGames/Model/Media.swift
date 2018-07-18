@@ -45,7 +45,7 @@ public class Media: Mappable, PersistenceServiceProtocol {
     }
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     public func mapping(map: Map) {

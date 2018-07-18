@@ -31,7 +31,7 @@ extension UIViewController {
     }
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     func showInfoAlert(title: String, message: Any, completion: ((UIAlertAction) -> Void)? = nil) {

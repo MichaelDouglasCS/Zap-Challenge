@@ -15,7 +15,7 @@ import UIKit
 class DashboardTabBarViewController: UITabBarController {
     
     //*************************************************
-    // MARK: - Life Cycle
+    // MARK: - Lifecycle
     //*************************************************
     
     override func viewDidLoad() {

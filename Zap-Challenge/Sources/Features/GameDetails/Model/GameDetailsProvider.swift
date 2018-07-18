@@ -15,7 +15,7 @@ import Foundation
 public class GameDetailsProvider: NSObject {
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     public func addFavoriteGame(_ gameRank: GameRank) {

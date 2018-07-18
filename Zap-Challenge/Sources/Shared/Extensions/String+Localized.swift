@@ -51,7 +51,7 @@ extension String {
 extension String {
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     var localized: String {

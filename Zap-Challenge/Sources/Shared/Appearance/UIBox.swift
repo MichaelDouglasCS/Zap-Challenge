@@ -16,10 +16,8 @@ import UIKit
 class UIBox: UIView {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Public Properties
     //*************************************************
-    
-    private var stroke: CALayer = CALayer()
     
     @IBInspectable var cornerRadius: CGFloat = 10.0
     @IBInspectable var shadowOffset: CGSize = CGSize(width: 0.0, height: 0.0)
@@ -33,6 +31,12 @@ class UIBox: UIView {
         let path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.cornerRadius)
         return path
     }
+    
+    //*************************************************
+    // MARK: - Private Properties
+    //*************************************************
+    
+    private var stroke: CALayer = CALayer()
     
     //*************************************************
     // MARK: - Protected Methods

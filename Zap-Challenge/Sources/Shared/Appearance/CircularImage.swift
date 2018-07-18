@@ -16,7 +16,7 @@ import UIKit
 class CircularImage: UIImageView {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Public Properties
     //*************************************************
     
     @IBInspectable var borderColor: UIColor = UIColor.white
@@ -24,7 +24,7 @@ class CircularImage: UIImageView {
     @IBInspectable var cornerRadius: CGFloat = -1.0
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     private func setupView() {

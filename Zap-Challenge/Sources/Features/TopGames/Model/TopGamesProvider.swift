@@ -16,7 +16,7 @@ import SwiftyJSON
 public class TopGamesProvider: NSObject {
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     // Load Data

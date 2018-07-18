@@ -15,7 +15,7 @@ import Foundation
 public class FavoritesProvider: NSObject {
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     public func loadFavoriteGames() -> [GameRank] {

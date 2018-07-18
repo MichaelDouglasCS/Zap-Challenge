@@ -15,7 +15,7 @@ import UIKit
 class TopGamesViewController: UIViewController {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Outlets
     //*************************************************
     
     @IBOutlet weak var placeholderImage: UIImageView!
@@ -23,9 +23,17 @@ class TopGamesViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private let refreshControl = UIRefreshControl()
+    //*************************************************
+    // MARK: - Public Properties
+    //*************************************************
     
     var viewModel: TopGamesViewModel!
+    
+    //*************************************************
+    // MARK: - Private Properties
+    //*************************************************
+    
+    private let refreshControl = UIRefreshControl()
     
     //*************************************************
     // MARK: - Lyfe Cicle
@@ -43,9 +51,9 @@ class TopGamesViewController: UIViewController {
         // Setup Refresh Control
         self.refreshControl.tintColor = UIColor.ZAP.purple
         self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
-        self.collectionView.register(LoadingFooterCollectionViewModel.viewNib,
+        self.collectionView.register(LoadingFooterCollectionView.viewNib,
                                      forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
-                                     withReuseIdentifier: LoadingFooterCollectionViewModel.reuseIdentifier)
+                                     withReuseIdentifier: LoadingFooterCollectionView.reuseIdentifier)
         
         // Setup SearchBar
         self.searchBar.placeholder = self.viewModel.searchBarPlaceholder
@@ -83,6 +91,21 @@ class TopGamesViewController: UIViewController {
         self.collectionView.performBatchUpdates({
             self.collectionView.reloadItems(at: indexPaths)
         })
+    }
+    
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let gameDetails = segue.destination as? GameDetailsViewController,
+            let index = sender as? Int {
+            gameDetails.viewModel = GameDetailsViewModel(provider: GameDetailsProvider(),
+                                                         gameRank: self.viewModel.gamesRank[index],
+                                                         index: index)
+            self.navigationItem.backBarButtonItem = UIBarButtonItem()
+            self.view.endEditing(true)
+        }
     }
     
     //*************************************************
@@ -209,36 +232,10 @@ extension TopGamesViewController: UICollectionViewDelegateFlowLayout {
 }
 
 //*************************************************
-// MARK: - Extension - TopGameCollectionViewCellDelegate
-//*************************************************
-
-extension TopGamesViewController: TopGameCollectionViewCellDelegate {
-    
-    func didTouchAddFavoriteGame(_ game: GameRank?) {
-        self.viewModel.addFavoriteGame(game)
-    }
-    
-    func didTouchRemoveFavoriteGame(_ game: GameRank?) {
-        self.viewModel.removeFavoriteGame(game)
-    }
-}
-
-//*************************************************
 // MARK: - Extension - UICollectionViewDelegate
 //*************************************************
 
 extension TopGamesViewController: UICollectionViewDelegate {
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let gameDetails = segue.destination as? GameDetailsViewController,
-            let index = sender as? Int {
-            gameDetails.viewModel = GameDetailsViewModel(provider: GameDetailsProvider(),
-                                                         gameRank: self.viewModel.gamesRank[index],
-                                                         index: index)
-            self.navigationItem.backBarButtonItem = UIBarButtonItem()
-            self.view.endEditing(true)
-        }
-    }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
@@ -264,6 +261,21 @@ extension TopGamesViewController: UICollectionViewDelegate {
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.view.endEditing(true)
+    }
+}
+
+//*************************************************
+// MARK: - Extension - TopGameCollectionViewCellDelegate
+//*************************************************
+
+extension TopGamesViewController: TopGameCollectionViewCellDelegate {
+    
+    func didTouchAddFavoriteGame(_ game: GameRank?) {
+        self.viewModel.addFavoriteGame(game)
+    }
+    
+    func didTouchRemoveFavoriteGame(_ game: GameRank?) {
+        self.viewModel.removeFavoriteGame(game)
     }
 }
 

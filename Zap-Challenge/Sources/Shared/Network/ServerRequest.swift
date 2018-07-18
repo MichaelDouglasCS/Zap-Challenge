@@ -33,7 +33,7 @@ public enum ServerResponse {
     case error(ServerResponse.Error)
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Public Properties
     //*************************************************
     
     public var localizedError: String {
@@ -105,7 +105,7 @@ public enum ServerRequest {
     }
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     public var method: HTTPMethod {

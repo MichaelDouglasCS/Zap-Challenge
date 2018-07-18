@@ -24,7 +24,7 @@ protocol TopGameCollectionViewCellDelegate: class {
 class TopGameCollectionViewCell: UICollectionViewCell {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Outlets
     //*************************************************
     
     @IBOutlet weak var backgroundBlurView: UIImageView!
@@ -32,11 +32,15 @@ class TopGameCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    //*************************************************
+    // MARK: - Public Properties
+    //*************************************************
+    
     var viewModel: TopGameCollectionViewModel!
     weak var delegate: TopGameCollectionViewCellDelegate!
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     func setup() {

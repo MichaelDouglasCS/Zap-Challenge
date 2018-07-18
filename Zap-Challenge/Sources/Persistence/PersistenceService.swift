@@ -25,7 +25,7 @@ public protocol PersistenceServiceProtocol: class {
 public final class PersistenceService: NSObject {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Public Properties
     //*************************************************
     
     public lazy var container: NSPersistentContainer = {
@@ -53,7 +53,7 @@ public final class PersistenceService: NSObject {
     }()
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     func saveContext () {

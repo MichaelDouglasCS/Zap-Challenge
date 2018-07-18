@@ -16,7 +16,7 @@ import SwiftyJSON
 public class ServerLogger: NSObject {
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     public class func logSeparator() {

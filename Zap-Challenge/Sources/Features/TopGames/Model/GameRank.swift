@@ -47,7 +47,7 @@ public class GameRank: Mappable, PersistenceServiceProtocol {
     }
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     public func mapping(map: Map) {

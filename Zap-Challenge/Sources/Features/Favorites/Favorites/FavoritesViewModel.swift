@@ -15,10 +15,8 @@ import UIKit
 public class FavoritesViewModel: NSObject {
     
     //*************************************************
-    // MARK: - Properties
+    // MARK: - Public Properties
     //*************************************************
-    
-    private var provider: FavoritesProvider
     
     public let headerTitle: String = String.ZAP.favorites
     public let placeholderImage: UIImage = UIImage.ZAP.favoritesPlaceholder
@@ -29,6 +27,12 @@ public class FavoritesViewModel: NSObject {
     public var favoriteGames: [GameRank] = []
     
     //*************************************************
+    // MARK: - Private Properties
+    //*************************************************
+    
+    private var provider: FavoritesProvider
+    
+    //*************************************************
     // MARK: - Initializers
     //*************************************************
     
@@ -37,7 +41,7 @@ public class FavoritesViewModel: NSObject {
     }
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     // Data

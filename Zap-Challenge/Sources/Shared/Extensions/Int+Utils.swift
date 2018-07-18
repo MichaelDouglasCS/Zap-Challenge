@@ -15,7 +15,7 @@ import Foundation
 extension Int {
     
     //*************************************************
-    // MARK: - Exposed Methods
+    // MARK: - Public Methods
     //*************************************************
     
     public func toString() -> String {
