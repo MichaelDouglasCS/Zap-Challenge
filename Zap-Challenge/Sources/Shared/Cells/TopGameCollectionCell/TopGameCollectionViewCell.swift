@@ -69,6 +69,16 @@ class TopGameCollectionViewCell: UICollectionViewCell {
             self.delegate.didTouchRemoveFavoriteGame(self.viewModel.gameRank)
         }
         self.favoriteButton.isSelected = self.viewModel.isFavorite
+        
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.1, animations: {
+                self.favoriteButton.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.1) {
+                    self.favoriteButton.transform = .identity
+                }
+            })
+        }
     }
     
     //*************************************************

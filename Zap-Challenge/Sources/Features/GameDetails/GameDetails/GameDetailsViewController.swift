@@ -24,11 +24,21 @@ class GameDetailsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var viewersLabel: UILabel!
-    @IBOutlet weak var favoriteButton: UIBarButtonItem!
+    @IBOutlet weak var favoriteButton: UIBarButtonItem! {
+        didSet {
+            let iconButton = UIButton(frame: CGRect(origin: .zero, size: UIImage.ZAP.favoritesUnselected.size))
+            iconButton.setBackgroundImage(UIImage.ZAP.favoritesUnselected, for: .normal)
+            iconButton.setBackgroundImage(UIImage.ZAP.favoritesSelected, for: .selected)
+            iconButton.addTarget(self, action: #selector(self.didTouchFavorite), for: .touchUpInside)
+            self.favoriteButton.customView = iconButton
+        }
+    }
     
     private var isFavorite: Bool = false {
         didSet {
-            self.favoriteButton.image = self.isFavorite ? UIImage.ZAP.favoritesSelected : UIImage.ZAP.favoritesUnselected
+            if let favoriteButton = self.favoriteButton.customView as? UIButton {
+                favoriteButton.isSelected = self.isFavorite
+            }
         }
     }
     
@@ -45,7 +55,7 @@ class GameDetailsViewController: UIViewController {
         UIApplication.shared.statusBarStyle = .lightContent
         
         // Navigation
-        self.navigationItem.title = self.viewModel.headerTitle
+        self.navigationItem.title = self.viewModel.headerTitle 
         
         // Load Data
         if let url = self.viewModel.imageURL {
@@ -69,12 +79,22 @@ class GameDetailsViewController: UIViewController {
     // MARK: - Exposed Methods
     //*************************************************
     
-    @IBAction func didTouchFavorite(_ sender: UIBarButtonItem) {
+    @objc func didTouchFavorite() {
         if !self.viewModel.isFavorite {
             self.viewModel.addFavoriteGame()
         } else {
             self.viewModel.removeFavoriteGame()
         }
         self.isFavorite = self.viewModel.isFavorite
+        
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.1, animations: {
+                self.favoriteButton.customView?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.1) {
+                    self.favoriteButton.customView?.transform = .identity
+                }
+            })
+        }
     }
 }
