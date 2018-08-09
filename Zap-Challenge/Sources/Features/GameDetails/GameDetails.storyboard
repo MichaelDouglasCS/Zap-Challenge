@@ -126,6 +126,11 @@
                         <viewLayoutGuide key="safeArea" id="hJl-EO-K57"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="pYt-8v-5Dy">
+                        <barButtonItem key="leftBarButtonItem" image="btn_back_button" id="TM4-fD-O6e">
+                            <connections>
+                                <action selector="back:" destination="EBQ-Hq-b2u" id="hbI-mW-L6m"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="btn_favorites_bordered" id="B9P-QE-aQs"/>
                     </navigationItem>
                     <connections>
@@ -143,6 +148,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hI5-ZO-qHn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Adl-vU-Exp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="jfK-xX-dFx" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="AQe-A8-EzK">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -157,12 +163,12 @@
                         <segue destination="EBQ-Hq-b2u" kind="relationship" relationship="rootViewController" id="SIg-fY-exF"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Adl-vU-Exp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-852" y="-171"/>
         </scene>
     </scenes>
     <resources>
+        <image name="btn_back_button" width="16" height="28"/>
         <image name="btn_favorites_bordered" width="36" height="32"/>
     </resources>
 </document>

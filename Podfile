@@ -8,9 +8,9 @@ target 'Zap-Challenge' do
   # Pods for Zap-Challenge
   pod 'SwiftLint'
   pod 'SwiftyJSON'
-  pod 'ObjectMapper', '~> 3.0'
-  pod 'Alamofire', '~> 4.5'
-  pod 'AlamofireImage', '~> 3.3'
+  pod 'ObjectMapper'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'KeychainAccess'
 
   target 'Zap-ChallengeTests' do

@@ -61,7 +61,8 @@ class GameDetailsViewController: UIViewController {
         UIApplication.shared.statusBarStyle = .lightContent
         
         // Navigation
-        self.navigationItem.title = self.viewModel.headerTitle 
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationItem.title = self.viewModel.headerTitle
         
         // Load Data
         if let url = self.viewModel.imageURL {
@@ -86,11 +87,13 @@ class GameDetailsViewController: UIViewController {
     //*************************************************
     
     @objc func didTouchFavorite() {
+        
         if !self.viewModel.isFavorite {
             self.viewModel.addFavoriteGame()
         } else {
             self.viewModel.removeFavoriteGame()
         }
+        
         self.isFavorite = self.viewModel.isFavorite
         
         DispatchQueue.main.async {
@@ -102,5 +105,24 @@ class GameDetailsViewController: UIViewController {
                 }
             })
         }
+    }
+    
+    //*************************************************
+    // MARK: - Actions
+    //*************************************************
+    
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+
+//*************************************************
+// MARK: - UIGestureRecognizerDelegate
+//*************************************************
+
+extension GameDetailsViewController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }
