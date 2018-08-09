@@ -76,7 +76,7 @@ class FavoritesViewController: UIViewController {
     private func loadData() {
         self.viewModel.loadFavoriteGames()
         self.collectionView.reloadData()
-        self.isPlaceholderVisible()
+        self.isShowPlaceholder(self.viewModel.isShowPlaceholder)
     }
     
     fileprivate func reloadData() {
@@ -93,9 +93,16 @@ class FavoritesViewController: UIViewController {
         })
     }
     
-    fileprivate func isPlaceholderVisible() {
-        self.placeholderImage.isHidden = !self.viewModel.isShowPlaceholder
-        self.placeholderLabel.isHidden = !self.viewModel.isShowPlaceholder
+    private func isShowPlaceholder(_ isShow: Bool) {
+        self.placeholderImage.alpha = isShow ? 0.0 : 1.0
+        self.placeholderLabel.alpha = isShow ? 0.0 : 1.0
+        self.placeholderImage.isHidden = !isShow
+        self.placeholderLabel.isHidden = !isShow
+        
+        UIView.animate(withDuration: 0.3) {
+            self.placeholderImage.alpha = 1.0
+            self.placeholderLabel.alpha = 1.0
+        }
     }
 }
 
@@ -187,6 +194,6 @@ extension FavoritesViewController: TopGameCollectionViewCellDelegate {
             self.collectionView.reloadSections([0])
             self.reloadData()
         }
-        self.isPlaceholderVisible()
+        self.isShowPlaceholder(self.viewModel.isShowPlaceholder)
     }
 }

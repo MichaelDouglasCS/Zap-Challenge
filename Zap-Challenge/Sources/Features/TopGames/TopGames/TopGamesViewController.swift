@@ -126,7 +126,7 @@ class TopGamesViewController: UIViewController {
         self.viewModel.isLoading = true
         self.viewModel.loadTopGames { (isSuccess, localizedError) in
             self.viewModel.isLoading = false
-            self.isPlaceholderVisible()
+            self.isShowPlaceholder(self.viewModel.isShowPlaceholder)
             
             if isSuccess {
                 if self.viewModel.gamesRank.count > self.collectionView.numberOfItems(inSection: 0) && !self.viewModel.isSearch {
@@ -151,9 +151,16 @@ class TopGamesViewController: UIViewController {
         }
     }
     
-    fileprivate func isPlaceholderVisible() {
-        self.placeholderImage.isHidden = !self.viewModel.isShowPlaceholder
-        self.placeholderLabel.isHidden = !self.viewModel.isShowPlaceholder
+    private func isShowPlaceholder(_ isShow: Bool) {
+        self.placeholderImage.alpha = isShow ? 0.0 : 1.0
+        self.placeholderLabel.alpha = isShow ? 0.0 : 1.0
+        self.placeholderImage.isHidden = !isShow
+        self.placeholderLabel.isHidden = !isShow
+        
+        UIView.animate(withDuration: 0.3) {
+            self.placeholderImage.alpha = 1.0
+            self.placeholderLabel.alpha = 1.0
+        }
     }
 }
 
@@ -298,7 +305,7 @@ extension TopGamesViewController: UISearchBarDelegate {
         self.viewModel.searchGames(for: searchText)
         self.viewModel.verifyFavoriteGames()
         self.collectionView.reloadData()
-        self.isPlaceholderVisible()
+        self.isShowPlaceholder(self.viewModel.isShowPlaceholder)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
