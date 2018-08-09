@@ -15,7 +15,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software.
 
 ```
-1 - Xcode 9
+1 - Xcode 9+
 2 - Swift 4
 3 - CocoaPods
 ```
