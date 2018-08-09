@@ -1,5 +1,9 @@
 <p align="center"><img src="/Screenshots/Icon.png" width="200"></p>
 
+![Xcode 9.0+](https://img.shields.io/badge/Xcode-9.0%2B-blue.svg)
+![Swift 4.0+](https://img.shields.io/badge/Swift-4.0%2B-orange.svg)
+![iOS 8.0+](https://img.shields.io/badge/iOS-9.0%2B-blue.svg)
+
 # Zap Challenge
 
 The goal of the test is to implement an app where we can see the games with the most views in Twitch. The app should show a list of games and be able to navigate to the details of each game. In addition, both in the list and on the details screen, it should be possible to favor the game. Favorite games must be persisted on the device so they can be accessed offline and shown on a tab itself.
@@ -16,8 +20,8 @@ What things you need to install the software.
 
 ```
 1 - Xcode 9+
-2 - Swift 4
-3 - CocoaPods
+2 - Swift 4+
+3 - Pods
 ```
 
 ### Installing
