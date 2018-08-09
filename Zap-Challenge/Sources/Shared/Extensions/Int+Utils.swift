@@ -8,25 +8,23 @@
 
 import Foundation
 
-//**********************************************************************************************************
-//
+//*************************************************
 // MARK: - Extension - Int
-//
-//**********************************************************************************************************
+//*************************************************
 
 extension Int {
-  
-  //*************************************************
-  // MARK: - Exposed Methods
-  //*************************************************
-  
-  public func toString() -> String {
-    return String(self)
-  }
-  
-  func toDecimalFormat() -> String {
-    let numberFormatter = NumberFormatter()
-    numberFormatter.numberStyle = NumberFormatter.Style.decimal
-    return numberFormatter.string(from: NSNumber(value: self)) ?? "0"
-  }
+    
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
+    
+    public func toString() -> String {
+        return String(self)
+    }
+    
+    func toDecimalFormat() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        return numberFormatter.string(from: NSNumber(value: self)) ?? "0"
+    }
 }
