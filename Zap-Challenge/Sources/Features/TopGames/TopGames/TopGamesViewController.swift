@@ -103,8 +103,6 @@ class TopGamesViewController: UIViewController {
             gameDetails.viewModel = GameDetailsViewModel(provider: GameDetailsProvider(),
                                                          gameRank: self.viewModel.gamesRank[index],
                                                          index: index)
-            self.navigationItem.backBarButtonItem = UIBarButtonItem()
-            self.view.endEditing(true)
         }
     }
     
